@@ -1,0 +1,244 @@
+// Datalog-style traceability rule contract for translate-java-to-cangjie.
+//
+// The current gate is evaluated by scripts/traceability_guard.py. This file is
+// a Datalog-style contract DSL, not a promise of direct Souffle executability.
+// It is the declarative rule source hashed into gate certificates. Rule IDs
+// here must stay aligned with the Python evaluator and generated violations.json
+// entries.
+// Arbitrary IDs and refs are emitted as exact symbols. Values that are not safe
+// lower-case atoms are quoted by traceability_guard.atom(), so a-b and a_b do
+// not collide in persisted facts.
+
+.decl behavior(id:symbol)
+.decl p0_p1_behavior(id:symbol)
+.decl todo(id:symbol)
+.decl p0_p1_todo(id:symbol)
+.decl p0_p1_obligation(id:symbol)
+.decl obligation(id:symbol)
+.decl evidence(id:symbol)
+.decl decision(id:symbol)
+.decl decision_type(decision:symbol, type:symbol)
+.decl decision_status(decision:symbol, status:symbol)
+
+.decl source_test(id:symbol)
+.decl public_api(id:symbol)
+.decl p0_p1_public_api(id:symbol)
+.decl runtime_entry(id:symbol)
+.decl runtime_critical_module(id:symbol)
+.decl dependency_boundary(id:symbol)
+.decl source_test_ref(source_test:symbol, ref:symbol)
+.decl public_api_ref(public_api:symbol, ref:symbol)
+.decl runtime_entry_ref(entry:symbol, ref:symbol)
+.decl runtime_module_path(module:symbol, path:symbol)
+.decl dependency_boundary_ref(boundary:symbol, ref:symbol)
+
+.decl covers(todo:symbol, behavior:symbol)
+.decl requires(todo:symbol, dependency:symbol)
+.decl todo_obligation(todo:symbol, obligation:symbol)
+.decl obligation_of(obligation:symbol, behavior:symbol)
+.decl evidence_for(evidence:symbol, obligation:symbol)
+.decl proves(evidence:symbol, behavior:symbol)
+
+.decl contract_covers(todo:symbol, behavior:symbol)
+.decl contract_obligation(behavior:symbol, obligation:symbol)
+.decl contract_evidence_for(behavior:symbol, obligation:symbol)
+.decl contract_has_tdd(behavior:symbol)
+.decl contract_tdd_shape_ok(behavior:symbol)
+
+.decl todo_source_test(todo:symbol, source_test:symbol)
+.decl todo_public_api(todo:symbol, public_api:symbol)
+.decl planned_runtime_module(module:symbol)
+.decl obligation_source_test(obligation:symbol, source_test:symbol)
+.decl obligation_source_ref(obligation:symbol, source_ref:symbol)
+.decl obligation_kind(obligation:symbol, kind:symbol)
+.decl obligation_module(obligation:symbol, module:symbol)
+.decl decided(item:symbol)
+
+.decl ledger_terminal(obligation:symbol)
+.decl ledger_verified(obligation:symbol)
+.decl ledger_blocked(obligation:symbol)
+.decl ledger_accepted_deviation(obligation:symbol)
+.decl todo_terminal(todo:symbol)
+.decl todo_finished(todo:symbol)
+.decl todo_blocked(todo:symbol)
+.decl todo_accepted_deviation(todo:symbol)
+.decl todo_tester_snapshot(todo:symbol, snapshot:symbol)
+.decl tester_pass_evidence(todo:symbol, obligation:symbol, snapshot:symbol)
+.decl tester_accepted_evidence(todo:symbol, obligation:symbol, snapshot:symbol)
+.decl blocked_entry_complete(obligation:symbol)
+.decl accepted_deviation_has_decision(obligation:symbol)
+.decl obligation_decision(obligation:symbol, decision:symbol)
+.decl inventory_decision(item:symbol, decision:symbol)
+.decl closure_kind(kind:symbol)
+
+.decl valid_inventory_decision_type(decision:symbol)
+.decl accepted_decision(decision:symbol)
+
+.decl violation(rule:symbol, subject:symbol)
+.output violation
+
+// Graph integrity.
+violation("TR-GRAPH-001", T) :- requires(T, D), !todo(D).
+violation("TR-GRAPH-002", T) :- covers(T, _), !todo(T).
+violation("TR-GRAPH-002", B) :- covers(_, B), !behavior(B).
+violation("TR-GRAPH-003", T) :- todo_obligation(T, _), !todo(T).
+violation("TR-GRAPH-003", O) :- todo_obligation(_, O), !obligation(O).
+violation("TR-GRAPH-004", B) :- obligation_of(_, B), !behavior(B).
+violation("TR-GRAPH-004", O) :- obligation_of(O, _), !obligation(O).
+// TR-GRAPH-005 is dependency-cycle detection; Python currently evaluates the
+// transitive closure because the gate also needs a readable cycle path.
+
+// Plan coverage and ledger binding.
+violation("TR-PLAN-003", B) :- p0_p1_behavior(B), !covers(_, B).
+violation("TR-PLAN-002", O) :- p0_p1_obligation(O), !obligation_of(O, _).
+violation("TR-PLAN-004", B) :- p0_p1_behavior(B), !obligation_of(_, B).
+violation("TR-PLAN-005", T) :- p0_p1_todo(T), !covers(T, _).
+// TR-PLAN-001 is P0/P1 planned slice behavior_ids shape validation.
+// TR-PLAN-006 is same-slice todo coverage validation.
+// TR-PLAN-007 is same-slice obligation coverage validation.
+// TR-PLAN-008 is same-slice todo-to-obligation link validation.
+// These schema-plus-slice rules use YAML fields richer than the exported
+// minimal facts and are evaluated by the Python checker.
+
+// Source test inventory.
+.decl source_test_mapped(source_test:symbol)
+.decl todo_has_source_test(todo:symbol)
+source_test_mapped(S) :- todo_source_test(_, S).
+source_test_mapped(S) :- obligation_source_test(_, S).
+source_test_mapped(S) :- obligation_kind(O, "source-test"), obligation_source_ref(O, S).
+source_test_mapped(S) :- source_test_ref(S, R), obligation_kind(O, "source-test"), obligation_source_ref(O, R).
+source_test_mapped(S) :- decided(S).
+todo_has_source_test(T) :- todo_source_test(T, _).
+violation("TR-COVERAGE-001", S) :- source_test(S), !source_test_mapped(S).
+violation("TR-SOURCE-001", T) :-
+    todo_obligation(T, O),
+    obligation_kind(O, "source-test"),
+    !todo_has_source_test(T).
+
+// Public API, runtime entry, runtime module, and dependency boundary inventory.
+.decl public_api_mapped(api:symbol)
+public_api_mapped(A) :- todo_public_api(_, A).
+public_api_mapped(A) :- obligation_kind(O, "public-api"), obligation_source_ref(O, A).
+public_api_mapped(A) :- public_api_ref(A, R), obligation_kind(O, "public-api"), obligation_source_ref(O, R).
+public_api_mapped(A) :- decided(A).
+violation("TR-COVERAGE-002", A) :- p0_p1_public_api(A), !public_api_mapped(A).
+
+.decl runtime_entry_mapped(entry:symbol)
+runtime_entry_mapped(E) :- obligation_kind(O, "runtime-entry"), obligation_source_ref(O, E).
+runtime_entry_mapped(E) :- runtime_entry_ref(E, R), obligation_kind(O, "runtime-entry"), obligation_source_ref(O, R).
+runtime_entry_mapped(E) :- decided(E).
+violation("TR-COVERAGE-003", E) :- runtime_entry(E), !runtime_entry_mapped(E).
+
+.decl runtime_module_mapped(module:symbol)
+runtime_module_mapped(M) :- obligation_module(_, M).
+runtime_module_mapped(M) :- planned_runtime_module(M).
+runtime_module_mapped(M) :- runtime_module_path(M, P), planned_runtime_module(P).
+runtime_module_mapped(M) :- decided(M).
+violation("TR-COVERAGE-004", M) :- runtime_critical_module(M), !runtime_module_mapped(M).
+
+.decl dependency_boundary_mapped(boundary:symbol)
+dependency_boundary_mapped(D) :- obligation_kind(O, "dependency-boundary"), obligation_source_ref(O, D).
+dependency_boundary_mapped(D) :- dependency_boundary_ref(D, R), obligation_kind(O, "dependency-boundary"), obligation_source_ref(O, R).
+dependency_boundary_mapped(D) :- decided(D).
+violation("TR-COVERAGE-005", D) :- dependency_boundary(D), !dependency_boundary_mapped(D).
+
+// Active todo feature-contract gate.
+violation("TR-CONTRACT-001", B) :- contract_covers(T, B), !covers(T, B).
+violation("TR-CONTRACT-002", B) :- contract_covers(_, B), !contract_obligation(B, _).
+violation("TR-CONTRACT-003", O) :- contract_obligation(B, O), !obligation_of(O, B).
+violation("TR-CONTRACT-004", B) :- contract_covers(_, B), !contract_has_tdd(B).
+violation("TR-CONTRACT-005", O) :- contract_obligation(B, O), !contract_evidence_for(B, O).
+violation("TR-CONTRACT-006", B) :- contract_has_tdd(B), !contract_tdd_shape_ok(B).
+
+// Closure gate.
+.decl verified_tester_evidence(obligation:symbol)
+verified_tester_evidence(O) :-
+    todo_obligation(T, O),
+    todo_finished(T),
+    todo_tester_snapshot(T, S),
+    tester_pass_evidence(T, O, S).
+
+.decl accepted_tester_evidence(obligation:symbol)
+accepted_tester_evidence(O) :-
+    todo_obligation(T, O),
+    todo_accepted_deviation(T),
+    todo_tester_snapshot(T, S),
+    tester_accepted_evidence(T, O, S).
+
+valid_inventory_decision_type(D) :- decision_type(D, "scope").
+valid_inventory_decision_type(D) :- decision_type(D, "blocked").
+valid_inventory_decision_type(D) :- decision_type(D, "accepted-deviation").
+accepted_decision(D) :- decision_status(D, "accepted").
+
+violation("TR-CLOSURE-002", B) :- p0_p1_behavior(B), !obligation_of(_, B).
+violation("TR-CLOSURE-003", O) :- obligation_of(O, B), p0_p1_behavior(B), !ledger_terminal(O).
+violation("TR-CLOSURE-004", O) :-
+    ledger_verified(O),
+    !verified_tester_evidence(O).
+violation("TR-CLOSURE-005", O) :-
+    ledger_blocked(O),
+    !blocked_entry_complete(O).
+violation("TR-CLOSURE-006", O) :-
+    ledger_accepted_deviation(O),
+    !accepted_deviation_has_decision(O).
+violation("TR-DECISION-001", O) :-
+    ledger_accepted_deviation(O),
+    obligation_decision(O, D),
+    !decision(D).
+violation("TR-DECISION-001", O) :-
+    ledger_accepted_deviation(O),
+    obligation_decision(O, D),
+    decision_type(D, T),
+    T != "accepted-deviation".
+violation("TR-DECISION-001", O) :-
+    ledger_accepted_deviation(O),
+    obligation_decision(O, D),
+    decision_status(D, S),
+    S != "accepted".
+violation("TR-DECISION-002", I) :-
+    inventory_decision(I, D),
+    !decision(D).
+violation("TR-DECISION-002", I) :-
+    inventory_decision(I, D),
+    !valid_inventory_decision_type(D).
+violation("TR-DECISION-002", I) :-
+    inventory_decision(I, D),
+    !accepted_decision(D).
+violation("TR-CLOSURE-007", O) :-
+    ledger_accepted_deviation(O),
+    !accepted_tester_evidence(O).
+violation("TR-CLOSURE-008", T) :-
+    todo_obligation(T, O),
+    obligation_of(O, B),
+    p0_p1_behavior(B),
+    ledger_terminal(O),
+    !todo_terminal(T).
+violation("TR-CLOSURE-009", B) :-
+    closure_kind(complete),
+    obligation_of(O, B),
+    ledger_blocked(O).
+violation("TR-CLOSURE-009", B) :-
+    closure_kind(complete),
+    obligation_of(O, B),
+    ledger_accepted_deviation(O).
+violation("TR-CLOSURE-009", T) :-
+    closure_kind(complete),
+    todo_blocked(T).
+violation("TR-CLOSURE-009", T) :-
+    closure_kind(complete),
+    todo_accepted_deviation(T).
+.decl partial_exists(marker:symbol)
+partial_exists(partial) :- ledger_blocked(_).
+partial_exists(partial) :- ledger_accepted_deviation(_).
+partial_exists(partial) :- todo_blocked(_).
+partial_exists(partial) :- todo_accepted_deviation(_).
+violation("TR-CLOSURE-010", "blocked-partial") :-
+    closure_kind("blocked-partial"),
+    !partial_exists(partial).
+// Operational/schema rule IDs emitted by the Python evaluator:
+// TR-CERT-001 formal artifact write failure.
+// TR-CERT-002 missing traceability rule contract.
+// TR-CERT-003 Python evaluator rule IDs must be declared by this contract.
+// TR-CLI-001 invalid checker invocation target.
+// TR-LOAD-001 YAML/JSON parse failure.
+// TR-CLOSURE-001 immutable tester snapshot parse validation.

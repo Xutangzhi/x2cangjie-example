@@ -1,0 +1,305 @@
+schema_version: 1
+report_id: "tester-todo-005-core-config-20260706T141927Z"
+report_snapshot_path: ".translation/tester/reports/tester-todo-005-core-config-20260706T141927Z.yaml"
+report_type: TODO_VERIFICATION
+decision: NEEDS_FIX
+active_todo_id: "TODO-005-CORE-CONFIG"
+active_slice: "SLICE-005-CORE-CONFIG"
+todo_verdict:
+  todo_id: "TODO-005-CORE-CONFIG"
+  verdict: fail
+  can_mark_finished: false
+  verified_obligation_ids:
+  - "OB_ST_CustomValidatorResourcesTest_testCustomResources"
+  - "OB_ST_EntityImportTest_testEntityImport"
+  - "OB_ST_EntityImportTest_testParseURL"
+  - "OB_ST_ExceptionTest_testValidatorException"
+  - "OB_ST_ExtensionTest_testOrder"
+  - "OB_ST_ExtensionTest_testOverrideRule"
+  - "OB_ST_ExtensionTest_testRequired"
+  - "OB_ST_ExtensionTest_testRequiredFirstName"
+  - "OB_ST_ExtensionTest_testRequiredFirstNameBlank"
+  - "OB_ST_ExtensionTest_testRequiredLastName"
+  - "OB_ST_ExtensionTest_testRequiredLastNameBlank"
+  - "OB_ST_ExtensionTest_testRequiredName"
+  - "OB_ST_FieldTest_testDefaultOnePosition"
+  - "OB_ST_FieldTest_testDefaultPositionImplied"
+  - "OB_ST_FieldTest_testDefaultSomePositions"
+  - "OB_ST_FieldTest_testDefaultUsingPositions"
+  - "OB_ST_FieldTest_testEmptyArgs"
+  - "OB_ST_FieldTest_testOverridePositionImplied"
+  - "OB_ST_FieldTest_testOverrideSomePosition"
+  - "OB_ST_FieldTest_testOverrideUsingPositionA"
+  - "OB_ST_FieldTest_testOverrideUsingPositionB"
+  - "OB_ST_LocaleTest_testLocale1"
+  - "OB_ST_LocaleTest_testLocale2"
+  - "OB_ST_LocaleTest_testLocale3"
+  - "OB_ST_LocaleTest_testLocale4"
+  - "OB_ST_LocaleTest_testLocale5"
+  - "OB_ST_MultipleConfigFilesTest_testBothBlank"
+  - "OB_ST_MultipleConfigFilesTest_testMergedConfig"
+  - "OB_ST_MultipleConfigFilesTest_testRequiredFirstNameBlankLastNameShort"
+  - "OB_ST_MultipleConfigFilesTest_testRequiredLastNameLong"
+  - "OB_ST_MultipleConfigFilesTest_testRequiredLastNameShort"
+  - "OB_ST_MultipleTest_testBothBlank"
+  - "OB_ST_MultipleTest_testFailingFirstDependentValidator"
+  - "OB_ST_MultipleTest_testFailingNextDependentValidator"
+  - "OB_ST_MultipleTest_testPassingDependentsFailingMain"
+  - "OB_ST_MultipleTest_testPassingDependentsPassingMain"
+  - "OB_ST_MultipleTest_testRequiredFirstNameBlankLastNameShort"
+  - "OB_ST_MultipleTest_testRequiredLastNameLong"
+  - "OB_ST_MultipleTest_testRequiredLastNameShort"
+  - "OB_ST_ParameterTest_testAllValid"
+  - "OB_ST_RequiredIfTest_testRequired"
+  - "OB_ST_RequiredIfTest_testRequiredFirstName"
+  - "OB_ST_RequiredIfTest_testRequiredFirstNameBlank"
+  - "OB_ST_RequiredIfTest_testRequiredLastName"
+  - "OB_ST_RequiredIfTest_testRequiredLastNameBlank"
+  - "OB_ST_RequiredNameTest_testRequired"
+  - "OB_ST_RequiredNameTest_testRequiredFirstName"
+  - "OB_ST_RequiredNameTest_testRequiredFirstNameBlank"
+  - "OB_ST_RequiredNameTest_testRequiredLastName"
+  - "OB_ST_RequiredNameTest_testRequiredLastNameBlank"
+  - "OB_ST_RequiredNameTest_testRequiredName"
+  - "OB_ST_RetrieveFormTest_testDefaultForm"
+  - "OB_ST_RetrieveFormTest_testFormNotFound"
+  - "OB_ST_RetrieveFormTest_testLanguageCountryForm"
+  - "OB_ST_RetrieveFormTest_testLanguageCountryVariantForm"
+  - "OB_ST_RetrieveFormTest_testLanguageForm"
+  - "OB_ST_ValidatorResourcesTest_testNullInputStream"
+  - "OB_ST_ValidatorResultsTest_testAllValid"
+  - "OB_ST_ValidatorResultsTest_testErrors"
+  - "OB_ST_ValidatorTest_testManualBoolean"
+  - "OB_ST_ValidatorTest_testManualBooleanDeprecated"
+  - "OB_ST_ValidatorTest_testManualObject"
+  - "OB_ST_ValidatorTest_testOnlyReturnErrors"
+  - "OB_ST_ValidatorTest_testOnlyValidateField"
+  - "OB_ST_VarTest_testVars"
+  - "OB_ST_util_FlagsTest_testClear"
+  - "OB_ST_util_FlagsTest_testClone"
+  - "OB_ST_util_FlagsTest_testEqualsObject"
+  - "OB_ST_util_FlagsTest_testGetFlags"
+  - "OB_ST_util_FlagsTest_testHashCode"
+  - "OB_ST_util_FlagsTest_testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn"
+  - "OB_ST_util_FlagsTest_testIsOnIsTrueWhenHighOrderBitIsSetAndQueried"
+  - "OB_ST_util_FlagsTest_testIsOnOff"
+  - "OB_ST_util_FlagsTest_testToString"
+  - "OB_ST_util_FlagsTest_testTurnOff"
+  - "OB_ST_util_FlagsTest_testTurnOffAll"
+  - "OB_ST_util_FlagsTest_testTurnOnAll"
+  - "OB_ST_util_FlagsTest_testTurnOnOff"
+  - "OB_ST_util_ValidatorUtilsTest_testCopyFastHashMap"
+  - "OB_XML_CONFIG_RESOURCES"
+  - "OB_SERIALIZABLE_CONFIG_BEANS"
+  - "OB_FIXTURE_VALIDATOR_XML_CONFIGS"
+  failed_obligation_ids:
+  - "OB_PUBLIC_API_SLICE_005_CORE_CONFIG"
+  - "OB_DEPENDENCY_REWRITE_CORE"
+  - "OB_REFLECTION_PROPERTY_ACCESS"
+  blocking_issue_ids:
+  - "TESTER-TODO-005-001"
+  required_rework:
+  - "Verify object-backed property access against the active public API path `validator.util.ValidatorUtils.getValueAsString`, not only against the duplicate `validator.ValidatorUtils` helper in ValidationSupport.cj."
+  - "Either unify the `ValidatorPropertyAccess` bridge used by `cangjie/src/util/ValidatorUtils.cj` with the production validator path, or add explicit object-backed translated coverage for `UtilValidatorUtils.getValueAsString(...)` that proves parity for the NameBean/TestBean/ValueBean scenarios covered by the active Java tests."
+  - "Keep the object-backed validator-path assertions, then rerun yaml_guard contract, two_agent_gate_check.sh contract, mvn -q test, cjpm build, and cjpm test before re-handoff."
+  evidence: >-
+    State selects TODO_VERIFICATION for TODO-005-CORE-CONFIG: run-state, migration-todo, and feature-contract all align on TODO-005-CORE-CONFIG / SLICE-005-CORE-CONFIG with TODO status ready-for-test, plan_audit.status=accepted, and final_closure.requested=false. Feature-contract source_tests still match all 79 active source_test_ids and the claimed behavior still lists all 85 active obligations with reverse bindings in translation-ledger. Contract gate passed (`yaml_guard.py --phase contract --strict --json` and `two_agent_gate_check.sh contract`). Source baseline `mvn -q test` passed. Target `cjpm build` passed. Target `cjpm test` passed with TOTAL: 74, PASSED: 74, SKIPPED: 0, ERROR: 0, FAILED: 0.
+    The prior map-only gap is partially fixed: `cangjie/tests/core_config_test.cj` now defines object-backed `CoreNameBean`, `CoreValueBean`, and `CoreTestBean` adapters implementing `validator.ValidatorPropertyAccess`, `coreValidate/coreValidateWithLocale` now accept `Any`, and the translated core tests directly assert `validator.ValidatorUtils.getValueAsString(bean, property)` before running validator flows.
+    However, the active Java public API and production code use `org.apache.commons.validator.util.ValidatorUtils.getValueAsString`: `java/.../ValidatorAction.java` imports `org.apache.commons.validator.util.ValidatorUtils`, and `java/.../ValidatorTest.java` calls that util API directly. In the target repo, `cangjie/src/util/ValidatorUtils.cj` is a separate package (`validator.util`) with its own `ValidatorPropertyAccess` interface, while `cangjie/tests/core_config_test.cj` object adapters implement only `validator.ValidatorPropertyAccess` from `ValidationSupport.cj`. The translated tests never call `UtilValidatorUtils.getValueAsString(...)`, and `rg` finds no implementation of `validator.util.ValidatorPropertyAccess` anywhere in `cangjie/src` or `cangjie/tests`. So the repaired object-backed path is real for `validator.ValidatorUtils`, but the active public API / dependency-boundary path for `validator.util.ValidatorUtils.getValueAsString` remains unverified and likely incompatible by construction.
+plan_audit:
+  status: not-applicable
+claimed_feature_results:
+- behavior_id: "B_CORE_VALIDATOR_CONFIG_MODEL"
+  verdict: fail
+  ledger_obligation_ids:
+    - "OB_ST_CustomValidatorResourcesTest_testCustomResources"
+    - "OB_ST_EntityImportTest_testEntityImport"
+    - "OB_ST_EntityImportTest_testParseURL"
+    - "OB_ST_ExceptionTest_testValidatorException"
+    - "OB_ST_ExtensionTest_testOrder"
+    - "OB_ST_ExtensionTest_testOverrideRule"
+    - "OB_ST_ExtensionTest_testRequired"
+    - "OB_ST_ExtensionTest_testRequiredFirstName"
+    - "OB_ST_ExtensionTest_testRequiredFirstNameBlank"
+    - "OB_ST_ExtensionTest_testRequiredLastName"
+    - "OB_ST_ExtensionTest_testRequiredLastNameBlank"
+    - "OB_ST_ExtensionTest_testRequiredName"
+    - "OB_ST_FieldTest_testDefaultOnePosition"
+    - "OB_ST_FieldTest_testDefaultPositionImplied"
+    - "OB_ST_FieldTest_testDefaultSomePositions"
+    - "OB_ST_FieldTest_testDefaultUsingPositions"
+    - "OB_ST_FieldTest_testEmptyArgs"
+    - "OB_ST_FieldTest_testOverridePositionImplied"
+    - "OB_ST_FieldTest_testOverrideSomePosition"
+    - "OB_ST_FieldTest_testOverrideUsingPositionA"
+    - "OB_ST_FieldTest_testOverrideUsingPositionB"
+    - "OB_ST_LocaleTest_testLocale1"
+    - "OB_ST_LocaleTest_testLocale2"
+    - "OB_ST_LocaleTest_testLocale3"
+    - "OB_ST_LocaleTest_testLocale4"
+    - "OB_ST_LocaleTest_testLocale5"
+    - "OB_ST_MultipleConfigFilesTest_testBothBlank"
+    - "OB_ST_MultipleConfigFilesTest_testMergedConfig"
+    - "OB_ST_MultipleConfigFilesTest_testRequiredFirstNameBlankLastNameShort"
+    - "OB_ST_MultipleConfigFilesTest_testRequiredLastNameLong"
+    - "OB_ST_MultipleConfigFilesTest_testRequiredLastNameShort"
+    - "OB_ST_MultipleTest_testBothBlank"
+    - "OB_ST_MultipleTest_testFailingFirstDependentValidator"
+    - "OB_ST_MultipleTest_testFailingNextDependentValidator"
+    - "OB_ST_MultipleTest_testPassingDependentsFailingMain"
+    - "OB_ST_MultipleTest_testPassingDependentsPassingMain"
+    - "OB_ST_MultipleTest_testRequiredFirstNameBlankLastNameShort"
+    - "OB_ST_MultipleTest_testRequiredLastNameLong"
+    - "OB_ST_MultipleTest_testRequiredLastNameShort"
+    - "OB_ST_ParameterTest_testAllValid"
+    - "OB_ST_RequiredIfTest_testRequired"
+    - "OB_ST_RequiredIfTest_testRequiredFirstName"
+    - "OB_ST_RequiredIfTest_testRequiredFirstNameBlank"
+    - "OB_ST_RequiredIfTest_testRequiredLastName"
+    - "OB_ST_RequiredIfTest_testRequiredLastNameBlank"
+    - "OB_ST_RequiredNameTest_testRequired"
+    - "OB_ST_RequiredNameTest_testRequiredFirstName"
+    - "OB_ST_RequiredNameTest_testRequiredFirstNameBlank"
+    - "OB_ST_RequiredNameTest_testRequiredLastName"
+    - "OB_ST_RequiredNameTest_testRequiredLastNameBlank"
+    - "OB_ST_RequiredNameTest_testRequiredName"
+    - "OB_ST_RetrieveFormTest_testDefaultForm"
+    - "OB_ST_RetrieveFormTest_testFormNotFound"
+    - "OB_ST_RetrieveFormTest_testLanguageCountryForm"
+    - "OB_ST_RetrieveFormTest_testLanguageCountryVariantForm"
+    - "OB_ST_RetrieveFormTest_testLanguageForm"
+    - "OB_ST_ValidatorResourcesTest_testNullInputStream"
+    - "OB_ST_ValidatorResultsTest_testAllValid"
+    - "OB_ST_ValidatorResultsTest_testErrors"
+    - "OB_ST_ValidatorTest_testManualBoolean"
+    - "OB_ST_ValidatorTest_testManualBooleanDeprecated"
+    - "OB_ST_ValidatorTest_testManualObject"
+    - "OB_ST_ValidatorTest_testOnlyReturnErrors"
+    - "OB_ST_ValidatorTest_testOnlyValidateField"
+    - "OB_ST_VarTest_testVars"
+    - "OB_ST_util_FlagsTest_testClear"
+    - "OB_ST_util_FlagsTest_testClone"
+    - "OB_ST_util_FlagsTest_testEqualsObject"
+    - "OB_ST_util_FlagsTest_testGetFlags"
+    - "OB_ST_util_FlagsTest_testHashCode"
+    - "OB_ST_util_FlagsTest_testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn"
+    - "OB_ST_util_FlagsTest_testIsOnIsTrueWhenHighOrderBitIsSetAndQueried"
+    - "OB_ST_util_FlagsTest_testIsOnOff"
+    - "OB_ST_util_FlagsTest_testToString"
+    - "OB_ST_util_FlagsTest_testTurnOff"
+    - "OB_ST_util_FlagsTest_testTurnOffAll"
+    - "OB_ST_util_FlagsTest_testTurnOnAll"
+    - "OB_ST_util_FlagsTest_testTurnOnOff"
+    - "OB_ST_util_ValidatorUtilsTest_testCopyFastHashMap"
+    - "OB_PUBLIC_API_SLICE_005_CORE_CONFIG"
+    - "OB_DEPENDENCY_REWRITE_CORE"
+    - "OB_XML_CONFIG_RESOURCES"
+    - "OB_REFLECTION_PROPERTY_ACCESS"
+    - "OB_SERIALIZABLE_CONFIG_BEANS"
+    - "OB_FIXTURE_VALIDATOR_XML_CONFIGS"
+  production_path_verified: partial
+  source_baseline: "mvn -q test (cwd: java/commons-validator) -> pass; source emitted expected ValidatorResources warnings and the ValidatorTest date parsing warning, exit code 0."
+  target_build: "cjpm build (cwd: cangjie) -> pass"
+  target_test: "cjpm test (cwd: cangjie) -> pass; TOTAL: 74 PASSED: 74 SKIPPED: 0 ERROR: 0 FAILED: 0"
+  contract_completeness:
+    active_source_tests: 79
+    feature_contract_source_tests: 79
+    active_ledger_obligations: 85
+    feature_contract_ledger_obligations: 85
+    ledger_reverse_bindings_verified: 85
+    special_obligations_present:
+    - "OB_PUBLIC_API_SLICE_005_CORE_CONFIG"
+    - "OB_DEPENDENCY_REWRITE_CORE"
+    - "OB_XML_CONFIG_RESOURCES"
+    - "OB_REFLECTION_PROPERTY_ACCESS"
+    - "OB_SERIALIZABLE_CONFIG_BEANS"
+    - "OB_FIXTURE_VALIDATOR_XML_CONFIGS"
+    special_obligations_verified:
+    - "OB_XML_CONFIG_RESOURCES"
+    - "OB_SERIALIZABLE_CONFIG_BEANS"
+    - "OB_FIXTURE_VALIDATOR_XML_CONFIGS"
+    special_obligations_failed:
+    - "OB_PUBLIC_API_SLICE_005_CORE_CONFIG"
+    - "OB_DEPENDENCY_REWRITE_CORE"
+    - "OB_REFLECTION_PROPERTY_ACCESS"
+  translated_test_coverage:
+    active_source_tests: 79
+    translated_test_groups: 9
+    covered_source_test_ids: 79
+    uncovered_source_test_ids: []
+    note: "The active grouped tests now preserve the object-backed validator path, but they still do not exercise the active util-package public API `validator.util.ValidatorUtils.getValueAsString` that the Java source and public API graph require."
+  behavior_evidence:
+  - "cangjie/tests/core_config_test.cj:54-217 replaces the old HashMap helpers with object-backed CoreNameBean/CoreValueBean/CoreTestBean adapters implementing `validator.ValidatorPropertyAccess`, and coreValidate/coreValidateWithLocale now accept `Any`."
+  - "cangjie/tests/core_config_test.cj:452-509 directly asserts `validator.ValidatorUtils.getValueAsString(bean, property)` for TestBean/NameBean-style scenarios before running the translated validator flows."
+  - "cangjie/src/ValidatorAction.cj:112-176 uses `validator.ValidatorUtils.getValueAsString`, so the repaired validator-path behavior is real and runs through production code."
+  - "cangjie/src/util/ValidatorUtils.cj:153-169 and 333-389 remain a separate package-local implementation with a distinct `validator.util.ValidatorPropertyAccess` interface; the current target tests do not hit that path with object-backed beans."
+  public_api_and_boundary_checks:
+  - "The XML/resource, locale/form fallback, cloning, Flags, FastHashMap copy, result aggregation, and extension/merge behaviors are exercised and acceptable for the active source-test inventory."
+  - "The source public API `org.apache.commons.validator.util.ValidatorUtils.getValueAsString(Object, String)` is still the active Java reference: `java/.../ValidatorAction.java` imports that util class and `java/.../ValidatorTest.java` calls it directly."
+  - "Because the translated object-backed assertions use `validator.ValidatorUtils` from `ValidationSupport.cj` rather than `validator.util.ValidatorUtils`, the repaired path does not yet prove semantic compatibility for the active util-package public API."
+  failure_reason: "The broad map-only blocker is fixed, but TODO-005 still cannot close because the active public API / dependency-boundary path for `org.apache.commons.validator.util.ValidatorUtils.getValueAsString` is not independently verified after the refactor."
+  regression_scope: "cjpm test re-ran the full current target suite; no regression was observed outside the remaining util-package public API parity gap."
+global_gap_scan:
+  missing_modules: []
+  incomplete_modules: []
+  missing_source_tests: []
+  missing_public_api: []
+  dependency_gaps:
+  - "Object-backed parity is now demonstrated for `validator.ValidatorUtils`, but not for the active public API `validator.util.ValidatorUtils.getValueAsString`."
+  ledger_gaps: []
+  stale_decisions: []
+ledger_consistency:
+  status: fail
+  checked_obligations: 416
+  missing_obligations: []
+  stale_claims:
+  - "feature-contract.yaml says object-bean getter/property access is now preserved for the Java NameBean/TestBean/ValueBean scenarios, but the new assertions target `validator.ValidatorUtils` while the active Java public API and production source path remain `org.apache.commons.validator.util.ValidatorUtils`."
+  - "feature-contract.yaml marks OB_PUBLIC_API_SLICE_005_CORE_CONFIG, OB_DEPENDENCY_REWRITE_CORE, and OB_REFLECTION_PROPERTY_ACCESS as verified-after-pass candidates, but no current target test exercises object-backed beans through `validator.util.ValidatorUtils.getValueAsString`."
+metrics:
+  source_build_status: pass
+  source_test_status: pass
+  target_build_status: pass
+  target_test_status: pass
+  source_test_count: 397
+  blocked_source_test_count: 0
+  active_source_test_count: 79
+  active_blocked_source_test_count: 0
+  active_executable_target_test_count: 9
+  executable_target_test_count: 74
+  passing_translated_test_count: 74
+  test_pass_rate: "74/74"
+  module_coverage_status: partial
+  public_api_status: partial
+  dependency_boundary_status: fail
+  runtime_smoke_status: not-applicable
+  regression_status: pass
+issues:
+- issue_id: "TESTER-TODO-005-001"
+  severity: P1
+  status: open
+  category: dependency-boundary
+  title: "util.ValidatorUtils object-bean parity is still unverified after the adapter fix"
+  evidence:
+  - "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorAction.java:36 imports `org.apache.commons.validator.util.ValidatorUtils`, and java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java:65 and :85 call that util API directly."
+  - "cangjie/tests/core_config_test.cj:457, :476, and :506-509 assert object-backed property access through `validator.ValidatorUtils.getValueAsString`, not through `validator.util.ValidatorUtils`."
+  - "cangjie/src/util/ValidatorUtils.cj:333-389 defines a separate `validator.util.ValidatorPropertyAccess` interface and `validator.util.ValidatorUtils.getValueAsString` implementation."
+  - "rg across cangjie/src and cangjie/tests finds no class implementing `validator.util.ValidatorPropertyAccess`."
+  - "The util-package object-bean path is therefore untested and likely incompatible with the new adapters, which implement only `validator.ValidatorPropertyAccess`."
+  required_rework:
+  - "Prove object-backed parity on the util-package public API, either by unifying the interface boundary or by adding direct translated assertions against `UtilValidatorUtils.getValueAsString(...)` for the active bean scenarios."
+  - "Keep the validator-package object-backed assertions and rerun the contract/build/test commands after the util-package path is covered."
+reference_paths:
+- ".translation/translator/run-state.yaml"
+- ".translation/translator/migration-todo.yaml"
+- ".translation/translator/feature-contract.yaml"
+- ".translation/translator/translation-ledger.yaml"
+- "java/commons-validator/src/main/java/org/apache/commons/validator/util/ValidatorUtils.java"
+- "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorAction.java"
+- "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java"
+- "cangjie/src/ValidationSupport.cj"
+- "cangjie/src/util/ValidatorUtils.cj"
+- "cangjie/src/ValidatorAction.cj"
+- "cangjie/tests/core_config_test.cj"
+- "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/cangjie_skills/translate-java-to-cangjie/references/migration_guide/quick-ref/api_map.md"
+- "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/cangjie_skills/translate-java-to-cangjie/references/migration_guide/quick-ref/syntax_map.md"
+summary: "TODO_VERIFICATION still fails for TODO-005-CORE-CONFIG. The original map-only parity gap was partially fixed: object-backed adapters now exist, the core translated tests use them, and yaml_guard contract, two_agent_gate_check contract, mvn -q test, cjpm build, and cjpm test all pass. The remaining blocker is narrower but still P1: the repaired assertions and validator path hit `validator.ValidatorUtils`, while the active Java public API and source production path are `org.apache.commons.validator.util.ValidatorUtils`. Because `cangjie/src/util/ValidatorUtils.cj` is a separate implementation with a separate `validator.util.ValidatorPropertyAccess` interface and no current object-backed adapter/test coverage, `todo_verdict.can_mark_finished=false` and the failed obligations remain OB_PUBLIC_API_SLICE_005_CORE_CONFIG, OB_DEPENDENCY_REWRITE_CORE, and OB_REFLECTION_PROPERTY_ACCESS."

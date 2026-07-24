@@ -1,0 +1,73 @@
+[33mwarning[0m: unused import 'std.collection.*'
+ [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/GenericTypeValidator.cj:7:1:
+  [36m| [0m
+[36m7[0m [36m| [0mimport std.collection.*[0m
+  [36m| [0m[33m^^^^^^^^^^^^^^^^^^^^^^^ unused import[0m
+  [36m| [0m
+  [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused import 'std.collection.*'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:32:1:
+   [36m| [0m
+[36m32[0m [36m| [0mimport std.collection.*[0m
+   [36m| [0m[33m^^^^^^^^^^^^^^^^^^^^^^^ unused import[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_URL_PATTERN'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:44:13:
+   [36m| [0m
+[36m44[0m [36m| [0mprivate let LEGACY_URL_PATTERN = Regex(LEGACY_URL_REGEX)[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'ignored'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/ValidatorResult.cj:45:17:
+   [36m| [0m
+[36m45[0m [36m| [0m    public init(ignored: ValidatorResult, valid: Bool, result: ?Any) {[0m
+   [36m| [0m                [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_SCHEME'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:54:13:
+   [36m| [0m
+[36m54[0m [36m| [0mprivate let LEGACY_PARSE_URL_SCHEME: Int64 = 2[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_AUTHORITY'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:55:13:
+   [36m| [0m
+[36m55[0m [36m| [0mprivate let LEGACY_PARSE_URL_AUTHORITY: Int64 = 4[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_PATH'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:56:13:
+   [36m| [0m
+[36m56[0m [36m| [0mprivate let LEGACY_PARSE_URL_PATH: Int64 = 5[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_QUERY'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:57:13:
+   [36m| [0m
+[36m57[0m [36m| [0mprivate let LEGACY_PARSE_URL_QUERY: Int64 = 7[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_FRAGMENT'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:58:13:
+   [36m| [0m
+[36m58[0m [36m| [0mprivate let LEGACY_PARSE_URL_FRAGMENT: Int64 = 9[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+9 warnings generated, 9 warnings printed.

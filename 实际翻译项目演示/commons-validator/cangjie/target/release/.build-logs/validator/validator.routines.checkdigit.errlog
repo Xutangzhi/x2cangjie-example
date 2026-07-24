@@ -1,0 +1,137 @@
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/EAN13CheckDigit.cj:24:58:
+   [36m| [0m
+[36m24[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/LuhnCheckDigit.cj:24:58:
+   [36m| [0m
+[36m24[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ABANumberCheckDigit.cj:24:58:
+   [36m| [0m
+[36m24[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/CUSIPCheckDigit.cj:34:58:
+   [36m| [0m
+[36m34[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ISBN10CheckDigit.cj:41:58:
+   [36m| [0m
+[36m41[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ISSNCheckDigit.cj:41:74:
+   [36m| [0m
+[36m41[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                         [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/SedolCheckDigit.cj:43:74:
+   [36m| [0m
+[36m43[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                         [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ISINCheckDigit.cj:45:58:
+   [36m| [0m
+[36m45[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/CASNumberCheckDigit.cj:63:58:
+   [36m| [0m
+[36m63[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusTenCheckDigit.cj:65:65:
+   [36m| [0m
+[36m65[0m [36m| [0m    public override func toInt(character: Rune, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ECNumberCheckDigit.cj:65:74:
+   [36m| [0m
+[36m65[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                         [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'code'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/AbstractCheckDigit.cj:84:32:
+   [36m| [0m
+[36m84[0m [36m| [0m    public open func calculate(code: String): String {[0m
+   [36m| [0m                               [33m^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'code'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/AbstractCheckDigit.cj:88:30:
+   [36m| [0m
+[36m88[0m [36m| [0m    public open func isValid(code: String): Bool {[0m
+   [36m| [0m                             [33m^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:107:61:
+    [36m| [0m
+[36m107[0m [36m| [0m    public open func toInt(character: Rune, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                                            [33m^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'charValue'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:114:36:
+    [36m| [0m
+[36m114[0m [36m| [0m    public open func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                   [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:114:54:
+    [36m| [0m
+[36m114[0m [36m| [0m    public open func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                                     [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:114:70:
+    [36m| [0m
+[36m114[0m [36m| [0m    public open func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                                                     [33m^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+17 warnings generated, 17 warnings printed.

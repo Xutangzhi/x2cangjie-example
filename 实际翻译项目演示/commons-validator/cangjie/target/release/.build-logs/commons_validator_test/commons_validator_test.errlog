@@ -1,0 +1,137 @@
+[33mwarning[0m: unused function:'ibanTestExpectIllegalArgumentMessage'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:14:1:
+   [36m| [0m
+[36m14[0m [36m| [0m  func ibanTestExpectIllegalArgumentMessage(action: () -> Unit): String {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m15[0m [36m| [0m[33m|[0m     try {[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m21[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestExpectIllegalStateMessage'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:23:1:
+   [36m| [0m
+[36m23[0m [36m| [0m  func ibanTestExpectIllegalStateMessage(action: () -> Unit): String {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m24[0m [36m| [0m[33m|[0m     try {[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m30[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestReadTsvRows'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:47:1:
+   [36m| [0m
+[36m47[0m [36m| [0m  func ibanTestReadTsvRows(): Array<Array<String>> {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m48[0m [36m| [0m[33m|[0m     let path = "tests/iban_registry_v99_utf8.txt"[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m58[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestFindRow'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:60:1:
+   [36m| [0m
+[36m60[0m [36m| [0m  func ibanTestFindRow(rows: Array<Array<String>>, label: String): Array<String> {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m61[0m [36m| [0m[33m|[0m     for (row in rows) {[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m67[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestParseInt'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:69:1:
+   [36m| [0m
+[36m69[0m [36m| [0m  func ibanTestParseInt(text: String): Int64 {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m70[0m [36m| [0m[33m|[0m     var value: Int64 = 0[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m78[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestAdditionalCodes'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:80:1:
+   [36m| [0m
+[36m80[0m [36m| [0m  func ibanTestAdditionalCodes(field: String): Array<String> {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m81[0m [36m| [0m[33m|[0m     let cleaned = ibanTestStripQuotes(field).replace("(French part)", "")[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m93[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestFormatToRegex'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:104:1:
+    [36m| [0m
+[36m104[0m [36m| [0m  func ibanTestFormatToRegex(ibanPattern: String, expectedLength: Int64): String {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m105[0m [36m| [0m[33m|[0m     let chars = ibanPattern.toRuneArray()[0m
+    [36m| [0m[33m|[0m ...[0m
+[36m141[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestArrayContains'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:143:1:
+    [36m| [0m
+[36m143[0m [36m| [0m  func ibanTestArrayContains(values: Array<String>, target: String): Bool {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m144[0m [36m| [0m[33m|[0m     for (value in values) {[0m
+    [36m| [0m[33m|[0m ...[0m
+[36m150[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestOptionIsNone'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:152:1:
+    [36m| [0m
+[36m152[0m [36m| [0m  func ibanTestOptionIsNone(value: ?Validator): Bool {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m153[0m [36m| [0m[33m|[0m     match (value) {[0m
+    [36m| [0m[33m|[0m ...[0m
+[36m157[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'ibanTestOptionIsSome'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:159:1:
+    [36m| [0m
+[36m159[0m [36m| [0m  func ibanTestOptionIsSome(value: ?Validator): Bool {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m160[0m [36m| [0m[33m|[0m     match (value) {[0m
+    [36m| [0m[33m|[0m ...[0m
+[36m164[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'VALID_IBAN_FIXTURES'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:166:5:
+    [36m| [0m
+[36m166[0m [36m| [0mlet VALID_IBAN_FIXTURES = [[0m
+    [36m| [0m    [33m^^^^^^^^^^^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'INVALID_IBAN_FIXTURES'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/iban_validator_tests.cj:279:5:
+    [36m| [0m
+[36m279[0m [36m| [0mlet INVALID_IBAN_FIXTURES = [[0m
+    [36m| [0m    [33m^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+12 warnings generated, 12 warnings printed.

@@ -1,0 +1,1296 @@
+{
+  "schema_version": 1,
+  "active_todo_id": "TODO-005-CORE-CONFIG",
+  "active_slice": "SLICE-005-CORE-CONFIG",
+  "handoff_attempt": 3,
+  "source_modules": [
+    "module-core",
+    "module-util",
+    "module-resources"
+  ],
+  "target_modules": [
+    "cangjie/src/Arg.cj",
+    "cangjie/src/Msg.cj",
+    "cangjie/src/Var.cj",
+    "cangjie/src/Field.cj",
+    "cangjie/src/Form.cj",
+    "cangjie/src/FormSet.cj",
+    "cangjie/src/FormSetFactory.cj",
+    "cangjie/src/Validator.cj",
+    "cangjie/src/ValidatorAction.cj",
+    "cangjie/src/ValidatorException.cj",
+    "cangjie/src/ValidatorResources.cj",
+    "cangjie/src/ValidatorResult.cj",
+    "cangjie/src/ValidatorResults.cj",
+    "cangjie/src/util/Flags.cj",
+    "cangjie/src/util/ValidatorUtils.cj",
+    "cangjie/src/ValidationSupport.cj",
+    "cangjie/src/JavaCompatExceptions.cj",
+    "cangjie/tests/core_config_test.cj"
+  ],
+  "source_refs": [
+    "java/commons-validator/src/main/java/org/apache/commons/validator/Arg.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/Field.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/Form.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/FormSet.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/FormSetFactory.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/Msg.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/Validator.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorAction.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorException.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorResources.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorResult.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorResults.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/Var.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/util/Flags.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/util/ValidatorUtils.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/CustomValidatorResourcesTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/EntityImportTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ExceptionTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ParameterTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/RetrieveFormTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResourcesTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResultsTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/VarTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/util/ValidatorUtilsTest.java",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/ExceptionTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/ExtensionTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/LocaleTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/MultipleConfigFilesTest-1-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/MultipleConfigFilesTest-2-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/MultipleTests-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/ParameterTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/RequiredIfTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/RequiredNameTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/RetrieveFormTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/TestNumber-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/ValidatorResultsTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/VarTest-config.xml"
+  ],
+  "target_refs": [
+    "cangjie/src/Arg.cj",
+    "cangjie/src/Msg.cj",
+    "cangjie/src/Var.cj",
+    "cangjie/src/Field.cj",
+    "cangjie/src/Form.cj",
+    "cangjie/src/FormSet.cj",
+    "cangjie/src/FormSetFactory.cj",
+    "cangjie/src/Validator.cj",
+    "cangjie/src/ValidatorAction.cj",
+    "cangjie/src/ValidatorException.cj",
+    "cangjie/src/ValidatorResources.cj",
+    "cangjie/src/ValidatorResult.cj",
+    "cangjie/src/ValidatorResults.cj",
+    "cangjie/src/util/Flags.cj",
+    "cangjie/src/util/ValidatorUtils.cj",
+    "cangjie/src/ValidationSupport.cj",
+    "cangjie/src/JavaCompatExceptions.cj",
+    "cangjie/tests/core_config_test.cj"
+  ],
+  "claimed_behaviors": [
+    {
+      "behavior_id": "B_CORE_VALIDATOR_CONFIG_MODEL",
+      "source_refs": [
+        "java/commons-validator/src/main/java/org/apache/commons/validator/Arg.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/Field.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/Form.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/FormSet.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/FormSetFactory.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/Msg.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/Validator.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorAction.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorException.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorResources.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorResult.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorResults.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/Var.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/util/Flags.java",
+        "java/commons-validator/src/main/java/org/apache/commons/validator/util/ValidatorUtils.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/CustomValidatorResourcesTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/EntityImportTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/ExceptionTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/ParameterTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/RetrieveFormTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResourcesTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResultsTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/VarTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java",
+        "java/commons-validator/src/test/java/org/apache/commons/validator/util/ValidatorUtilsTest.java",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/ExceptionTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/ExtensionTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/LocaleTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/MultipleConfigFilesTest-1-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/MultipleConfigFilesTest-2-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/MultipleTests-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/ParameterTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/RequiredIfTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/RequiredNameTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/RetrieveFormTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/TestNumber-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/ValidatorResultsTest-config.xml",
+        "java/commons-validator/src/test/resources/org/apache/commons/validator/VarTest-config.xml"
+      ],
+      "target_refs": [
+        "cangjie/src/Arg.cj",
+        "cangjie/src/Msg.cj",
+        "cangjie/src/Var.cj",
+        "cangjie/src/Field.cj",
+        "cangjie/src/Form.cj",
+        "cangjie/src/FormSet.cj",
+        "cangjie/src/FormSetFactory.cj",
+        "cangjie/src/Validator.cj",
+        "cangjie/src/ValidatorAction.cj",
+        "cangjie/src/ValidatorException.cj",
+        "cangjie/src/ValidatorResources.cj",
+        "cangjie/src/ValidatorResult.cj",
+        "cangjie/src/ValidatorResults.cj",
+        "cangjie/src/util/Flags.cj",
+        "cangjie/src/util/ValidatorUtils.cj",
+        "cangjie/src/ValidationSupport.cj",
+        "cangjie/src/JavaCompatExceptions.cj",
+        "cangjie/tests/core_config_test.cj"
+      ],
+      "ledger_obligation_ids": [
+        "OB_ST_CustomValidatorResourcesTest_testCustomResources",
+        "OB_ST_EntityImportTest_testEntityImport",
+        "OB_ST_EntityImportTest_testParseURL",
+        "OB_ST_ExceptionTest_testValidatorException",
+        "OB_ST_ExtensionTest_testOrder",
+        "OB_ST_ExtensionTest_testOverrideRule",
+        "OB_ST_ExtensionTest_testRequired",
+        "OB_ST_ExtensionTest_testRequiredFirstName",
+        "OB_ST_ExtensionTest_testRequiredFirstNameBlank",
+        "OB_ST_ExtensionTest_testRequiredLastName",
+        "OB_ST_ExtensionTest_testRequiredLastNameBlank",
+        "OB_ST_ExtensionTest_testRequiredName",
+        "OB_ST_FieldTest_testDefaultOnePosition",
+        "OB_ST_FieldTest_testDefaultPositionImplied",
+        "OB_ST_FieldTest_testDefaultSomePositions",
+        "OB_ST_FieldTest_testDefaultUsingPositions",
+        "OB_ST_FieldTest_testEmptyArgs",
+        "OB_ST_FieldTest_testOverridePositionImplied",
+        "OB_ST_FieldTest_testOverrideSomePosition",
+        "OB_ST_FieldTest_testOverrideUsingPositionA",
+        "OB_ST_FieldTest_testOverrideUsingPositionB",
+        "OB_ST_LocaleTest_testLocale1",
+        "OB_ST_LocaleTest_testLocale2",
+        "OB_ST_LocaleTest_testLocale3",
+        "OB_ST_LocaleTest_testLocale4",
+        "OB_ST_LocaleTest_testLocale5",
+        "OB_ST_MultipleConfigFilesTest_testBothBlank",
+        "OB_ST_MultipleConfigFilesTest_testMergedConfig",
+        "OB_ST_MultipleConfigFilesTest_testRequiredFirstNameBlankLastNameShort",
+        "OB_ST_MultipleConfigFilesTest_testRequiredLastNameLong",
+        "OB_ST_MultipleConfigFilesTest_testRequiredLastNameShort",
+        "OB_ST_MultipleTest_testBothBlank",
+        "OB_ST_MultipleTest_testFailingFirstDependentValidator",
+        "OB_ST_MultipleTest_testFailingNextDependentValidator",
+        "OB_ST_MultipleTest_testPassingDependentsFailingMain",
+        "OB_ST_MultipleTest_testPassingDependentsPassingMain",
+        "OB_ST_MultipleTest_testRequiredFirstNameBlankLastNameShort",
+        "OB_ST_MultipleTest_testRequiredLastNameLong",
+        "OB_ST_MultipleTest_testRequiredLastNameShort",
+        "OB_ST_ParameterTest_testAllValid",
+        "OB_ST_RequiredIfTest_testRequired",
+        "OB_ST_RequiredIfTest_testRequiredFirstName",
+        "OB_ST_RequiredIfTest_testRequiredFirstNameBlank",
+        "OB_ST_RequiredIfTest_testRequiredLastName",
+        "OB_ST_RequiredIfTest_testRequiredLastNameBlank",
+        "OB_ST_RequiredNameTest_testRequired",
+        "OB_ST_RequiredNameTest_testRequiredFirstName",
+        "OB_ST_RequiredNameTest_testRequiredFirstNameBlank",
+        "OB_ST_RequiredNameTest_testRequiredLastName",
+        "OB_ST_RequiredNameTest_testRequiredLastNameBlank",
+        "OB_ST_RequiredNameTest_testRequiredName",
+        "OB_ST_RetrieveFormTest_testDefaultForm",
+        "OB_ST_RetrieveFormTest_testFormNotFound",
+        "OB_ST_RetrieveFormTest_testLanguageCountryForm",
+        "OB_ST_RetrieveFormTest_testLanguageCountryVariantForm",
+        "OB_ST_RetrieveFormTest_testLanguageForm",
+        "OB_ST_ValidatorResourcesTest_testNullInputStream",
+        "OB_ST_ValidatorResultsTest_testAllValid",
+        "OB_ST_ValidatorResultsTest_testErrors",
+        "OB_ST_ValidatorTest_testManualBoolean",
+        "OB_ST_ValidatorTest_testManualBooleanDeprecated",
+        "OB_ST_ValidatorTest_testManualObject",
+        "OB_ST_ValidatorTest_testOnlyReturnErrors",
+        "OB_ST_ValidatorTest_testOnlyValidateField",
+        "OB_ST_VarTest_testVars",
+        "OB_ST_util_FlagsTest_testClear",
+        "OB_ST_util_FlagsTest_testClone",
+        "OB_ST_util_FlagsTest_testEqualsObject",
+        "OB_ST_util_FlagsTest_testGetFlags",
+        "OB_ST_util_FlagsTest_testHashCode",
+        "OB_ST_util_FlagsTest_testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn",
+        "OB_ST_util_FlagsTest_testIsOnIsTrueWhenHighOrderBitIsSetAndQueried",
+        "OB_ST_util_FlagsTest_testIsOnOff",
+        "OB_ST_util_FlagsTest_testToString",
+        "OB_ST_util_FlagsTest_testTurnOff",
+        "OB_ST_util_FlagsTest_testTurnOffAll",
+        "OB_ST_util_FlagsTest_testTurnOnAll",
+        "OB_ST_util_FlagsTest_testTurnOnOff",
+        "OB_ST_util_ValidatorUtilsTest_testCopyFastHashMap",
+        "OB_PUBLIC_API_SLICE_005_CORE_CONFIG",
+        "OB_DEPENDENCY_REWRITE_CORE",
+        "OB_XML_CONFIG_RESOURCES",
+        "OB_REFLECTION_PROPERTY_ACCESS",
+        "OB_SERIALIZABLE_CONFIG_BEANS",
+        "OB_FIXTURE_VALIDATOR_XML_CONFIGS"
+      ],
+      "source_behavior": "Commons Validator core config/resource semantics preserve XML-driven ValidatorResources loading, locale/form fallback, form and field inheritance/merging, manual validator execution, result aggregation, utility helpers, and entity-import/resource edge cases used by the Java core tests.",
+      "translated_behavior": "The Cangjie core-config slice now implements the provided skeleton APIs for Arg/Msg/Var, Field/Form/FormSet, Validator/ValidatorAction/ValidatorResources, ValidatorResult/ValidatorResults, FormSetFactory, and utility adapters, with translated core-config tests preserving Java behavior across XML fixtures, locale fallback, extension rules, dependent validation, entity imports, util semantics, and object-bean getter/property access through explicit ValidatorPropertyAccess adapters for the Java NameBean/TestBean/ValueBean scenarios while directly asserting the active util-package public API `validator.util.ValidatorUtils.getValueAsString`.",
+      "production_path": "cangjie/src/Arg.cj, Msg.cj, Var.cj, Field.cj, Form.cj, FormSet.cj, FormSetFactory.cj, Validator.cj, ValidatorAction.cj, ValidatorException.cj, ValidatorResources.cj, ValidatorResult.cj, ValidatorResults.cj, util/Flags.cj, util/ValidatorUtils.cj, plus ValidationSupport.cj and JavaCompatExceptions.cj implement the source behavior; cangjie/src/util/ValidatorUtils.cj now bridges both validator.util.ValidatorPropertyAccess and validator.ValidatorPropertyAccess, and cangjie/tests/core_config_test.cj directly asserts both validator.ValidatorUtils and validator.util.ValidatorUtils on object-backed CoreNameBean/CoreTestBean/CoreValueBean adapters; mvn -q test, cjpm build, and cjpm test all pass from the project roots."
+    }
+  ],
+  "source_tests": [
+    {
+      "test_id": "ST_CustomValidatorResourcesTest_testCustomResources",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/CustomValidatorResourcesTest.java:27",
+      "assertion_summary": "org.apache.commons.validator.CustomValidatorResourcesTest.testCustomResources source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_EntityImportTest_testEntityImport",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/EntityImportTest.java:16",
+      "assertion_summary": "org.apache.commons.validator.EntityImportTest.testEntityImport source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_EntityImportTest_testParseURL",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/EntityImportTest.java:24",
+      "assertion_summary": "org.apache.commons.validator.EntityImportTest.testParseURL source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExceptionTest_testValidatorException",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExceptionTest.java:87",
+      "assertion_summary": "org.apache.commons.validator.ExceptionTest.testValidatorException source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testOrder",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:50",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testOrder source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testOverrideRule",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:79",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testOverrideRule source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testRequired",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:108",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testRequired source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testRequiredFirstName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:142",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testRequiredFirstName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testRequiredFirstNameBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:173",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testRequiredFirstNameBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testRequiredLastName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:204",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testRequiredLastName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testRequiredLastNameBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:236",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testRequiredLastNameBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ExtensionTest_testRequiredName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java:267",
+      "assertion_summary": "org.apache.commons.validator.ExtensionTest.testRequiredName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testDefaultOnePosition",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:58",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testDefaultOnePosition source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testDefaultPositionImplied",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:74",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testDefaultPositionImplied source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testDefaultSomePositions",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:89",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testDefaultSomePositions source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testDefaultUsingPositions",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:106",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testDefaultUsingPositions source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testEmptyArgs",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:121",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testEmptyArgs source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testOverridePositionImplied",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:129",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testOverridePositionImplied source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testOverrideSomePosition",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:157",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testOverrideSomePosition source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testOverrideUsingPositionA",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:190",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testOverrideUsingPositionA source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_FieldTest_testOverrideUsingPositionB",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java:212",
+      "assertion_summary": "org.apache.commons.validator.FieldTest.testOverrideUsingPositionB source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_LocaleTest_testLocale1",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java:38",
+      "assertion_summary": "org.apache.commons.validator.LocaleTest.testLocale1 source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_LocaleTest_testLocale2",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java:49",
+      "assertion_summary": "org.apache.commons.validator.LocaleTest.testLocale2 source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_LocaleTest_testLocale3",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java:60",
+      "assertion_summary": "org.apache.commons.validator.LocaleTest.testLocale3 source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_LocaleTest_testLocale4",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java:71",
+      "assertion_summary": "org.apache.commons.validator.LocaleTest.testLocale4 source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_LocaleTest_testLocale5",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java:82",
+      "assertion_summary": "org.apache.commons.validator.LocaleTest.testLocale5 source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleConfigFilesTest_testBothBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java:43",
+      "assertion_summary": "org.apache.commons.validator.MultipleConfigFilesTest.testBothBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleConfigFilesTest_testMergedConfig",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java:78",
+      "assertion_summary": "org.apache.commons.validator.MultipleConfigFilesTest.testMergedConfig source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleConfigFilesTest_testRequiredFirstNameBlankLastNameShort",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java:123",
+      "assertion_summary": "org.apache.commons.validator.MultipleConfigFilesTest.testRequiredFirstNameBlankLastNameShort source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleConfigFilesTest_testRequiredLastNameLong",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java:155",
+      "assertion_summary": "org.apache.commons.validator.MultipleConfigFilesTest.testRequiredLastNameLong source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleConfigFilesTest_testRequiredLastNameShort",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java:187",
+      "assertion_summary": "org.apache.commons.validator.MultipleConfigFilesTest.testRequiredLastNameShort source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testBothBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:37",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testBothBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testFailingFirstDependentValidator",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:72",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testFailingFirstDependentValidator source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testFailingNextDependentValidator",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:102",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testFailingNextDependentValidator source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testPassingDependentsFailingMain",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:134",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testPassingDependentsFailingMain source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testPassingDependentsPassingMain",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:167",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testPassingDependentsPassingMain source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testRequiredFirstNameBlankLastNameShort",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:200",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testRequiredFirstNameBlankLastNameShort source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testRequiredLastNameLong",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:232",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testRequiredLastNameLong source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_MultipleTest_testRequiredLastNameShort",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java:264",
+      "assertion_summary": "org.apache.commons.validator.MultipleTest.testRequiredLastNameShort source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ParameterTest_testAllValid",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ParameterTest.java:61",
+      "assertion_summary": "org.apache.commons.validator.ParameterTest.testAllValid source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredIfTest_testRequired",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java:37",
+      "assertion_summary": "org.apache.commons.validator.RequiredIfTest.testRequired source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredIfTest_testRequiredFirstName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java:71",
+      "assertion_summary": "org.apache.commons.validator.RequiredIfTest.testRequiredFirstName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredIfTest_testRequiredFirstNameBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java:103",
+      "assertion_summary": "org.apache.commons.validator.RequiredIfTest.testRequiredFirstNameBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredIfTest_testRequiredLastName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java:135",
+      "assertion_summary": "org.apache.commons.validator.RequiredIfTest.testRequiredLastName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredIfTest_testRequiredLastNameBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java:168",
+      "assertion_summary": "org.apache.commons.validator.RequiredIfTest.testRequiredLastNameBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredNameTest_testRequired",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java:37",
+      "assertion_summary": "org.apache.commons.validator.RequiredNameTest.testRequired source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredNameTest_testRequiredFirstName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java:71",
+      "assertion_summary": "org.apache.commons.validator.RequiredNameTest.testRequiredFirstName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredNameTest_testRequiredFirstNameBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java:102",
+      "assertion_summary": "org.apache.commons.validator.RequiredNameTest.testRequiredFirstNameBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredNameTest_testRequiredLastName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java:133",
+      "assertion_summary": "org.apache.commons.validator.RequiredNameTest.testRequiredLastName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredNameTest_testRequiredLastNameBlank",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java:165",
+      "assertion_summary": "org.apache.commons.validator.RequiredNameTest.testRequiredLastNameBlank source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RequiredNameTest_testRequiredName",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java:196",
+      "assertion_summary": "org.apache.commons.validator.RequiredNameTest.testRequiredName source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RetrieveFormTest_testDefaultForm",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RetrieveFormTest.java:62",
+      "assertion_summary": "org.apache.commons.validator.RetrieveFormTest.testDefaultForm source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RetrieveFormTest_testFormNotFound",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RetrieveFormTest.java:88",
+      "assertion_summary": "org.apache.commons.validator.RetrieveFormTest.testFormNotFound source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RetrieveFormTest_testLanguageCountryForm",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RetrieveFormTest.java:114",
+      "assertion_summary": "org.apache.commons.validator.RetrieveFormTest.testLanguageCountryForm source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RetrieveFormTest_testLanguageCountryVariantForm",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RetrieveFormTest.java:140",
+      "assertion_summary": "org.apache.commons.validator.RetrieveFormTest.testLanguageCountryVariantForm source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_RetrieveFormTest_testLanguageForm",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/RetrieveFormTest.java:166",
+      "assertion_summary": "org.apache.commons.validator.RetrieveFormTest.testLanguageForm source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorResourcesTest_testNullInputStream",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResourcesTest.java:15",
+      "assertion_summary": "org.apache.commons.validator.ValidatorResourcesTest.testNullInputStream source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorResultsTest_testAllValid",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResultsTest.java:73",
+      "assertion_summary": "org.apache.commons.validator.ValidatorResultsTest.testAllValid source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorResultsTest_testErrors",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResultsTest.java:93",
+      "assertion_summary": "org.apache.commons.validator.ValidatorResultsTest.testErrors source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorTest_testManualBoolean",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java:105",
+      "assertion_summary": "org.apache.commons.validator.ValidatorTest.testManualBoolean source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorTest_testManualBooleanDeprecated",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java:158",
+      "assertion_summary": "org.apache.commons.validator.ValidatorTest.testManualBooleanDeprecated source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorTest_testManualObject",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java:211",
+      "assertion_summary": "org.apache.commons.validator.ValidatorTest.testManualObject source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorTest_testOnlyReturnErrors",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java:261",
+      "assertion_summary": "org.apache.commons.validator.ValidatorTest.testOnlyReturnErrors source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_ValidatorTest_testOnlyValidateField",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java:288",
+      "assertion_summary": "org.apache.commons.validator.ValidatorTest.testOnlyValidateField source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_VarTest_testVars",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/VarTest.java:40",
+      "assertion_summary": "org.apache.commons.validator.VarTest.testVars source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testClear",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:19",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testClear source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testClone",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:27",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testClone source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testEqualsObject",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:32",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testEqualsObject source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testGetFlags",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:36",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testGetFlags source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testHashCode",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:42",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testHashCode source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:48",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testIsOnIsTrueWhenHighOrderBitIsSetAndQueried",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:56",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testIsOnIsTrueWhenHighOrderBitIsSetAndQueried source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testIsOnOff",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:64",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testIsOnOff source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testToString",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:79",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testToString source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testTurnOff",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:92",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testTurnOff source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testTurnOffAll",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:96",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testTurnOffAll source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testTurnOnAll",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:103",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testTurnOnAll source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_FlagsTest_testTurnOnOff",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/FlagsTest.java:110",
+      "assertion_summary": "org.apache.commons.validator.util.FlagsTest.testTurnOnOff source assertion behavior for Core Validator form/config/resource model"
+    },
+    {
+      "test_id": "ST_util_ValidatorUtilsTest_testCopyFastHashMap",
+      "source_ref": "java/commons-validator/src/test/java/org/apache/commons/validator/util/ValidatorUtilsTest.java:14",
+      "assertion_summary": "org.apache.commons.validator.util.ValidatorUtilsTest.testCopyFastHashMap source assertion behavior for Core Validator form/config/resource model"
+    }
+  ],
+  "translated_tests": [
+    {
+      "test_id": "CJ_CORE_001",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_FieldTest_testDefaultOnePosition",
+        "ST_FieldTest_testDefaultPositionImplied",
+        "ST_FieldTest_testDefaultSomePositions",
+        "ST_FieldTest_testDefaultUsingPositions",
+        "ST_FieldTest_testEmptyArgs",
+        "ST_FieldTest_testOverridePositionImplied",
+        "ST_FieldTest_testOverrideSomePosition",
+        "ST_FieldTest_testOverrideUsingPositionA",
+        "ST_FieldTest_testOverrideUsingPositionB"
+      ],
+      "assertion_summary": "fieldArgumentPositioningScenarios preserves default and validator-specific argument slot assignment, sparse positions, override precedence, and null-slot semantics from FieldTest."
+    },
+    {
+      "test_id": "CJ_CORE_002",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_ValidatorTest_testManualBoolean",
+        "ST_ValidatorTest_testManualBooleanDeprecated"
+      ],
+      "assertion_summary": "validatorManualBooleanAndDeprecated preserves manual ValidatorResources wiring, deprecated classname setter compatibility, boolean validator side effects, and object-bean property lookup through CoreTestBean while directly asserting both validator and util.ValidatorUtils property resolution."
+    },
+    {
+      "test_id": "CJ_CORE_003",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_ValidatorTest_testManualObject",
+        "ST_ValidatorTest_testOnlyReturnErrors",
+        "ST_ValidatorTest_testOnlyValidateField"
+      ],
+      "assertion_summary": "validatorManualObjectAndFieldFiltering preserves object-return validation, onlyReturnErrors suppression of passing fields, field-specific validation selection, and TestBean-style getter/property resolution through CoreTestBean on both validator and util.ValidatorUtils paths."
+    },
+    {
+      "test_id": "CJ_CORE_004",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_ParameterTest_testAllValid",
+        "ST_ValidatorResultsTest_testAllValid",
+        "ST_ValidatorResultsTest_testErrors"
+      ],
+      "assertion_summary": "parameterAndValidatorResultsBehavior preserves validator parameter exposure plus ValidatorResults action-presence, pass/fail, and dependency short-circuit semantics while exercising NameBean-style object property access through CoreNameBean on the active util-package public API boundary."
+    },
+    {
+      "test_id": "CJ_CORE_005",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_VarTest_testVars",
+        "ST_ExceptionTest_testValidatorException"
+      ],
+      "assertion_summary": "varsAndValidatorException preserves Var metadata loading from XML and ValidatorException propagation with exact message behavior while routing the exception form through an object-backed ValueBean adapter and directly asserting util.ValidatorUtils value lookup."
+    },
+    {
+      "test_id": "CJ_CORE_006",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_LocaleTest_testLocale1",
+        "ST_LocaleTest_testLocale2",
+        "ST_LocaleTest_testLocale3",
+        "ST_LocaleTest_testLocale4",
+        "ST_LocaleTest_testLocale5",
+        "ST_RetrieveFormTest_testDefaultForm",
+        "ST_RetrieveFormTest_testFormNotFound",
+        "ST_RetrieveFormTest_testLanguageCountryForm",
+        "ST_RetrieveFormTest_testLanguageCountryVariantForm",
+        "ST_RetrieveFormTest_testLanguageForm"
+      ],
+      "assertion_summary": "localeFallbackAndRetrieveFormBehaviors preserves locale-specific form fallback order, default fallback, and locale-targeted form retrieval semantics using an object-backed blank NameBean adapter."
+    },
+    {
+      "test_id": "CJ_CORE_007",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_RequiredNameTest_testRequired",
+        "ST_RequiredNameTest_testRequiredFirstName",
+        "ST_RequiredNameTest_testRequiredFirstNameBlank",
+        "ST_RequiredNameTest_testRequiredLastName",
+        "ST_RequiredNameTest_testRequiredLastNameBlank",
+        "ST_RequiredNameTest_testRequiredName",
+        "ST_RequiredIfTest_testRequired",
+        "ST_RequiredIfTest_testRequiredFirstName",
+        "ST_RequiredIfTest_testRequiredFirstNameBlank",
+        "ST_RequiredIfTest_testRequiredLastName",
+        "ST_RequiredIfTest_testRequiredLastNameBlank",
+        "ST_MultipleTest_testBothBlank",
+        "ST_MultipleTest_testFailingFirstDependentValidator",
+        "ST_MultipleTest_testFailingNextDependentValidator",
+        "ST_MultipleTest_testPassingDependentsFailingMain",
+        "ST_MultipleTest_testPassingDependentsPassingMain",
+        "ST_MultipleTest_testRequiredFirstNameBlankLastNameShort",
+        "ST_MultipleTest_testRequiredLastNameLong",
+        "ST_MultipleTest_testRequiredLastNameShort"
+      ],
+      "assertion_summary": "requiredNameRequiredIfAndMultipleBehaviors preserves required/requiredif semantics plus dependent-validator sequencing, short-circuiting, mixed pass/fail outcomes, and NameBean-style getter/property access through CoreNameBean."
+    },
+    {
+      "test_id": "CJ_CORE_008",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_MultipleConfigFilesTest_testBothBlank",
+        "ST_MultipleConfigFilesTest_testMergedConfig",
+        "ST_MultipleConfigFilesTest_testRequiredFirstNameBlankLastNameShort",
+        "ST_MultipleConfigFilesTest_testRequiredLastNameLong",
+        "ST_MultipleConfigFilesTest_testRequiredLastNameShort",
+        "ST_ExtensionTest_testOrder",
+        "ST_ExtensionTest_testOverrideRule",
+        "ST_ExtensionTest_testRequired",
+        "ST_ExtensionTest_testRequiredFirstName",
+        "ST_ExtensionTest_testRequiredFirstNameBlank",
+        "ST_ExtensionTest_testRequiredLastName",
+        "ST_ExtensionTest_testRequiredLastNameBlank",
+        "ST_ExtensionTest_testRequiredName"
+      ],
+      "assertion_summary": "multipleConfigAndExtensionBehaviors preserves merged multi-file config loading, extension ordering and override semantics, and object-bean validation through CoreNameBean."
+    },
+    {
+      "test_id": "CJ_CORE_009",
+      "target_ref": "cangjie/tests/core_config_test.cj",
+      "source_test_ids": [
+        "ST_CustomValidatorResourcesTest_testCustomResources",
+        "ST_EntityImportTest_testEntityImport",
+        "ST_EntityImportTest_testParseURL",
+        "ST_ValidatorResourcesTest_testNullInputStream",
+        "ST_util_FlagsTest_testClear",
+        "ST_util_FlagsTest_testClone",
+        "ST_util_FlagsTest_testEqualsObject",
+        "ST_util_FlagsTest_testGetFlags",
+        "ST_util_FlagsTest_testHashCode",
+        "ST_util_FlagsTest_testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn",
+        "ST_util_FlagsTest_testIsOnIsTrueWhenHighOrderBitIsSetAndQueried",
+        "ST_util_FlagsTest_testIsOnOff",
+        "ST_util_FlagsTest_testToString",
+        "ST_util_FlagsTest_testTurnOff",
+        "ST_util_FlagsTest_testTurnOffAll",
+        "ST_util_FlagsTest_testTurnOnAll",
+        "ST_util_FlagsTest_testTurnOnOff",
+        "ST_util_ValidatorUtilsTest_testCopyFastHashMap"
+      ],
+      "assertion_summary": "validatorResourcesEntityImportAndUtilBehaviors preserves custom resource loading, XML entity import expansion, constructor guards, Flags bit operations, and FastHashMap copy semantics."
+    }
+  ],
+  "blocked_behaviors": [],
+  "tdd_evidence": [
+    {
+      "behavior_id": "B_CORE_VALIDATOR_CONFIG_MODEL",
+      "ledger_obligation_ids": [
+        "OB_ST_CustomValidatorResourcesTest_testCustomResources",
+        "OB_ST_EntityImportTest_testEntityImport",
+        "OB_ST_EntityImportTest_testParseURL",
+        "OB_ST_ExceptionTest_testValidatorException",
+        "OB_ST_ExtensionTest_testOrder",
+        "OB_ST_ExtensionTest_testOverrideRule",
+        "OB_ST_ExtensionTest_testRequired",
+        "OB_ST_ExtensionTest_testRequiredFirstName",
+        "OB_ST_ExtensionTest_testRequiredFirstNameBlank",
+        "OB_ST_ExtensionTest_testRequiredLastName",
+        "OB_ST_ExtensionTest_testRequiredLastNameBlank",
+        "OB_ST_ExtensionTest_testRequiredName",
+        "OB_ST_FieldTest_testDefaultOnePosition",
+        "OB_ST_FieldTest_testDefaultPositionImplied",
+        "OB_ST_FieldTest_testDefaultSomePositions",
+        "OB_ST_FieldTest_testDefaultUsingPositions",
+        "OB_ST_FieldTest_testEmptyArgs",
+        "OB_ST_FieldTest_testOverridePositionImplied",
+        "OB_ST_FieldTest_testOverrideSomePosition",
+        "OB_ST_FieldTest_testOverrideUsingPositionA",
+        "OB_ST_FieldTest_testOverrideUsingPositionB",
+        "OB_ST_LocaleTest_testLocale1",
+        "OB_ST_LocaleTest_testLocale2",
+        "OB_ST_LocaleTest_testLocale3",
+        "OB_ST_LocaleTest_testLocale4",
+        "OB_ST_LocaleTest_testLocale5",
+        "OB_ST_MultipleConfigFilesTest_testBothBlank",
+        "OB_ST_MultipleConfigFilesTest_testMergedConfig",
+        "OB_ST_MultipleConfigFilesTest_testRequiredFirstNameBlankLastNameShort",
+        "OB_ST_MultipleConfigFilesTest_testRequiredLastNameLong",
+        "OB_ST_MultipleConfigFilesTest_testRequiredLastNameShort",
+        "OB_ST_MultipleTest_testBothBlank",
+        "OB_ST_MultipleTest_testFailingFirstDependentValidator",
+        "OB_ST_MultipleTest_testFailingNextDependentValidator",
+        "OB_ST_MultipleTest_testPassingDependentsFailingMain",
+        "OB_ST_MultipleTest_testPassingDependentsPassingMain",
+        "OB_ST_MultipleTest_testRequiredFirstNameBlankLastNameShort",
+        "OB_ST_MultipleTest_testRequiredLastNameLong",
+        "OB_ST_MultipleTest_testRequiredLastNameShort",
+        "OB_ST_ParameterTest_testAllValid",
+        "OB_ST_RequiredIfTest_testRequired",
+        "OB_ST_RequiredIfTest_testRequiredFirstName",
+        "OB_ST_RequiredIfTest_testRequiredFirstNameBlank",
+        "OB_ST_RequiredIfTest_testRequiredLastName",
+        "OB_ST_RequiredIfTest_testRequiredLastNameBlank",
+        "OB_ST_RequiredNameTest_testRequired",
+        "OB_ST_RequiredNameTest_testRequiredFirstName",
+        "OB_ST_RequiredNameTest_testRequiredFirstNameBlank",
+        "OB_ST_RequiredNameTest_testRequiredLastName",
+        "OB_ST_RequiredNameTest_testRequiredLastNameBlank",
+        "OB_ST_RequiredNameTest_testRequiredName",
+        "OB_ST_RetrieveFormTest_testDefaultForm",
+        "OB_ST_RetrieveFormTest_testFormNotFound",
+        "OB_ST_RetrieveFormTest_testLanguageCountryForm",
+        "OB_ST_RetrieveFormTest_testLanguageCountryVariantForm",
+        "OB_ST_RetrieveFormTest_testLanguageForm",
+        "OB_ST_ValidatorResourcesTest_testNullInputStream",
+        "OB_ST_ValidatorResultsTest_testAllValid",
+        "OB_ST_ValidatorResultsTest_testErrors",
+        "OB_ST_ValidatorTest_testManualBoolean",
+        "OB_ST_ValidatorTest_testManualBooleanDeprecated",
+        "OB_ST_ValidatorTest_testManualObject",
+        "OB_ST_ValidatorTest_testOnlyReturnErrors",
+        "OB_ST_ValidatorTest_testOnlyValidateField",
+        "OB_ST_VarTest_testVars",
+        "OB_ST_util_FlagsTest_testClear",
+        "OB_ST_util_FlagsTest_testClone",
+        "OB_ST_util_FlagsTest_testEqualsObject",
+        "OB_ST_util_FlagsTest_testGetFlags",
+        "OB_ST_util_FlagsTest_testHashCode",
+        "OB_ST_util_FlagsTest_testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn",
+        "OB_ST_util_FlagsTest_testIsOnIsTrueWhenHighOrderBitIsSetAndQueried",
+        "OB_ST_util_FlagsTest_testIsOnOff",
+        "OB_ST_util_FlagsTest_testToString",
+        "OB_ST_util_FlagsTest_testTurnOff",
+        "OB_ST_util_FlagsTest_testTurnOffAll",
+        "OB_ST_util_FlagsTest_testTurnOnAll",
+        "OB_ST_util_FlagsTest_testTurnOnOff",
+        "OB_ST_util_ValidatorUtilsTest_testCopyFastHashMap",
+        "OB_PUBLIC_API_SLICE_005_CORE_CONFIG",
+        "OB_DEPENDENCY_REWRITE_CORE",
+        "OB_XML_CONFIG_RESOURCES",
+        "OB_REFLECTION_PROPERTY_ACCESS",
+        "OB_SERIALIZABLE_CONFIG_BEANS",
+        "OB_FIXTURE_VALIDATOR_XML_CONFIGS"
+      ],
+      "red": {
+        "command": "cjpm test (cwd: cangjie)",
+        "result": "failed before the TODO-005 slice closed: the translated core-config test suite initially exposed target-side Option comparison compile errors, locale fallback expectation drift during translation, and missing XML entity import expansion in ValidatorResources.",
+        "failure_proves": "The core validator config/resource slice required real production fixes in the skeleton-backed Cangjie implementations and translated tests before Java parity could be claimed."
+      },
+      "green": {
+        "command": "cjpm test (cwd: cangjie)",
+        "result": "success after completing the skeleton-backed core config/resource implementations, translating the modeled core Java tests into cangjie/tests/core_config_test.cj, correcting locale fallback expectations from LocaleTest, fixing ValidatorResources DOCTYPE/entity expansion behavior, replacing HashMap-only test beans with object-backed CoreNameBean/CoreTestBean/CoreValueBean adapters, and bridging util.ValidatorUtils to the same ValidatorPropertyAccess boundary used by the translated validator path."
+      },
+      "refactor": {
+        "command": "cjpm build (cwd: cangjie)",
+        "result": "success after keeping the skeleton comments intact, consolidating root-package validation helpers into ValidationSupport.cj, adding JavaCompatExceptions.cj for compatibility, bridging cangjie/src/util/ValidatorUtils.cj to validator.ValidatorPropertyAccess, and rewiring cangjie/tests/core_config_test.cj to assert util-package and validator-package property access on the same object-backed bean adapters while preserving the required public APIs.",
+        "note": "The final shape keeps XML fixture semantics and utility behavior aligned to the Java source contract instead of relying on case-specific shortcuts."
+      },
+      "smoke": {
+        "command": "cjpm test (cwd: cangjie)",
+        "result": "success after rerunning object-bean and util-public-api parity coverage; TOTAL: 74 PASSED: 74 SKIPPED: 0 ERROR: 0 FAILED: 0"
+      }
+    }
+  ],
+  "commands": {
+    "source_baseline": [
+      "mvn -q test (cwd: java/commons-validator) -> success on 2026-07-06 after the util-public-api parity rerun; emitted the expected INVALID_NAME warnings, ValidatorTest.formatDate parse warning, and recent-last-update warning."
+    ],
+    "target_verification": [
+      "cjpm build (cwd: cangjie) -> success on 2026-07-06 after util.ValidatorUtils bridge update",
+      "cjpm test (cwd: cangjie) -> success on 2026-07-06 after util-public-api parity assertions; TOTAL: 74 PASSED: 74 SKIPPED: 0 ERROR: 0 FAILED: 0"
+    ],
+    "runtime_smoke": []
+  },
+  "reference_paths": [
+    ".translation/tester/reports/tester-plan-audit-20260706T063610Z.yaml",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/FieldTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/LocaleTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/EntityImportTest.java",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/LocaleTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/EntityImportTest-config.xml",
+    "java/commons-validator/src/test/resources/org/apache/commons/validator/EntityImportTest-byteform.xml",
+    "cangjie/tests/core_config_test.cj",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/util/ValidatorUtils.java",
+    "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorAction.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/NameBean.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ValueBean.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredNameTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/RequiredIfTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/MultipleConfigFilesTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ParameterTest.java",
+    "java/commons-validator/src/test/java/org/apache/commons/validator/ExtensionTest.java"
+  ],
+  "decision_ids": [],
+  "known_limits": [
+    "This contract closes only the core validator config/resource slice. Whole-repo delivery still requires tester sync for TODO-005 and the final reviewer/delivery gates."
+  ],
+  "translator_risk_notes": [
+    "The translated target suite intentionally groups 79 Java source test methods into 9 executable mappings inside cangjie/tests/core_config_test.cj; every active TODO-005 source_test_id is mapped above to an executable production-path assertion group.",
+    "The target ValidatorResources implementation now expands internal-subset XML entities from the Java fixtures and preserves locale/form fallback behavior without weakening the skeleton-backed public APIs.",
+    "The grouped core-config target cases now use object-backed CoreNameBean/CoreTestBean/CoreValueBean adapters implementing ValidatorPropertyAccess, and cangjie/src/util/ValidatorUtils.cj bridges that contract while cangjie/tests/core_config_test.cj directly asserts util.ValidatorUtils.getValueAsString, so the active public API boundary claimed by OB_PUBLIC_API_SLICE_005_CORE_CONFIG, OB_DEPENDENCY_REWRITE_CORE, and OB_REFLECTION_PROPERTY_ACCESS is exercised without relying on HashMap-only stand-ins."
+  ],
+  "proposed_ledger_updates": [
+    {
+      "obligation_id": "OB_ST_CustomValidatorResourcesTest_testCustomResources",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_EntityImportTest_testEntityImport",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_EntityImportTest_testParseURL",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExceptionTest_testValidatorException",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testOrder",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testOverrideRule",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testRequired",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testRequiredFirstName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testRequiredFirstNameBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testRequiredLastName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testRequiredLastNameBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ExtensionTest_testRequiredName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testDefaultOnePosition",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testDefaultPositionImplied",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testDefaultSomePositions",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testDefaultUsingPositions",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testEmptyArgs",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testOverridePositionImplied",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testOverrideSomePosition",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testOverrideUsingPositionA",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_FieldTest_testOverrideUsingPositionB",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_LocaleTest_testLocale1",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_LocaleTest_testLocale2",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_LocaleTest_testLocale3",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_LocaleTest_testLocale4",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_LocaleTest_testLocale5",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleConfigFilesTest_testBothBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleConfigFilesTest_testMergedConfig",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleConfigFilesTest_testRequiredFirstNameBlankLastNameShort",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleConfigFilesTest_testRequiredLastNameLong",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleConfigFilesTest_testRequiredLastNameShort",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testBothBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testFailingFirstDependentValidator",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testFailingNextDependentValidator",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testPassingDependentsFailingMain",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testPassingDependentsPassingMain",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testRequiredFirstNameBlankLastNameShort",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testRequiredLastNameLong",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_MultipleTest_testRequiredLastNameShort",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ParameterTest_testAllValid",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredIfTest_testRequired",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredIfTest_testRequiredFirstName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredIfTest_testRequiredFirstNameBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredIfTest_testRequiredLastName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredIfTest_testRequiredLastNameBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredNameTest_testRequired",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredNameTest_testRequiredFirstName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredNameTest_testRequiredFirstNameBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredNameTest_testRequiredLastName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredNameTest_testRequiredLastNameBlank",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RequiredNameTest_testRequiredName",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RetrieveFormTest_testDefaultForm",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RetrieveFormTest_testFormNotFound",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RetrieveFormTest_testLanguageCountryForm",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RetrieveFormTest_testLanguageCountryVariantForm",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_RetrieveFormTest_testLanguageForm",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorResourcesTest_testNullInputStream",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorResultsTest_testAllValid",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorResultsTest_testErrors",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorTest_testManualBoolean",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorTest_testManualBooleanDeprecated",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorTest_testManualObject",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorTest_testOnlyReturnErrors",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_ValidatorTest_testOnlyValidateField",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_VarTest_testVars",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testClear",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testClone",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testEqualsObject",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testGetFlags",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testHashCode",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testIsOnIsFalseWhenNotAllFlagsInArgumentAreOn",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testIsOnIsTrueWhenHighOrderBitIsSetAndQueried",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testIsOnOff",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testToString",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testTurnOff",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testTurnOffAll",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testTurnOnAll",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_FlagsTest_testTurnOnOff",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_ST_util_ValidatorUtilsTest_testCopyFastHashMap",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_PUBLIC_API_SLICE_005_CORE_CONFIG",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_DEPENDENCY_REWRITE_CORE",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_XML_CONFIG_RESOURCES",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_REFLECTION_PROPERTY_ACCESS",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_SERIALIZABLE_CONFIG_BEANS",
+      "status": "verified after TODO_VERIFICATION PASS"
+    },
+    {
+      "obligation_id": "OB_FIXTURE_VALIDATOR_XML_CONFIGS",
+      "status": "verified after TODO_VERIFICATION PASS"
+    }
+  ]
+}

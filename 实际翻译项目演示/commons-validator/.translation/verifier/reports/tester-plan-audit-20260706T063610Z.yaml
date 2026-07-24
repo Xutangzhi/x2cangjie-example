@@ -1,0 +1,68 @@
+schema_version: 1
+report_id: "tester-plan-audit-20260706T063610Z"
+report_snapshot_path: ".translation/tester/reports/tester-plan-audit-20260706T063610Z.yaml"
+report_type: PLAN_AUDIT
+decision: PASS
+active_todo_id: ""
+active_slice: ""
+todo_verdict:
+  todo_id: ""
+  verdict: not-applicable
+  can_mark_finished: false
+  verified_obligation_ids: []
+  failed_obligation_ids: []
+  blocking_issue_ids: []
+  required_rework: []
+plan_audit:
+  status: accepted
+  source_scan_status: pass
+  module_graph_status: pass
+  public_api_graph_status: pass
+  source_test_inventory_status: pass
+  ledger_status: pass
+  todo_queue_status: pass
+  validation_plan_status: pass
+  missing_modules: []
+  missing_public_apis: []
+  missing_source_tests: []
+  missing_obligations: []
+  oversized_todos: []
+  unverifiable_todos: []
+  dependency_order_issues: []
+  blocked_without_evidence: []
+claimed_feature_results:
+  - issue_id: "TESTER-PLAN-001"
+    previous_report_id: "tester-plan-audit-20260706T062519Z"
+    status: fixed
+    verification:
+      - "module-backlog source_inventory.resources now lists 28 main/test resources matching java/commons-validator/src/main/resources and src/test/resources."
+      - "module-backlog test_inventory now has fixture entries for XML resources, IBANtests.txt, iban_registry_v99.txt, and IBAN provider datasets."
+      - "ledger contains OB_FIXTURE_VALIDATOR_XML_CONFIGS, OB_FIXTURE_IBAN_CHECKDIGIT_TXT, OB_PROVIDER_IBAN_REGISTRY_SOURCE, and OB_PROVIDER_IBAN_FIELD_AND_STATUS_FIXTURES."
+  - issue_id: "TESTER-PLAN-002"
+    previous_report_id: "tester-plan-audit-20260706T062519Z"
+    status: fixed
+    verification:
+      - "IBANValidatorTest parameterized providers are represented in backlog fixtures and ledger provider obligations."
+      - "ST_routines_IBANValidatorTest_testValidatorShouldExistWithProperConfiguration is present in repo-scan, backlog, ledger, and TODO-004-IDENTIFIERS."
+global_gap_scan:
+  missing_modules: []
+  incomplete_modules: []
+  missing_source_tests: []
+  missing_public_api: []
+  dependency_gaps: []
+  ledger_gaps: []
+  stale_decisions: []
+ledger_consistency:
+  status: pass
+  checked_obligations: 416
+  missing_obligations: []
+  stale_claims: []
+metrics:
+  source_build_status: not-run
+  source_test_status: not-run
+  target_build_status: not-run
+  target_test_status: not-run
+  runtime_smoke_status: not-applicable
+issues: []
+reference_paths: []
+summary: "PLAN_AUDIT accepted. The state remains in PLAN_AUDIT because migration-todo.yaml has plan_audit.status=needs-rework, but tester verification now finds the plan complete enough to enter implementation: 397 repo-scan source tests map to backlog, ledger, and todos; 758 public API entries are covered by todos; 416 ledger obligations are referenced by todos; all 28 main/test resources are inventoried; fixture and IBAN provider obligations are modeled; todo dependencies are valid and acyclic; and yaml_guard.py --phase todo --strict --json passed."

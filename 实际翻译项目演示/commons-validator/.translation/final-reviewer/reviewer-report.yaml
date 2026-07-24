@@ -1,0 +1,105 @@
+schema_version: 1
+report_id: "final-closure-20260706T151406Z"
+report_snapshot_path: ".translation/final-reviewer/reports/final-closure-20260706T151406Z.yaml"
+report_type: FINAL_CLOSURE
+decision: PASS
+review_scope:
+  completeness: pass
+  behavior_equivalence: pass
+  api_dependency_mapping: pass
+  build_runtime_verification: pass
+  target_language_quality: pass
+  high_risk_points: pass
+global_gap_scan:
+  missing_modules: []
+  incomplete_modules: []
+  missing_source_tests: []
+  missing_public_api: []
+  dependency_gaps: []
+  ledger_gaps: []
+  stale_decisions: []
+ledger_consistency:
+  status: pass
+  checked_obligations: 416
+  missing_obligations: []
+  stale_claims: []
+closure:
+  completion_kind: complete
+  todo_status: pass
+  ledger_status: pass
+  source_coverage_status: pass
+  target_verification_status: pass
+  documentation_status: pass
+  open_p0_p1_issues: []
+metrics:
+  source_build_status: pass
+  source_test_status: pass
+  target_build_status: pass
+  target_test_status: pass
+  runtime_smoke_status: not-applicable
+  source_test_count: 397
+  blocked_source_test_count: 0
+  executable_target_test_count: 74
+  passing_translated_test_count: 74
+  test_pass_rate: "74/74"
+verified_evidence:
+  - command: "jq '{counts: (.obligations | group_by(.status) | map({status: .[0].status, count: length})), non_terminal: [.obligations[] | select(.status != \"verified\" and .status != \"blocked\" and .status != \"accepted-deviation\")], blocked_or_accepted: [.obligations[] | select(.status == \"blocked\" or .status == \"accepted-deviation\")], total: (.obligations|length)}' .translation/translator/translation-ledger.yaml"
+    result: "pass; total=416 obligations, all status=verified, no non-terminal / blocked / accepted-deviation obligations."
+    artifact: ".translation/translator/translation-ledger.yaml"
+    proves: "Ledger closure is complete and internally terminal."
+  - command: "jq '{final_closure: .final_closure, todos: [.todos[] | {todo_id, status, report_path: .tester_gate.report_path}]}' .translation/translator/migration-todo.yaml"
+    result: "pass; final_closure.requested=true and all six todos are finished with immutable tester report snapshots."
+    artifact: ".translation/translator/migration-todo.yaml"
+    proves: "Todo closure is complete and every obligation chain terminates at a tester snapshot."
+  - command: "comm -23 <(rg --files java/commons-validator/src/main/java | sed 's#.*/##' | sed 's#\\.java$##' | rg -v '^package-info$' | sort -u) <(rg --files cangjie/src | sed 's#.*/##' | sed 's#\\.cj$##' | rg -v '^package-info$|^cjpm$|^JavaCompatExceptions$|^LegacyBridge$|^LegacyInetAddress$|^ValidationSupport$|^DomainValidatorData$' | sort -u)"
+    result: "pass; only leaf.svg and logo.png remain unmatched, both doc-files and outside backend runtime scope."
+    artifact: "java/commons-validator/src/main/java ; cangjie/src"
+    proves: "Production type/file coverage is closed across source and target modules."
+  - command: "rg -n 'TODO|FIXME|ensure\\(true\\)|placeholder|stub|unimplemented|throw Unsupported|UnsupportedOperationException' cangjie/src cangjie/tests"
+    result: "pass; no matches in target production/tests."
+    artifact: "cangjie/src ; cangjie/tests"
+    proves: "No leftover placeholder tests, stub implementations, or unsupported-runtime markers remain in the target tree."
+  - command: "mvn -q test"
+    result: "pass; source baseline test suite completed successfully, with expected ValidatorResources warning logs and ValidatorTest date warning."
+    artifact: "java/commons-validator"
+    proves: "Source baseline remains green for parity reference."
+  - command: "cjpm build"
+    result: "pass; target package builds successfully."
+    artifact: "cangjie"
+    proves: "Target library build is healthy."
+  - command: "cjpm test"
+    result: "pass; TOTAL: 74, PASSED: 74, SKIPPED: 0, ERROR: 0, FAILED: 0."
+    artifact: "cangjie"
+    proves: "Executable translated test suite passes in the current workspace state."
+  - command: "rg -n '^\\s*status:\\s*open\\b' .translation/tester/issue-queue.yaml .translation/final-reviewer/issue-queue.yaml"
+    result: "pass; no open tester or reviewer issues."
+    artifact: ".translation/tester/issue-queue.yaml ; .translation/final-reviewer/issue-queue.yaml"
+    proves: "Issue queues are closed, which is required for completion_kind=complete."
+uncovered_risks: []
+issues: []
+reference_paths:
+  - ".translation/translator/task.yaml"
+  - ".translation/translator/run-state.yaml"
+  - ".translation/translator/module-backlog.yaml"
+  - ".translation/translator/migration-todo.yaml"
+  - ".translation/translator/blocked-todos.yaml"
+  - ".translation/translator/translation-ledger.yaml"
+  - ".translation/translator/decision-log.yaml"
+  - ".translation/translator/decision-log.md"
+  - ".translation/translator/migration-readme.md"
+  - ".translation/translator/fix-patterns-archive.md"
+  - ".translation/third_party_api.md"
+  - ".translation/tester/tester-report.yaml"
+  - ".translation/tester/issue-queue.yaml"
+  - ".translation/tester/reports/tester-todo-005-core-config-20260706T145402Z.yaml"
+  - "java/commons-validator/src/main/java/org/apache/commons/validator/ValidatorResources.java"
+  - "java/commons-validator/src/test/java/org/apache/commons/validator/ValidatorResourcesTest.java"
+  - "cangjie/src/ValidatorResources.cj"
+  - "cangjie/src/ValidatorAction.cj"
+  - "cangjie/src/ValidationSupport.cj"
+  - "cangjie/src/util/ValidatorUtils.cj"
+  - "cangjie/src/routines/IBANValidator.cj"
+  - "cangjie/src/routines/DomainValidator.cj"
+  - "cangjie/tests/core_config_test.cj"
+  - "cangjie/tests/iban_validator_suite_test.cj"
+summary: "FINAL_CLOSURE PASS with completion_kind=complete. I independently re-read translator/tester state, re-verified that all 6 todos are terminal finished and all 416 ledger obligations are verified, reran the source baseline (`mvn -q test`), reran the target build (`cjpm build`), and reran the target test suite (`cjpm test` -> 74/74). Sampled high-risk core XML/property-access and IBAN/domain paths are implemented in target code and exercised by translated tests; no open tester/reviewer issues or uncovered risks remain."

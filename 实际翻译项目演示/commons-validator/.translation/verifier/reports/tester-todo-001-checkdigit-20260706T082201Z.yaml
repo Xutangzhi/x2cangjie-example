@@ -1,0 +1,123 @@
+schema_version: 1
+report_id: "tester-todo-001-checkdigit-20260706T082201Z"
+report_snapshot_path: ".translation/tester/reports/tester-todo-001-checkdigit-20260706T082201Z.yaml"
+report_type: TODO_VERIFICATION
+decision: NEEDS_FIX
+active_todo_id: "TODO-001-CHECKDIGIT"
+active_slice: "SLICE-001-CHECKDIGIT"
+todo_verdict:
+  todo_id: "TODO-001-CHECKDIGIT"
+  verdict: fail
+  can_mark_finished: false
+  verified_obligation_ids:
+    - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testCalculateInvalid"
+    - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testCalculateValid"
+    - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testIsValidFalse"
+    - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testIsValidTrue"
+    - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testMissingCode"
+    - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testSerialization"
+    - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testZeroSum"
+    - "OB_ST_routines_checkdigit_CUSIPCheckDigitTest_testValidator336InvalidCheckDigits"
+    - "OB_ST_routines_checkdigit_CUSIPCheckDigitTest_testValidator336ValidCheckDigits"
+    - "OB_ST_routines_checkdigit_IBANCheckDigitTest_testOther"
+    - "OB_ST_routines_checkdigit_ISBNCheckDigitTest_testInvalidLength"
+    - "OB_ST_routines_checkdigit_ISINCheckDigitTest_testValidator345"
+    - "OB_ST_routines_checkdigit_ModulusTenCUSIPCheckDigitTest_testValidator336InvalidCheckDigits"
+    - "OB_ST_routines_checkdigit_ModulusTenCUSIPCheckDigitTest_testValidator336ValidCheckDigits"
+    - "OB_ST_routines_checkdigit_ModulusTenSedolCheckDigitTest_testValidator346"
+    - "OB_ST_routines_checkdigit_SedolCheckDigitTest_testValidator346"
+    - "OB_PUBLIC_API_SLICE_001_CHECKDIGIT"
+    - "OB_CHECKDIGIT_EXCEPTIONS"
+    - "OB_FIXTURE_IBAN_CHECKDIGIT_TXT"
+  failed_obligation_ids:
+    - "OB_ST_routines_checkdigit_IBANCheckDigitTest_testZeroSum"
+    - "OB_ST_routines_checkdigit_VerhoeffCheckDigitTest_testZeroSum"
+  blocking_issue_ids:
+    - "TESTER-TODO-001-001"
+  required_rework:
+    - "Replace cangjie/tests/checkdigit_test.cj placeholder test cases ibanCheckDigitTestZeroSum and verhoeffCheckDigitTestZeroSum with explicit translated behavior, or remove them from translated-test coverage only if the contract/ledger records a justified no-op/source-equivalence decision."
+    - "Update feature-contract translated_tests and obligation evidence so no active source-test obligation is represented by ensure(true, \"placeholder\")."
+    - "Rerun contract gate, source checkdigit baseline, cjpm build, and cjpm test before re-handoff."
+  evidence: "State selects TODO_VERIFICATION for TODO-001-CHECKDIGIT: run-state, migration-todo, and feature-contract all agree on TODO-001-CHECKDIGIT / SLICE-001-CHECKDIGIT and contract gate passes. Source checkdigit baseline command passed. Target cjpm build and cjpm test pass with TOTAL: 20, PASSED: 20. However, cangjie/tests/checkdigit_test.cj contains two active translated test cases that are literal placeholders: ibanCheckDigitTestZeroSum at line 440 and verhoeffCheckDigitTestZeroSum at line 445 each only call ensure(true, \"placeholder\"). The tester skill forbids accepting placeholder tests as translated tests, and these cases are mapped to active P1 source-test obligations."
+plan_audit:
+  status: not-applicable
+claimed_feature_results:
+  - behavior_id: "B_CHECKDIGIT_ALGORITHMS"
+    verdict: fail
+    ledger_obligation_ids:
+      - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testCalculateInvalid"
+      - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testCalculateValid"
+      - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testIsValidFalse"
+      - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testIsValidTrue"
+      - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testMissingCode"
+      - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testSerialization"
+      - "OB_ST_routines_checkdigit_AbstractCheckDigitTest_testZeroSum"
+      - "OB_ST_routines_checkdigit_CUSIPCheckDigitTest_testValidator336InvalidCheckDigits"
+      - "OB_ST_routines_checkdigit_CUSIPCheckDigitTest_testValidator336ValidCheckDigits"
+      - "OB_ST_routines_checkdigit_IBANCheckDigitTest_testOther"
+      - "OB_ST_routines_checkdigit_IBANCheckDigitTest_testZeroSum"
+      - "OB_ST_routines_checkdigit_ISBNCheckDigitTest_testInvalidLength"
+      - "OB_ST_routines_checkdigit_ISINCheckDigitTest_testValidator345"
+      - "OB_ST_routines_checkdigit_ModulusTenCUSIPCheckDigitTest_testValidator336InvalidCheckDigits"
+      - "OB_ST_routines_checkdigit_ModulusTenCUSIPCheckDigitTest_testValidator336ValidCheckDigits"
+      - "OB_ST_routines_checkdigit_ModulusTenSedolCheckDigitTest_testValidator346"
+      - "OB_ST_routines_checkdigit_SedolCheckDigitTest_testValidator346"
+      - "OB_ST_routines_checkdigit_VerhoeffCheckDigitTest_testZeroSum"
+      - "OB_PUBLIC_API_SLICE_001_CHECKDIGIT"
+      - "OB_CHECKDIGIT_EXCEPTIONS"
+      - "OB_FIXTURE_IBAN_CHECKDIGIT_TXT"
+    production_path_verified: partial
+    source_baseline: "mvn -q -Dtest=org.apache.commons.validator.routines.checkdigit.AbstractCheckDigitTest,org.apache.commons.validator.routines.checkdigit.ABANumberCheckDigitTest,org.apache.commons.validator.routines.checkdigit.CASNumberCheckDigitTest,org.apache.commons.validator.routines.checkdigit.CUSIPCheckDigitTest,org.apache.commons.validator.routines.checkdigit.EAN13CheckDigitTest,org.apache.commons.validator.routines.checkdigit.ECNumberCheckDigitTest,org.apache.commons.validator.routines.checkdigit.IBANCheckDigitTest,org.apache.commons.validator.routines.checkdigit.ISBN10CheckDigitTest,org.apache.commons.validator.routines.checkdigit.ISBNCheckDigitTest,org.apache.commons.validator.routines.checkdigit.ISINCheckDigitTest,org.apache.commons.validator.routines.checkdigit.ISSNCheckDigitTest,org.apache.commons.validator.routines.checkdigit.LuhnCheckDigitTest,org.apache.commons.validator.routines.checkdigit.ModulusTenABACheckDigitTest,org.apache.commons.validator.routines.checkdigit.ModulusTenCUSIPCheckDigitTest,org.apache.commons.validator.routines.checkdigit.ModulusTenEAN13CheckDigitTest,org.apache.commons.validator.routines.checkdigit.ModulusTenLuhnCheckDigitTest,org.apache.commons.validator.routines.checkdigit.ModulusTenSedolCheckDigitTest,org.apache.commons.validator.routines.checkdigit.SedolCheckDigitTest,org.apache.commons.validator.routines.checkdigit.VerhoeffCheckDigitTest test -> pass"
+    target_build: "cjpm build -> pass"
+    target_test: "cjpm test -> pass; TOTAL: 20 PASSED: 20 ERROR: 0 FAILED: 0"
+    failure_reason: "Passing target tests include two placeholder translated tests for active obligations; placeholder tests cannot be accepted as translated source-test coverage."
+global_gap_scan:
+  missing_modules: []
+  incomplete_modules: []
+  missing_source_tests: []
+  missing_public_api: []
+  dependency_gaps: []
+  ledger_gaps: []
+  stale_decisions: []
+ledger_consistency:
+  status: fail
+  checked_obligations: 416
+  missing_obligations: []
+  stale_claims:
+    - "feature-contract maps ST_routines_checkdigit_IBANCheckDigitTest_testZeroSum to CJ_CHECKDIGIT_017, but cangjie/tests/checkdigit_test.cj implements ibanCheckDigitTestZeroSum as ensure(true, \"placeholder\")."
+    - "feature-contract maps ST_routines_checkdigit_VerhoeffCheckDigitTest_testZeroSum to CJ_CHECKDIGIT_018, but cangjie/tests/checkdigit_test.cj implements verhoeffCheckDigitTestZeroSum as ensure(true, \"placeholder\")."
+metrics:
+  source_build_status: pass
+  source_test_status: pass
+  target_build_status: pass
+  target_test_status: pass
+  source_test_count: 397
+  blocked_source_test_count: 0
+  active_source_test_count: 18
+  active_blocked_source_test_count: 0
+  active_executable_target_test_count: 19
+  executable_target_test_count: 20
+  passing_translated_test_count: 20
+  test_pass_rate: "20/20"
+  module_coverage_status: partial
+  public_api_status: complete
+  dependency_boundary_status: complete
+  runtime_smoke_status: not-applicable
+  regression_status: pass
+issues:
+  - issue_id: "TESTER-TODO-001-001"
+    severity: P1
+    status: open
+    category: translated-test-quality
+    title: "Two active checkdigit obligations are represented by placeholder tests"
+    evidence:
+      - "cangjie/tests/checkdigit_test.cj:440 ibanCheckDigitTestZeroSum contains only ensure(true, \"placeholder\")."
+      - "cangjie/tests/checkdigit_test.cj:445 verhoeffCheckDigitTestZeroSum contains only ensure(true, \"placeholder\")."
+      - ".translation/translator/feature-contract.yaml maps CJ_CHECKDIGIT_017 to ST_routines_checkdigit_IBANCheckDigitTest_testZeroSum."
+      - ".translation/translator/feature-contract.yaml maps CJ_CHECKDIGIT_018 to ST_routines_checkdigit_VerhoeffCheckDigitTest_testZeroSum."
+      - "tester/todo_verification.md forbids accepting placeholder tests as translated tests."
+    required_rework:
+      - "Replace the placeholders with explicit source-equivalent assertions or record an explicit contract/ledger decision that these source no-op overrides are not translated-test obligations."
+      - "Do not count placeholder tests toward translated coverage in the feature contract."
+reference_paths: []
+summary: "TODO_VERIFICATION failed for TODO-001-CHECKDIGIT. Contract/state consistency and commands pass: contract gate passed, the source checkdigit baseline passed, cjpm build passed, and cjpm test passed with 20/20 target tests. The todo cannot be marked finished because two active translated tests are literal placeholders while mapped to active P1 source-test obligations. can_mark_finished=false; failed obligations are OB_ST_routines_checkdigit_IBANCheckDigitTest_testZeroSum and OB_ST_routines_checkdigit_VerhoeffCheckDigitTest_testZeroSum."

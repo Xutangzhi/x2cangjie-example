@@ -1,0 +1,4262 @@
+{
+  "source_cangjie_file": "cangjie_api_card/math.json",
+  "mapping_method": "manual_semantic_alignment_card_by_card",
+  "mappings": [
+    {
+      "cangjie_api": "RoundingMode",
+      "candidates": [
+        {
+          "java_api": "RoundingMode",
+          "cangjie_api": "RoundingMode",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Both define numeric rounding mode enums.",
+          "semantic_gaps": "Cangjie enum case naming and completeness may differ slightly from Java definitions.",
+          "suggested_translation_strategy": "Map case by case to java.math.RoundingMode and document non-identical cases."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.Ceiling",
+      "candidates": [
+        {
+          "java_api": "RoundingMode",
+          "cangjie_api": "RoundingMode.Ceiling",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Semantically aligns with CEILING behavior.",
+          "semantic_gaps": "Identifier casing differs.",
+          "suggested_translation_strategy": "Map to java.math.RoundingMode.CEILING."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.Down",
+      "candidates": [
+        {
+          "java_api": "RoundingMode",
+          "cangjie_api": "RoundingMode.Down",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both denote rounding toward zero.",
+          "semantic_gaps": "Identifier naming differs.",
+          "suggested_translation_strategy": "Map to java.math.RoundingMode.DOWN."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.Floor",
+      "candidates": [
+        {
+          "java_api": "RoundingMode",
+          "cangjie_api": "RoundingMode.Floor",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both denote rounding toward negative infinity.",
+          "semantic_gaps": "Identifier naming differs.",
+          "suggested_translation_strategy": "Map to java.math.RoundingMode.FLOOR."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.HalfEven",
+      "candidates": [
+        {
+          "java_api": "RoundingMode",
+          "cangjie_api": "RoundingMode.HalfEven",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both represent bankers' rounding.",
+          "semantic_gaps": "Identifier naming differs.",
+          "suggested_translation_strategy": "Map to java.math.RoundingMode.HALF_EVEN."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.HalfUp",
+      "candidates": [
+        {
+          "java_api": "RoundingMode",
+          "cangjie_api": "RoundingMode.HalfUp",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both represent half-up rounding.",
+          "semantic_gaps": "Identifier naming differs.",
+          "suggested_translation_strategy": "Map to java.math.RoundingMode.HALF_UP."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.Up",
+      "candidates": [
+        {
+          "java_api": "RoundingMode",
+          "cangjie_api": "RoundingMode.Up",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both denote rounding away from zero.",
+          "semantic_gaps": "Identifier naming differs.",
+          "suggested_translation_strategy": "Map to java.math.RoundingMode.UP."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.toString()",
+      "candidates": [
+        {
+          "java_api": "java.math.RoundingMode.toString()",
+          "cangjie_api": "RoundingMode.toString()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java enum exposes toString() for textual representation of constants.",
+          "semantic_gaps": "Exact output text may differ from Cangjie if either side customizes display text.",
+          "suggested_translation_strategy": "Use `RoundingMode.toString()` and add compatibility mapping when output contract must be exact."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "RoundingMode.==(RoundingMode)",
+      "candidates": [
+        {
+          "java_api": "java.lang.Enum.equals(Object)",
+          "cangjie_api": "RoundingMode.==(RoundingMode)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Java enum equality is identity-based and consistent with enum constant equality semantics.",
+          "semantic_gaps": "Cangjie operator syntax differs from Java method/operator forms.",
+          "suggested_translation_strategy": "Prefer `==` for Java enum constants (or `equals` when APIs require Object form)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "abs(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "abs(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math provides absolute-value operations.",
+          "semantic_gaps": "Java lacks Float16 primitive overload.",
+          "suggested_translation_strategy": "Promote Float16 to float/double, call Math.abs, then convert back."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "abs(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "abs(Float32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.abs has float overload.",
+          "semantic_gaps": "NaN/negative-zero handling should still be validated for exact parity.",
+          "suggested_translation_strategy": "Use Math.abs(float)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "abs(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "abs(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.abs has double overload.",
+          "semantic_gaps": "Corner-case behavior should be regression-tested.",
+          "suggested_translation_strategy": "Use Math.abs(double)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "abs(Int16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "abs(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.abs covers integer absolute value.",
+          "semantic_gaps": "Java has no short-returning abs and overflow behavior on min value differs by conversion path.",
+          "suggested_translation_strategy": "Compute with int and add explicit overflow guard before narrowing."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "abs(Int32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "abs(Int32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.abs(int) matches operation intent.",
+          "semantic_gaps": "Cangjie may throw on min value while Java returns same negative value.",
+          "suggested_translation_strategy": "Use Math.abs with explicit check for Integer.MIN_VALUE when parity requires exception."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "abs(Int64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "abs(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.abs(long) matches operation intent.",
+          "semantic_gaps": "Cangjie overflow-exception semantics may differ for Long.MIN_VALUE.",
+          "suggested_translation_strategy": "Use Math.abs and guard Long.MIN_VALUE for parity."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "abs(Int8)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "abs(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Java supports absolute value via widened int operation.",
+          "semantic_gaps": "No byte overload and min-value overflow behavior differs.",
+          "suggested_translation_strategy": "Widen to int, validate bounds, then cast to byte."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "acos(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "acos(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math class provides acos semantics.",
+          "semantic_gaps": "Java lacks Float16 and often returns NaN instead of throwing for out-of-domain.",
+          "suggested_translation_strategy": "Convert via double, call Math.acos, and add explicit domain checks if exception parity is required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "acos(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "acos(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.acos is direct for floating input.",
+          "semantic_gaps": "Java domain-error behavior may differ from Cangjie exceptions.",
+          "suggested_translation_strategy": "Use Math.acos with optional precondition checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "acos(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "acos(Float64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.acos(double) matches operation.",
+          "semantic_gaps": "Potential exception-vs-NaN difference.",
+          "suggested_translation_strategy": "Use Math.acos and add range validation when necessary."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "acosh(Float16)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "acosh(Float16)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No stable java.lang.Math acosh API in common baselines represented by cards.",
+          "semantic_gaps": "Missing direct inverse hyperbolic cosine function and Float16 support.",
+          "suggested_translation_strategy": "Implement acosh formula manually using log/sqrt helpers and explicit domain checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "acosh(Float32)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "acosh(Float32)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java card set does not expose dedicated acosh entry.",
+          "semantic_gaps": "No direct API and exception/domain behavior must be custom.",
+          "suggested_translation_strategy": "Implement through mathematical identity with explicit validation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "acosh(Float64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "acosh(Float64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No explicit acosh API in provided Java cards.",
+          "semantic_gaps": "Needs manual implementation and domain handling.",
+          "suggested_translation_strategy": "Use custom helper `log(x + sqrt(x-1)*sqrt(x+1))` with guard x>=1."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "asin(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "asin(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.asin covers arcsine semantics.",
+          "semantic_gaps": "No Float16 overload and potential exception-vs-NaN mismatch.",
+          "suggested_translation_strategy": "Convert through double and add domain checks when strict behavior is needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "asin(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "asin(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.asin aligns with operation.",
+          "semantic_gaps": "Domain error behavior can differ.",
+          "suggested_translation_strategy": "Use Math.asin with optional explicit range validation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "asin(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "asin(Float64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.asin(double) is the direct counterpart.",
+          "semantic_gaps": "Exception model may differ.",
+          "suggested_translation_strategy": "Call Math.asin and emulate exceptions if required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "asinh(Float16)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "asinh(Float16)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No explicit asinh API in provided Java card surface.",
+          "semantic_gaps": "Lack of direct inverse hyperbolic sine and Float16.",
+          "suggested_translation_strategy": "Implement with `log(x + sqrt(x*x + 1))` helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "asinh(Float32)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "asinh(Float32)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No dedicated asinh entry appears in Java cards.",
+          "semantic_gaps": "Direct API absent.",
+          "suggested_translation_strategy": "Provide custom utility with numerical-stability tests."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "asinh(Float64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "asinh(Float64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java cards shown do not include asinh method symbol.",
+          "semantic_gaps": "Needs manual formula and precision consideration.",
+          "suggested_translation_strategy": "Implement custom asinh and validate against known values."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atan(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "atan(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.atan covers arctangent semantics.",
+          "semantic_gaps": "Float16 not directly supported.",
+          "suggested_translation_strategy": "Convert to double, call Math.atan, convert back as needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atan(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "atan(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.atan is semantically equivalent.",
+          "semantic_gaps": "Return type conversion may be needed.",
+          "suggested_translation_strategy": "Call Math.atan(double) with float cast policy."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atan(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "atan(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.atan(double) directly matches.",
+          "semantic_gaps": "Minimal; only edge-case parity testing required.",
+          "suggested_translation_strategy": "Use Math.atan."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atan2(Float16, Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "atan2(Float16, Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.atan2 computes two-argument arctangent.",
+          "semantic_gaps": "Float16 unsupported directly.",
+          "suggested_translation_strategy": "Convert to double, call Math.atan2, convert back."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atan2(Float32, Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "atan2(Float32, Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.atan2 aligns semantically.",
+          "semantic_gaps": "Type conversions may be required.",
+          "suggested_translation_strategy": "Use Math.atan2(double,double) and cast if needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atan2(Float64, Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "atan2(Float64, Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.atan2(double,double) is direct counterpart.",
+          "semantic_gaps": "Only corner-case behavior should be validated.",
+          "suggested_translation_strategy": "Use Math.atan2."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atanh(Float16)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "atanh(Float16)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No explicit atanh API in cards.",
+          "semantic_gaps": "Missing direct inverse hyperbolic tangent and Float16 support.",
+          "suggested_translation_strategy": "Implement formula `0.5*log((1+x)/(1-x))` with |x|<1 checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atanh(Float32)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "atanh(Float32)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No dedicated atanh symbol appears in Java cards.",
+          "semantic_gaps": "Needs custom function and domain checks.",
+          "suggested_translation_strategy": "Implement utility helper with numeric-stability tests."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "atanh(Float64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "atanh(Float64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Card set lacks direct atanh API.",
+          "semantic_gaps": "Must emulate domain/exception behavior manually.",
+          "suggested_translation_strategy": "Implement with log identity and explicit domain guards."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cbrt(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cbrt(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.cbrt provides cube-root operation.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Use double path and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cbrt(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cbrt(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.cbrt is semantically equivalent.",
+          "semantic_gaps": "Type conversion float<->double.",
+          "suggested_translation_strategy": "Call Math.cbrt then cast to float if required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cbrt(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cbrt(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.cbrt(double) is direct.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.cbrt."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ceil(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "ceil(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.ceil provides ceiling operation.",
+          "semantic_gaps": "No Float16 overload and return-shape differences.",
+          "suggested_translation_strategy": "Compute via Math.ceil(double) and convert."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ceil(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "ceil(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.ceil aligns semantically.",
+          "semantic_gaps": "Math returns double.",
+          "suggested_translation_strategy": "Use Math.ceil and cast with care."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ceil(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "ceil(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.ceil(double) directly matches.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.ceil."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "checkedAbs(Int16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "checkedAbs(Int16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Java can compute abs and throw manually on overflow to emulate checked semantics.",
+          "semantic_gaps": "No dedicated checkedAbs for short and exception contract differs.",
+          "suggested_translation_strategy": "Use widened abs + explicit MIN_VALUE guard + throw ArithmeticException/translated exception."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "checkedAbs(Int32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "checkedAbs(Int32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Equivalent can be built around Math.abs with overflow guard.",
+          "semantic_gaps": "Java abs does not throw on Integer.MIN_VALUE.",
+          "suggested_translation_strategy": "Guard MIN_VALUE and throw explicit exception."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "checkedAbs(Int64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "checkedAbs(Int64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Equivalent behavior can be emulated with explicit checks.",
+          "semantic_gaps": "No built-in checked long abs.",
+          "suggested_translation_strategy": "Guard Long.MIN_VALUE before Math.abs."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "checkedAbs(Int8)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "checkedAbs(Int8)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can emulate checked semantics using widened integer math.",
+          "semantic_gaps": "No byte-specific checked abs in Java.",
+          "suggested_translation_strategy": "Widen, guard bounds, then cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "clamp(Float16, Float16, Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "clamp(Float16, Float16, Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Clamp semantics can be composed from min/max.",
+          "semantic_gaps": "No dedicated clamp in baseline cards and no Float16.",
+          "suggested_translation_strategy": "Implement `min(max(v,min),max)` utility with conversions."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "clamp(Float32, Float32, Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "clamp(Float32, Float32, Float32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Composable from Math.min/Math.max.",
+          "semantic_gaps": "No one-call clamp API in this card set.",
+          "suggested_translation_strategy": "Use helper based on min/max with NaN policy defined."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cos(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cos(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.cos provides cosine computation.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Convert to double and cast back."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cos(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cos(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.cos aligns with cosine semantics.",
+          "semantic_gaps": "float conversion required.",
+          "suggested_translation_strategy": "Use Math.cos(double) then cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cos(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cos(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.cos(double) direct counterpart.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.cos."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cosh(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cosh(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math has hyperbolic cosine API.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Call Math.cosh via double conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cosh(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cosh(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.cosh is semantically aligned.",
+          "semantic_gaps": "Type conversion/precision differences.",
+          "suggested_translation_strategy": "Use Math.cosh(double) and cast if needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "cosh(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "cosh(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.cosh(double) direct counterpart.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.cosh."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(Int16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOne(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Bit-count functionality aligns with Java wrapper bit utilities.",
+          "semantic_gaps": "No short-specific API; width/sign-extension handling differs.",
+          "suggested_translation_strategy": "Mask to 16 bits and use Integer.bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(Int16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOnes(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Population count semantics match bitCount family.",
+          "semantic_gaps": "Signed short width handling must be explicit.",
+          "suggested_translation_strategy": "Use `Integer.bitCount(x & 0xFFFF)`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(Int32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOne(Int32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Maps to Integer.bitCount(int).",
+          "semantic_gaps": "Name differs only.",
+          "suggested_translation_strategy": "Use Integer.bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(Int32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOnes(Int32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Same population-count operation as Integer.bitCount.",
+          "semantic_gaps": "Naming differs.",
+          "suggested_translation_strategy": "Use Integer.bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(Int64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "countOne(Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Maps to Long.bitCount(long).",
+          "semantic_gaps": "Name differs.",
+          "suggested_translation_strategy": "Use Long.bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(Int64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "countOnes(Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Population count directly matches Long.bitCount.",
+          "semantic_gaps": "Naming differs.",
+          "suggested_translation_strategy": "Use Long.bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOne(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Bit count can be computed via Integer.bitCount.",
+          "semantic_gaps": "Need masking to 8-bit domain.",
+          "suggested_translation_strategy": "Use `Integer.bitCount(x & 0xFF)`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOnes(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Same popcount family operation.",
+          "semantic_gaps": "Byte width/sign-extension must be controlled.",
+          "suggested_translation_strategy": "Mask low 8 bits before bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(UInt16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOne(UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Unsigned bit count can be emulated with masks.",
+          "semantic_gaps": "Java lacks UInt16 primitive.",
+          "suggested_translation_strategy": "Store in int and apply `& 0xFFFF` before bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(UInt16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOnes(UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Bit-count logic is available in Integer utilities.",
+          "semantic_gaps": "Unsigned type not native.",
+          "suggested_translation_strategy": "Represent UInt16 in int and mask to 16 bits."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(UInt32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOne(UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "32-bit popcount aligns with Integer.bitCount.",
+          "semantic_gaps": "Unsigned interpretation for some upstream operations.",
+          "suggested_translation_strategy": "Use Integer.bitCount on int representation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(UInt32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOnes(UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Operation equals 32-bit population count.",
+          "semantic_gaps": "Unsigned-only typing model differs.",
+          "suggested_translation_strategy": "Use Integer.bitCount with unsigned-int conventions."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(UInt64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "countOne(UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "64-bit popcount aligns with Long.bitCount.",
+          "semantic_gaps": "Unsigned storage differs in Java type system.",
+          "suggested_translation_strategy": "Use long bits directly; treat as unsigned where formatting/comparison matters."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(UInt64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "countOnes(UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Equivalent to Long.bitCount on 64-bit pattern.",
+          "semantic_gaps": "Unsigned type semantics differ outside popcount itself.",
+          "suggested_translation_strategy": "Use Long.bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOne(UInt8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOne(UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Can emulate with Integer.bitCount and mask.",
+          "semantic_gaps": "No UInt8 type in Java.",
+          "suggested_translation_strategy": "Represent with int and mask by 0xFF."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "countOnes(UInt8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "countOnes(UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Same popcount-by-mask approach applies.",
+          "semantic_gaps": "Unsigned byte not native.",
+          "suggested_translation_strategy": "Mask low 8 bits before Integer.bitCount."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "erf(Float16)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "erf(Float16)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No explicit erf API appears in provided Java cards.",
+          "semantic_gaps": "Missing built-in error function and Float16 support.",
+          "suggested_translation_strategy": "Implement approximation (e.g., Abramowitz-Stegun) and test accuracy."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "erf(Float32)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "erf(Float32)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Card set lacks explicit error-function API.",
+          "semantic_gaps": "Direct function absent.",
+          "suggested_translation_strategy": "Use custom numerical approximation library/helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "erf(Float64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "erf(Float64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No dedicated erf symbol available in cards.",
+          "semantic_gaps": "Need custom implementation and error analysis.",
+          "suggested_translation_strategy": "Implement erf approximation with unit tests against reference values."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "exp(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "exp(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.exp provides exponential operation.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Convert through double and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "exp(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "exp(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.exp aligns with natural exponent.",
+          "semantic_gaps": "float conversion and rounding differences.",
+          "suggested_translation_strategy": "Use Math.exp(double) then cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "exp(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "exp(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.exp(double) direct counterpart.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.exp."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "exp2(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "exp2(Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can be represented as pow(2, x) using Math.",
+          "semantic_gaps": "No direct exp2 method and no Float16.",
+          "suggested_translation_strategy": "Use `Math.pow(2.0, x)` with conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "exp2(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "exp2(Float32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "exp2 can be emulated via Math.pow.",
+          "semantic_gaps": "No single-call exp2 API.",
+          "suggested_translation_strategy": "Implement helper `pow2(x)=Math.pow(2.0,x)`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "exp2(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "exp2(Float64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Equivalent mathematically through power function.",
+          "semantic_gaps": "Dedicated exp2 API absent.",
+          "suggested_translation_strategy": "Use Math.pow(2.0, x)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "floor(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "floor(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.floor computes floor operation.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Compute in double then cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "floor(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "floor(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.floor aligns with semantics.",
+          "semantic_gaps": "float conversion/casting.",
+          "suggested_translation_strategy": "Use Math.floor(double) and cast if needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "floor(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "floor(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.floor(double) direct counterpart.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.floor."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "fmod(Float16, Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "fmod(Float16, Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Remainder-like operation can be approximated with `%`/IEEE remainder patterns.",
+          "semantic_gaps": "fmod sign and rounding semantics differ from Java `%` and IEEEremainder; Float16 unsupported.",
+          "suggested_translation_strategy": "Implement exact fmod formula `x - trunc(x/y)*y` with careful edge-case handling."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "fmod(Float32, Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "fmod(Float32, Float32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Java has building blocks but not exact fmod API.",
+          "semantic_gaps": "Behavior differs from `%`/IEEEremainder for negatives and ties.",
+          "suggested_translation_strategy": "Implement dedicated fmod helper and unit-test sign behavior."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "fmod(Float64, Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "fmod(Float64, Float64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Needs custom formula despite available remainder primitives.",
+          "semantic_gaps": "No direct fmod API with C semantics.",
+          "suggested_translation_strategy": "Use `x - Math.floor(x/y)*y` or trunc-based variant matching Cangjie docs."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gamma(Float16)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "gamma(Float16)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No gamma function API appears in Java cards.",
+          "semantic_gaps": "Missing special-function support and Float16.",
+          "suggested_translation_strategy": "Implement via approximation (Lanczos/Spouge) or external numeric library."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gamma(Float32)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "gamma(Float32)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Provided Java API cards do not expose gamma.",
+          "semantic_gaps": "Direct special-function API absent.",
+          "suggested_translation_strategy": "Use custom approximation with domain handling."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gamma(Float64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "gamma(Float64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Gamma is not directly available in listed Java math cards.",
+          "semantic_gaps": "Requires custom numeric implementation.",
+          "suggested_translation_strategy": "Implement gamma helper and verify against reference constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(Int16, Int16)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(Int16, Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java exposes GCD operation on BigInteger.",
+          "semantic_gaps": "Primitive short overload absent.",
+          "suggested_translation_strategy": "Promote to int/long and implement Euclidean algorithm or adapt through BigInteger."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(Int32, Int32)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(Int32, Int32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "GCD semantics directly match BigInteger.gcd.",
+          "semantic_gaps": "Primitive int helper not directly represented in cards.",
+          "suggested_translation_strategy": "Use iterative Euclid on int or temporary BigInteger conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(Int64, Int64)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(Int64, Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "BigInteger.gcd provides exact gcd semantics.",
+          "semantic_gaps": "Long primitive form needs wrapper algorithm.",
+          "suggested_translation_strategy": "Use long Euclidean algorithm with abs/overflow guards."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(Int8, Int8)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(Int8, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "GCD operation exists via BigInteger.",
+          "semantic_gaps": "No byte overload and casting concerns.",
+          "suggested_translation_strategy": "Widen to int for Euclidean algorithm, then cast with bounds checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(UInt16, UInt16)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(UInt16, UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Unsigned gcd can be represented with non-negative big integers.",
+          "semantic_gaps": "UInt16 type absent in Java.",
+          "suggested_translation_strategy": "Represent values in int and apply Euclidean algorithm on non-negative domain."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(UInt32, UInt32)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(UInt32, UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "GCD semantics align for non-negative integers.",
+          "semantic_gaps": "Unsigned primitive unavailable.",
+          "suggested_translation_strategy": "Use long or BigInteger to preserve unsigned range."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(UInt64, UInt64)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(UInt64, UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "BigInteger naturally handles 64-bit unsigned magnitude.",
+          "semantic_gaps": "Conversion from unsigned long representation required.",
+          "suggested_translation_strategy": "Convert to positive BigInteger representations and call gcd."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "gcd(UInt8, UInt8)",
+      "candidates": [
+        {
+          "java_api": "BigInteger.gcd",
+          "cangjie_api": "gcd(UInt8, UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Operation semantics match integer gcd.",
+          "semantic_gaps": "No native unsigned byte.",
+          "suggested_translation_strategy": "Use int in [0,255] range and Euclidean algorithm."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(Int16, Int16)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(Int16, Int16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "LCM can be derived from gcd with integer arithmetic.",
+          "semantic_gaps": "No direct lcm API.",
+          "suggested_translation_strategy": "Implement `abs(a/gcd(a,b)*b)` with overflow checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(Int32, Int32)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(Int32, Int32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Can be computed using gcd relationship.",
+          "semantic_gaps": "No built-in primitive lcm.",
+          "suggested_translation_strategy": "Implement formula using gcd helper and guard overflow."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(Int64, Int64)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(Int64, Int64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "BigInteger provides safe arithmetic for lcm derivation.",
+          "semantic_gaps": "No direct lcm method.",
+          "suggested_translation_strategy": "Use BigInteger arithmetic to avoid overflow, then narrow if needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(Int8, Int8)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(Int8, Int8)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "LCM derivation is straightforward via gcd.",
+          "semantic_gaps": "No byte-specific lcm API.",
+          "suggested_translation_strategy": "Widen to int, compute safely, cast with bounds checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(UInt16, UInt16)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(UInt16, UInt16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Unsigned lcm can be done in non-negative integer domain.",
+          "semantic_gaps": "Java lacks UInt16 primitive.",
+          "suggested_translation_strategy": "Use int/BigInteger representation and gcd-based formula."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(UInt32, UInt32)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(UInt32, UInt32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Derivable from gcd with non-negative arithmetic.",
+          "semantic_gaps": "No unsigned primitive API.",
+          "suggested_translation_strategy": "Use long/BigInteger and unsigned conversion helpers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(UInt64, UInt64)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(UInt64, UInt64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "BigInteger supports full 64-bit unsigned magnitude and arithmetic.",
+          "semantic_gaps": "No built-in lcm symbol.",
+          "suggested_translation_strategy": "Convert to BigInteger, compute gcd-derived lcm."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "lcm(UInt8, UInt8)",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "lcm(UInt8, UInt8)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "LCM formula is available using gcd helper.",
+          "semantic_gaps": "Unsigned byte requires manual representation.",
+          "suggested_translation_strategy": "Use int range [0,255], apply gcd-based lcm."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(Int16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "leadingZeros(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Integer.numberOfLeadingZeros gives analogous bit metric.",
+          "semantic_gaps": "Bit-width differs; short is 16-bit not 32-bit.",
+          "suggested_translation_strategy": "Mask to 16 bits and adjust count offset."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(Int32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "leadingZeros(Int32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Directly aligns with Integer.numberOfLeadingZeros.",
+          "semantic_gaps": "Naming differs.",
+          "suggested_translation_strategy": "Use Integer.numberOfLeadingZeros."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(Int64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "leadingZeros(Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Directly aligns with Long.numberOfLeadingZeros.",
+          "semantic_gaps": "Naming differs.",
+          "suggested_translation_strategy": "Use Long.numberOfLeadingZeros."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "leadingZeros(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Can be computed from Integer leading-zero primitive.",
+          "semantic_gaps": "Need 8-bit width normalization.",
+          "suggested_translation_strategy": "Mask to 8 bits and subtract 24 from 32-bit count."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(UInt16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "leadingZeros(UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Leading-zero count can be emulated on masked value.",
+          "semantic_gaps": "Unsigned type not native.",
+          "suggested_translation_strategy": "Use int with `& 0xFFFF` and width-adjusted formula."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(UInt32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "leadingZeros(UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "32-bit pattern count uses Integer.numberOfLeadingZeros.",
+          "semantic_gaps": "Unsigned interpretation differences outside bitwise context.",
+          "suggested_translation_strategy": "Use Integer.numberOfLeadingZeros on int bits."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(UInt64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "leadingZeros(UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "64-bit leading-zero count aligns with Long utility.",
+          "semantic_gaps": "Unsigned type differences mostly outside counting operation.",
+          "suggested_translation_strategy": "Use Long.numberOfLeadingZeros on raw long bits."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "leadingZeros(UInt8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "leadingZeros(UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Computable via integer leading-zero routines.",
+          "semantic_gaps": "Need explicit 8-bit normalization.",
+          "suggested_translation_strategy": "Mask by 0xFF and adjust result to 8-bit width."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.log provides natural logarithm.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Convert to double, call Math.log, cast back."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.log aligns with operation semantics.",
+          "semantic_gaps": "float conversion details.",
+          "suggested_translation_strategy": "Use Math.log(double) then cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.log(double) is direct.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.log."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log10(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log10(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.log10 provides base-10 logarithm.",
+          "semantic_gaps": "Float16 unsupported directly.",
+          "suggested_translation_strategy": "Use double conversion and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log10(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log10(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.log10 semantically matches.",
+          "semantic_gaps": "float conversion.",
+          "suggested_translation_strategy": "Use Math.log10(double) then cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log10(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log10(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.log10(double) direct equivalent.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.log10."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log2(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log2(Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "log2 can be derived from natural log and constants.",
+          "semantic_gaps": "No direct log2 API and no Float16.",
+          "suggested_translation_strategy": "Implement `Math.log(x)/Math.log(2.0)` with conversions."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log2(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log2(Float32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Operation derivable from available log function.",
+          "semantic_gaps": "No single-call log2 symbol.",
+          "suggested_translation_strategy": "Provide helper based on log ratio."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "log2(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "log2(Float64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Math APIs can express log2 via change-of-base.",
+          "semantic_gaps": "Direct method absent.",
+          "suggested_translation_strategy": "Use `Math.log(x)/Math.log(2d)`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "logBase(Float16, Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "logBase(Float16, Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "General-base log is composable using log ratio.",
+          "semantic_gaps": "No direct base-parameterized API and no Float16.",
+          "suggested_translation_strategy": "Implement helper `log(x)/log(base)` with domain checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "logBase(Float32, Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "logBase(Float32, Float32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Can be expressed using existing Math.log.",
+          "semantic_gaps": "No dedicated API.",
+          "suggested_translation_strategy": "Use change-of-base helper plus validation (x>0, base>0, base!=1)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "logBase(Float64, Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "logBase(Float64, Float64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Math.log supports formula-based implementation.",
+          "semantic_gaps": "No direct logBase symbol.",
+          "suggested_translation_strategy": "Implement helper using log ratio and edge-case checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "pow(Float32, Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "pow(Float32, Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.pow handles real exponentiation.",
+          "semantic_gaps": "Return type is double; cast policy needed.",
+          "suggested_translation_strategy": "Use Math.pow then cast to float as required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "pow(Float32, Int32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "pow(Float32, Int32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.pow covers mixed numeric exponentiation.",
+          "semantic_gaps": "No specialized int-exponent float overload.",
+          "suggested_translation_strategy": "Use Math.pow with cast or fast exponentiation when needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "pow(Float64, Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "pow(Float64, Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.pow(double,double) direct equivalent.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.pow."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "pow(Float64, Int64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "pow(Float64, Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.pow supports long via widening.",
+          "semantic_gaps": "No integer-exponent specific overload contract.",
+          "suggested_translation_strategy": "Use Math.pow(double,(double)exp) or optimized integer-power helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "reverse(UInt16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "reverse(UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Bit-reversal is available via Integer.reverse.",
+          "semantic_gaps": "Needs 16-bit width adaptation and unsigned type emulation.",
+          "suggested_translation_strategy": "Apply Integer.reverse then shift/mask to 16-bit result."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "reverse(UInt32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "reverse(UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Integer.reverse provides 32-bit bit reversal.",
+          "semantic_gaps": "Unsigned model differences outside bit pattern.",
+          "suggested_translation_strategy": "Use Integer.reverse on int bits."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "reverse(UInt64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "reverse(UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Long.reverse provides 64-bit bit reversal.",
+          "semantic_gaps": "Unsigned wrapping semantics may differ in presentation.",
+          "suggested_translation_strategy": "Use Long.reverse on raw bits."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "reverse(UInt8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "reverse(UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Bit-reversal can be derived from Integer.reverse plus masks.",
+          "semantic_gaps": "No byte-specific reverse API.",
+          "suggested_translation_strategy": "Reverse 32-bit then shift/mask to low 8 bits."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(Int16, Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "rotate(Int16, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Java has rotateLeft/rotateRight primitives.",
+          "semantic_gaps": "No 16-bit rotate helper and sign-width policy differs.",
+          "suggested_translation_strategy": "Mask to 16 bits and emulate rotation with shifts/or."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(Int32, Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "rotate(Int32, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Integer.rotateLeft/rotateRight aligns with bit rotation.",
+          "semantic_gaps": "Direction convention must be confirmed.",
+          "suggested_translation_strategy": "Map to rotateLeft or rotateRight based on sign of shift parameter."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(Int64, Int8)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "rotate(Int64, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Long.rotateLeft/rotateRight provides same primitive.",
+          "semantic_gaps": "Shift interpretation parity must be verified.",
+          "suggested_translation_strategy": "Use Long rotate helpers with normalized distance."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(Int8, Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "rotate(Int8, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Rotation can be emulated on masked byte pattern.",
+          "semantic_gaps": "No byte rotate API.",
+          "suggested_translation_strategy": "Implement `(x<<k | x>>> (8-k)) & 0xFF` style helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(UInt16, Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "rotate(UInt16, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Integer rotation primitives can emulate 16-bit unsigned rotate.",
+          "semantic_gaps": "Need unsigned width masking.",
+          "suggested_translation_strategy": "Rotate masked 16-bit pattern and re-mask."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(UInt32, Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "rotate(UInt32, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "32-bit rotate maps to Integer.rotateLeft/Right.",
+          "semantic_gaps": "Unsigned type aliasing only.",
+          "suggested_translation_strategy": "Use Integer rotate APIs on raw bits."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(UInt64, Int8)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "rotate(UInt64, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "64-bit rotate maps to Long.rotateLeft/Right.",
+          "semantic_gaps": "Unsigned semantics mainly in formatting/comparison.",
+          "suggested_translation_strategy": "Use Long rotate APIs."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "rotate(UInt8, Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "rotate(UInt8, Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Can emulate by masked shift/or operations.",
+          "semantic_gaps": "No native UInt8 rotate.",
+          "suggested_translation_strategy": "Implement custom 8-bit rotate helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "round(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "round(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math provides rounding helpers.",
+          "semantic_gaps": "No Float16 and potentially different tie-breaking mode.",
+          "suggested_translation_strategy": "Define required rounding mode explicitly and use Math/BigDecimal accordingly."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "round(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "round(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.round(float) supports nearest-integer rounding.",
+          "semantic_gaps": "Return type and tie policy may differ from Cangjie contract.",
+          "suggested_translation_strategy": "Use Math.round or BigDecimal with explicit mode if strict parity is required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "round(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "round(Float64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.round(double) is the natural counterpart.",
+          "semantic_gaps": "Tie-handling and output type may differ by API contract.",
+          "suggested_translation_strategy": "Use Math.round or BigDecimal setScale with selected RoundingMode."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sin(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sin(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.sin provides sine operation.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Use double conversion and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sin(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sin(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.sin semantically matches.",
+          "semantic_gaps": "float conversion.",
+          "suggested_translation_strategy": "Use Math.sin(double) and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sin(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sin(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.sin(double) is direct.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.sin."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sinh(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sinh(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.sinh provides hyperbolic sine.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Convert via double."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sinh(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sinh(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.sinh is semantically aligned.",
+          "semantic_gaps": "float conversion.",
+          "suggested_translation_strategy": "Use Math.sinh(double) then cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sinh(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sinh(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.sinh(double) direct counterpart.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.sinh."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sqrt(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sqrt(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.sqrt provides square root.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Convert through double."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sqrt(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sqrt(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.sqrt semantically equivalent.",
+          "semantic_gaps": "Return type conversion.",
+          "suggested_translation_strategy": "Use Math.sqrt(double) and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "sqrt(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "sqrt(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.sqrt(double) direct counterpart.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.sqrt."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "tan(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "tan(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.tan provides tangent.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Convert via double."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "tan(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "tan(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.tan semantically matches.",
+          "semantic_gaps": "Type conversion needed.",
+          "suggested_translation_strategy": "Use Math.tan(double) and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "tan(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "tan(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.tan(double) direct equivalent.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.tan."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "tanh(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "tanh(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Math.tanh provides hyperbolic tangent.",
+          "semantic_gaps": "No Float16 overload.",
+          "suggested_translation_strategy": "Convert through double."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "tanh(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "tanh(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.tanh semantically aligned.",
+          "semantic_gaps": "Type conversion needed.",
+          "suggested_translation_strategy": "Use Math.tanh(double) and cast."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "tanh(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "tanh(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.tanh(double) direct counterpart.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Use Math.tanh."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(Int16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "trailingZeros(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Integer.numberOfTrailingZeros gives analogous metric.",
+          "semantic_gaps": "Need 16-bit width treatment.",
+          "suggested_translation_strategy": "Mask to 16 bits and clamp count to 16."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(Int32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "trailingZeros(Int32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Maps to Integer.numberOfTrailingZeros.",
+          "semantic_gaps": "Naming differs.",
+          "suggested_translation_strategy": "Use Integer.numberOfTrailingZeros."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(Int64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "trailingZeros(Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Maps to Long.numberOfTrailingZeros.",
+          "semantic_gaps": "Naming differs.",
+          "suggested_translation_strategy": "Use Long.numberOfTrailingZeros."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(Int8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "trailingZeros(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Can emulate via Integer trailing-zero count.",
+          "semantic_gaps": "Need 8-bit masking/normalization.",
+          "suggested_translation_strategy": "Mask by 0xFF and adjust result upper bound."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(UInt16)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "trailingZeros(UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Trailing-zero metric available at int level.",
+          "semantic_gaps": "Unsigned 16-bit type absent.",
+          "suggested_translation_strategy": "Use masked int and width-aware post-processing."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(UInt32)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "trailingZeros(UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "32-bit trailing-zero count aligns with Integer utility.",
+          "semantic_gaps": "Unsigned model differences outside counting.",
+          "suggested_translation_strategy": "Use Integer.numberOfTrailingZeros."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(UInt64)",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "trailingZeros(UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "64-bit trailing-zero count aligns with Long utility.",
+          "semantic_gaps": "Unsigned interpretation differs in other operations.",
+          "suggested_translation_strategy": "Use Long.numberOfTrailingZeros."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trailingZeros(UInt8)",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "trailingZeros(UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Can emulate from Integer trailing-zero function.",
+          "semantic_gaps": "No UInt8 primitive.",
+          "suggested_translation_strategy": "Mask to 8-bit and normalize result."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trunc(Float16)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "trunc(Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Truncation toward zero can be composed from floor/ceil.",
+          "semantic_gaps": "No direct trunc API and no Float16.",
+          "suggested_translation_strategy": "Implement `x>=0?floor(x):ceil(x)` with conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trunc(Float32)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "trunc(Float32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Operation derivable from Math.floor/ceil.",
+          "semantic_gaps": "No direct trunc function.",
+          "suggested_translation_strategy": "Create helper truncTowardZero using floor/ceil branch."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "trunc(Float64)",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "trunc(Float64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Trunc behavior expressible with existing primitives.",
+          "semantic_gaps": "No one-call API.",
+          "suggested_translation_strategy": "Use sign-branch with floor/ceil."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "FloatingPoint<T>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java does not expose a generic floating-point capability interface analogous to this card.",
+          "semantic_gaps": "Missing static-generic numeric interface pattern in Java type system.",
+          "suggested_translation_strategy": "Use utility classes and type-specific adapters for Float/Double."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.getE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "FloatingPoint<T>.getE()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math exposes constant E.",
+          "semantic_gaps": "Generic static interface dispatch is not available in Java.",
+          "suggested_translation_strategy": "Map to Math.E and cast per target type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.getInf()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "FloatingPoint<T>.getInf()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Double/Float provide Infinity constants.",
+          "semantic_gaps": "No generic T-level static dispatch.",
+          "suggested_translation_strategy": "Use Double.POSITIVE_INFINITY or Float.POSITIVE_INFINITY per type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.getPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "FloatingPoint<T>.getPI()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.PI is direct constant source.",
+          "semantic_gaps": "Generic static interface semantics differ.",
+          "suggested_translation_strategy": "Use Math.PI and cast as needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.getMinDenormal()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "FloatingPoint<T>.getMinDenormal()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java wrapper classes expose MIN_VALUE denormal constants.",
+          "semantic_gaps": "Generic type dispatch and Float16 are missing.",
+          "suggested_translation_strategy": "Map Float32 to Float.MIN_VALUE and Float64 to Double.MIN_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.getMinNormal()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "FloatingPoint<T>.getMinNormal()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java exposes MIN_NORMAL constants on Float/Double.",
+          "semantic_gaps": "No generic interface form.",
+          "suggested_translation_strategy": "Map using Float.MIN_NORMAL or Double.MIN_NORMAL."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.getNaN()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "FloatingPoint<T>.getNaN()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java wrappers expose NaN constants.",
+          "semantic_gaps": "No generic type-level dispatch.",
+          "suggested_translation_strategy": "Use Float.NaN or Double.NaN per target type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.isInf()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "FloatingPoint<T>.isInf()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java has isInfinite checks on Float/Double.",
+          "semantic_gaps": "Generic method dispatch differs.",
+          "suggested_translation_strategy": "Use Float.isInfinite or Double.isInfinite."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.isNaN()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "FloatingPoint<T>.isNaN()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java has isNaN checks on Float/Double.",
+          "semantic_gaps": "Generic typing differs.",
+          "suggested_translation_strategy": "Use Float.isNaN or Double.isNaN."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "FloatingPoint<T>.isNormal()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "FloatingPoint<T>.isNormal()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Normal-number check can be composed from finite/non-zero/range checks.",
+          "semantic_gaps": "No direct isNormal API on Java wrappers in this card abstraction.",
+          "suggested_translation_strategy": "Implement helper using abs, MIN_NORMAL, infinity/NaN checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: FloatingPoint<Float16>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: FloatingPoint<Float16>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java lacks Float16 primitive and extension-interface mechanism.",
+          "semantic_gaps": "Both type and extension model absent.",
+          "suggested_translation_strategy": "Use custom Float16 wrapper class plus static utility methods."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getE()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Constant source exists as Math.E.",
+          "semantic_gaps": "No Float16/extension binding.",
+          "suggested_translation_strategy": "Return Float16-converted Math.E from custom wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getInf()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getInf()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Infinity constants exist for Java floats.",
+          "semantic_gaps": "No Float16 target type.",
+          "suggested_translation_strategy": "Map via float infinity then convert to custom Float16."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getPI()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "PI constant exists in Math.",
+          "semantic_gaps": "No Float16/extension mapping.",
+          "suggested_translation_strategy": "Convert Math.PI into custom Float16 representation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getMinDenormal()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getMinDenormal()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java cards do not provide Float16 denormal constant.",
+          "semantic_gaps": "No Float16 primitive constants.",
+          "suggested_translation_strategy": "Define Float16 constants in custom wrapper implementation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getMinNormal()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getMinNormal()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No Float16 min-normal constant in provided Java APIs.",
+          "semantic_gaps": "Target type unavailable.",
+          "suggested_translation_strategy": "Implement custom Float16 constant table."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getNaN()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float16 <: FloatingPoint<Float16>.getNaN()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "NaN constant exists for Float/Double.",
+          "semantic_gaps": "No Float16 built-in NaN constant in Java.",
+          "suggested_translation_strategy": "Convert float NaN to custom Float16 encoding."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: FloatingPoint<Float32>",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: FloatingPoint<Float32>",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java Float class carries floating-point constants and helpers.",
+          "semantic_gaps": "Cangjie extension-interface pattern has no direct Java equivalent.",
+          "suggested_translation_strategy": "Use static utility methods over Float."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getE()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.E is the source constant.",
+          "semantic_gaps": "Need cast to float and extension syntax translation.",
+          "suggested_translation_strategy": "Use `(float)Math.E` in helper method."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getInf()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getInf()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Float.POSITIVE_INFINITY matches semantic intent.",
+          "semantic_gaps": "Extension dispatch syntax differs.",
+          "suggested_translation_strategy": "Expose helper returning Float.POSITIVE_INFINITY."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getPI()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.PI provides PI constant.",
+          "semantic_gaps": "Need float cast and helper wrapping.",
+          "suggested_translation_strategy": "Use `(float)Math.PI`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getMinDenormal()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getMinDenormal()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Float.MIN_VALUE is smallest positive subnormal value.",
+          "semantic_gaps": "Extension syntax differs only.",
+          "suggested_translation_strategy": "Map to Float.MIN_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getMinNormal()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getMinNormal()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Float.MIN_NORMAL directly represents minimum normal float.",
+          "semantic_gaps": "None beyond syntax mapping.",
+          "suggested_translation_strategy": "Map to Float.MIN_NORMAL."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getNaN()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: FloatingPoint<Float32>.getNaN()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Float.NaN matches semantic intent.",
+          "semantic_gaps": "Extension syntax only.",
+          "suggested_translation_strategy": "Map to Float.NaN."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: FloatingPoint<Float64>",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: FloatingPoint<Float64>",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java Double class provides corresponding constants/utilities.",
+          "semantic_gaps": "No extension-interface mechanism in Java.",
+          "suggested_translation_strategy": "Use static utility wrappers around Double."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getE()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.E directly matches.",
+          "semantic_gaps": "Only dispatch style differs.",
+          "suggested_translation_strategy": "Use Math.E."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getInf()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getInf()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Double.POSITIVE_INFINITY matches semantic intent.",
+          "semantic_gaps": "Dispatch syntax differs.",
+          "suggested_translation_strategy": "Use Double.POSITIVE_INFINITY."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getPI()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.PI directly matches.",
+          "semantic_gaps": "Only syntax-level adaptation needed.",
+          "suggested_translation_strategy": "Use Math.PI."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getMinDenormal()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getMinDenormal()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Double.MIN_VALUE is smallest positive subnormal double.",
+          "semantic_gaps": "None beyond extension syntax.",
+          "suggested_translation_strategy": "Map to Double.MIN_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getMinNormal()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getMinNormal()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Double.MIN_NORMAL directly matches.",
+          "semantic_gaps": "None beyond syntax mapping.",
+          "suggested_translation_strategy": "Map to Double.MIN_NORMAL."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getNaN()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: FloatingPoint<Float64>.getNaN()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Double.NaN directly matches.",
+          "semantic_gaps": "Extension syntax differs.",
+          "suggested_translation_strategy": "Map to Double.NaN."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java lacks generic integer-operator interface abstraction with static traits.",
+          "semantic_gaps": "No trait-like generic operator contract in Java type system.",
+          "suggested_translation_strategy": "Model with utility methods or sealed wrappers per numeric width."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "Integer<T>.isSigned()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Signedness can be encoded as metadata per type in Java.",
+          "semantic_gaps": "No generic static method for signedness query.",
+          "suggested_translation_strategy": "Implement helper table for each represented integer type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.%(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>.%(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java operators are not first-class methods on generic numeric interfaces.",
+          "semantic_gaps": "No operator-method dispatch over generic T.",
+          "suggested_translation_strategy": "Use concrete primitive operations or functional adapters per type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.&(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>.&(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Bitwise operator methods on generic T are not available in Java.",
+          "semantic_gaps": "Operator abstraction missing.",
+          "suggested_translation_strategy": "Specialize by concrete primitive type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.|(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>.|(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java bitwise OR is operator syntax, not interface method.",
+          "semantic_gaps": "Generic operator dispatch absent.",
+          "suggested_translation_strategy": "Use type-specific helper methods."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.^(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>.^(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Generic XOR operator method abstraction is not in Java.",
+          "semantic_gaps": "No first-class operator interface model.",
+          "suggested_translation_strategy": "Implement concrete primitive-specific operations."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.!()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>.!()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Bitwise-not on generic trait is not representable directly in Java interfaces.",
+          "semantic_gaps": "Operator method abstraction missing.",
+          "suggested_translation_strategy": "Use concrete `~` operations in typed helpers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.>>(Int64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>.>>(Int64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Shift operators are not generic interface methods in Java.",
+          "semantic_gaps": "No generic operator dispatch.",
+          "suggested_translation_strategy": "Implement per primitive width in helper functions."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Integer<T>.<<(Int64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Integer<T>.<<(Int64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Generic left-shift method abstraction unavailable in Java.",
+          "semantic_gaps": "Operator trait model differs fundamentally.",
+          "suggested_translation_strategy": "Use concrete primitive shifts."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int16 <: Integer<Int16>",
+      "candidates": [
+        {
+          "java_api": "Short",
+          "cangjie_api": "extend Int16 <: Integer<Int16>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Short is the corresponding 16-bit signed wrapper.",
+          "semantic_gaps": "No extension interface implementation over primitives.",
+          "suggested_translation_strategy": "Use utility class for short operations."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int16 <: Integer<Int16>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Short",
+          "cangjie_api": "extend Int16 <: Integer<Int16>.isSigned()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java short is signed.",
+          "semantic_gaps": "No dedicated API call returning this metadata.",
+          "suggested_translation_strategy": "Return constant true in type helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int32 <: Integer<Int32>",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend Int32 <: Integer<Int32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Integer wrapper corresponds to 32-bit signed type.",
+          "semantic_gaps": "Trait extension model absent.",
+          "suggested_translation_strategy": "Use static utility methods for int."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int32 <: Integer<Int32>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend Int32 <: Integer<Int32>.isSigned()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java int is signed.",
+          "semantic_gaps": "No method call; metadata is implicit.",
+          "suggested_translation_strategy": "Return true constant in helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int64 <: Integer<Int64>",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend Int64 <: Integer<Int64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Long wrapper corresponds to 64-bit signed type.",
+          "semantic_gaps": "No extension trait mechanism.",
+          "suggested_translation_strategy": "Map to utility methods around long."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int64 <: Integer<Int64>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend Int64 <: Integer<Int64>.isSigned()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java long is signed.",
+          "semantic_gaps": "No direct API; this is type metadata.",
+          "suggested_translation_strategy": "Return true in helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int8 <: Integer<Int8>",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend Int8 <: Integer<Int8>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Byte wrapper corresponds to 8-bit signed type.",
+          "semantic_gaps": "No extension trait support.",
+          "suggested_translation_strategy": "Use byte-focused helper methods."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int8 <: Integer<Int8>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend Int8 <: Integer<Int8>.isSigned()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java byte is signed.",
+          "semantic_gaps": "No explicit API method.",
+          "suggested_translation_strategy": "Return true constant."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend IntNative <: Integer<IntNative>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend IntNative <: Integer<IntNative>",
+          "mapping_type": "uncertain",
+          "confidence": "low",
+          "reason": "IntNative width is platform-defined in Cangjie, while Java primitive widths are fixed.",
+          "semantic_gaps": "No platform-native integer primitive abstraction in Java.",
+          "suggested_translation_strategy": "Choose int or long based on required range and keep abstraction layer."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend IntNative <: Integer<IntNative>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend IntNative <: Integer<IntNative>.isSigned()",
+          "mapping_type": "uncertain",
+          "confidence": "low",
+          "reason": "Java has no IntNative notion; signedness is tied to chosen surrogate type.",
+          "semantic_gaps": "No direct equivalent type.",
+          "suggested_translation_strategy": "Return constant based on selected surrogate (int/long)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt16 <: Integer<UInt16>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UInt16 <: Integer<UInt16>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java has no UInt16 primitive or wrapper type.",
+          "semantic_gaps": "Unsigned 16-bit trait implementation unavailable directly.",
+          "suggested_translation_strategy": "Represent using int with range checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt16 <: Integer<UInt16>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UInt16 <: Integer<UInt16>.isSigned()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Unsignedness metadata cannot bind to native UInt16 type in Java.",
+          "semantic_gaps": "Type missing.",
+          "suggested_translation_strategy": "Represent with int and hardcode signed=false."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt32 <: Integer<UInt32>",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend UInt32 <: Integer<UInt32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Java int can carry same 32-bit bit pattern.",
+          "semantic_gaps": "Unsigned arithmetic/comparison differ.",
+          "suggested_translation_strategy": "Use int plus Integer.compareUnsigned/divideUnsigned style helpers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt32 <: Integer<UInt32>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend UInt32 <: Integer<UInt32>.isSigned()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can represent as int but signedness semantics are emulated.",
+          "semantic_gaps": "No true UInt32 type.",
+          "suggested_translation_strategy": "Expose metadata false and use unsigned helper methods."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt64 <: Integer<UInt64>",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend UInt64 <: Integer<UInt64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Java long can store 64-bit pattern.",
+          "semantic_gaps": "Unsigned operations require special helpers.",
+          "suggested_translation_strategy": "Use long with unsigned compare/divide/remainder APIs."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt64 <: Integer<UInt64>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend UInt64 <: Integer<UInt64>.isSigned()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Underlying storage can be long but unsigned semantics are external.",
+          "semantic_gaps": "No native UInt64 type.",
+          "suggested_translation_strategy": "Hardcode signed=false in abstraction layer."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt8 <: Integer<UInt8>",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend UInt8 <: Integer<UInt8>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Byte can hold raw 8-bit pattern.",
+          "semantic_gaps": "Unsigned interpretation not native.",
+          "suggested_translation_strategy": "Use int/short surrogate with 0..255 checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt8 <: Integer<UInt8>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend UInt8 <: Integer<UInt8>.isSigned()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can emulate unsigned-byte metadata despite signed storage.",
+          "semantic_gaps": "No true UInt8 type.",
+          "suggested_translation_strategy": "Return false in helper and mask operations with 0xFF."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UIntNative <: Integer<UIntNative>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UIntNative <: Integer<UIntNative>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java lacks platform-native unsigned integer abstraction.",
+          "semantic_gaps": "Both native-width and unsigned dimensions missing.",
+          "suggested_translation_strategy": "Select fixed surrogate (int/long/BigInteger) and encapsulate behavior."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UIntNative <: Integer<UIntNative>.isSigned()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UIntNative <: Integer<UIntNative>.isSigned()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Unsigned native-width integer metadata has no native Java type target.",
+          "semantic_gaps": "Type absent.",
+          "suggested_translation_strategy": "Define abstraction metadata manually with signed=false."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MathExtension<T>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "MathExtension<T>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java lacks trait-style generic extension interfaces for numeric constants.",
+          "semantic_gaps": "No equivalent extension model.",
+          "suggested_translation_strategy": "Use utility class exposing constants by target type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MathExtension<T>.GetPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "MathExtension<T>.GetPI()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.PI provides PI constant.",
+          "semantic_gaps": "Generic extension dispatch not present.",
+          "suggested_translation_strategy": "Use Math.PI with type conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MathExtension<T>.GetE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "MathExtension<T>.GetE()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Math.E provides Euler constant.",
+          "semantic_gaps": "No generic extension dispatch.",
+          "suggested_translation_strategy": "Use Math.E with conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: MathExtension<Float16>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: MathExtension<Float16>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Float16 and extension-trait model are both unavailable in Java.",
+          "semantic_gaps": "Missing type and mechanism.",
+          "suggested_translation_strategy": "Implement custom Float16 constants helper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: MathExtension<Float16>.GetPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float16 <: MathExtension<Float16>.GetPI()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Source constant exists as Math.PI.",
+          "semantic_gaps": "No Float16 built-in target.",
+          "suggested_translation_strategy": "Convert Math.PI into custom Float16 representation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: MathExtension<Float16>.GetE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float16 <: MathExtension<Float16>.GetE()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Source constant exists as Math.E.",
+          "semantic_gaps": "No Float16 native support.",
+          "suggested_translation_strategy": "Convert Math.E to custom Float16 value."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: MathExtension<Float32>",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: MathExtension<Float32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Float can represent 32-bit floating constants.",
+          "semantic_gaps": "Trait extension pattern differs.",
+          "suggested_translation_strategy": "Expose static helper constants for float."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: MathExtension<Float32>.GetPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float32 <: MathExtension<Float32>.GetPI()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "PI source constant available.",
+          "semantic_gaps": "Cast required to float.",
+          "suggested_translation_strategy": "Use `(float)Math.PI`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: MathExtension<Float32>.GetE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float32 <: MathExtension<Float32>.GetE()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "E source constant available.",
+          "semantic_gaps": "Cast required to float.",
+          "suggested_translation_strategy": "Use `(float)Math.E`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: MathExtension<Float64>",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: MathExtension<Float64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Double corresponds to 64-bit float constants.",
+          "semantic_gaps": "Extension syntax not present in Java.",
+          "suggested_translation_strategy": "Use static utility layer over Double/Math constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: MathExtension<Float64>.GetPI()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float64 <: MathExtension<Float64>.GetPI()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.PI is direct.",
+          "semantic_gaps": "Only syntax adaptation.",
+          "suggested_translation_strategy": "Use Math.PI."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: MathExtension<Float64>.GetE()",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "extend Float64 <: MathExtension<Float64>.GetE()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Math.E is direct.",
+          "semantic_gaps": "Only syntax adaptation.",
+          "suggested_translation_strategy": "Use Math.E."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MaxMinValue<T>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "MaxMinValue<T>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java has per-type min/max constants but no generic static trait interface.",
+          "semantic_gaps": "Generic static dispatch model absent.",
+          "suggested_translation_strategy": "Use per-type constants via helper adapters."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MaxMinValue<T>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "MaxMinValue<T>.getMax()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Java wrapper classes provide MAX_VALUE constants.",
+          "semantic_gaps": "No generic trait-level static method.",
+          "suggested_translation_strategy": "Dispatch by concrete type and return corresponding MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MaxMinValue<T>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "MaxMinValue<T>.getMin()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Java wrappers expose MIN_VALUE constants.",
+          "semantic_gaps": "Meaning of min for floating types differs (smallest positive vs most negative).",
+          "suggested_translation_strategy": "Map per type carefully and use NEGATIVE_INFINITY/min finite where semantics require."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: MaxMinValue<Float16>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: MaxMinValue<Float16>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Float16 is not native in Java cards.",
+          "semantic_gaps": "Missing target type and constants.",
+          "suggested_translation_strategy": "Define custom Float16 max/min constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: MaxMinValue<Float16>.getMax()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: MaxMinValue<Float16>.getMax()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No native Float16 max constant in Java.",
+          "semantic_gaps": "Target type missing.",
+          "suggested_translation_strategy": "Implement in custom Float16 wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: MaxMinValue<Float16>.getMin()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: MaxMinValue<Float16>.getMin()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No native Float16 min constant in Java cards.",
+          "semantic_gaps": "Missing type and semantics mapping.",
+          "suggested_translation_strategy": "Define custom Float16 min behavior explicitly."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: MaxMinValue<Float32>",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: MaxMinValue<Float32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Float exposes MAX_VALUE/MIN_VALUE constants.",
+          "semantic_gaps": "Trait extension mechanism not present.",
+          "suggested_translation_strategy": "Provide helper methods returning Float constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: MaxMinValue<Float32>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: MaxMinValue<Float32>.getMax()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Float.MAX_VALUE directly matches max finite float.",
+          "semantic_gaps": "None beyond helper wrapping.",
+          "suggested_translation_strategy": "Return Float.MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: MaxMinValue<Float32>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: MaxMinValue<Float32>.getMin()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Float.MIN_VALUE provides minimum positive subnormal.",
+          "semantic_gaps": "If Cangjie means most negative finite value, mapping differs.",
+          "suggested_translation_strategy": "Verify intended semantics; choose Float.MIN_VALUE or -Float.MAX_VALUE accordingly."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: MaxMinValue<Float64>",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: MaxMinValue<Float64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Double exposes max/min constants.",
+          "semantic_gaps": "No trait extension syntax.",
+          "suggested_translation_strategy": "Provide helper wrapper for Double constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: MaxMinValue<Float64>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: MaxMinValue<Float64>.getMax()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Double.MAX_VALUE is direct.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Return Double.MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: MaxMinValue<Float64>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: MaxMinValue<Float64>.getMin()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Double.MIN_VALUE gives minimum positive subnormal.",
+          "semantic_gaps": "Could differ if Cangjie expects most negative bound.",
+          "suggested_translation_strategy": "Confirm semantics and map to Double.MIN_VALUE or -Double.MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int16 <: MaxMinValue<Int16>",
+      "candidates": [
+        {
+          "java_api": "Short",
+          "cangjie_api": "extend Int16 <: MaxMinValue<Int16>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Short has MIN_VALUE/MAX_VALUE constants.",
+          "semantic_gaps": "No extension trait support.",
+          "suggested_translation_strategy": "Expose helper methods returning Short constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int16 <: MaxMinValue<Int16>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Short",
+          "cangjie_api": "extend Int16 <: MaxMinValue<Int16>.getMax()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Short.MAX_VALUE matches intent.",
+          "semantic_gaps": "None beyond syntax mapping.",
+          "suggested_translation_strategy": "Return Short.MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int16 <: MaxMinValue<Int16>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Short",
+          "cangjie_api": "extend Int16 <: MaxMinValue<Int16>.getMin()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Short.MIN_VALUE matches intent.",
+          "semantic_gaps": "None beyond syntax mapping.",
+          "suggested_translation_strategy": "Return Short.MIN_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int32 <: MaxMinValue<Int32>",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend Int32 <: MaxMinValue<Int32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Integer has MIN_VALUE/MAX_VALUE constants.",
+          "semantic_gaps": "No trait extension syntax.",
+          "suggested_translation_strategy": "Use helper wrappers over Integer constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int32 <: MaxMinValue<Int32>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend Int32 <: MaxMinValue<Int32>.getMax()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Integer.MAX_VALUE direct match.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Return Integer.MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int32 <: MaxMinValue<Int32>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend Int32 <: MaxMinValue<Int32>.getMin()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Integer.MIN_VALUE direct match.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Return Integer.MIN_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int64 <: MaxMinValue<Int64>",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend Int64 <: MaxMinValue<Int64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Long has MIN_VALUE/MAX_VALUE constants.",
+          "semantic_gaps": "Extension syntax unavailable.",
+          "suggested_translation_strategy": "Use helper wrappers around Long constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int64 <: MaxMinValue<Int64>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend Int64 <: MaxMinValue<Int64>.getMax()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Long.MAX_VALUE direct match.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Return Long.MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int64 <: MaxMinValue<Int64>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend Int64 <: MaxMinValue<Int64>.getMin()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Long.MIN_VALUE direct match.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Return Long.MIN_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int8 <: MaxMinValue<Int8>",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend Int8 <: MaxMinValue<Int8>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Byte has MIN_VALUE/MAX_VALUE constants.",
+          "semantic_gaps": "No trait extension model.",
+          "suggested_translation_strategy": "Use helper wrappers over Byte constants."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int8 <: MaxMinValue<Int8>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend Int8 <: MaxMinValue<Int8>.getMax()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Byte.MAX_VALUE direct match.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Return Byte.MAX_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int8 <: MaxMinValue<Int8>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend Int8 <: MaxMinValue<Int8>.getMin()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Byte.MIN_VALUE direct match.",
+          "semantic_gaps": "Minimal.",
+          "suggested_translation_strategy": "Return Byte.MIN_VALUE."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend IntNative <: MaxMinValue<IntNative>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend IntNative <: MaxMinValue<IntNative>",
+          "mapping_type": "uncertain",
+          "confidence": "low",
+          "reason": "IntNative has no direct Java equivalent width.",
+          "semantic_gaps": "Cannot pick min/max without surrogate choice.",
+          "suggested_translation_strategy": "Choose int or long abstraction and define constants accordingly."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend IntNative <: MaxMinValue<IntNative>.getMax()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend IntNative <: MaxMinValue<IntNative>.getMax()",
+          "mapping_type": "uncertain",
+          "confidence": "low",
+          "reason": "Max depends on chosen surrogate width in Java.",
+          "semantic_gaps": "No native-width integer type.",
+          "suggested_translation_strategy": "Bind to Integer.MAX_VALUE or Long.MAX_VALUE by design decision."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend IntNative <: MaxMinValue<IntNative>.getMin()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend IntNative <: MaxMinValue<IntNative>.getMin()",
+          "mapping_type": "uncertain",
+          "confidence": "low",
+          "reason": "Min bound depends on selected surrogate type.",
+          "semantic_gaps": "No platform-native primitive in Java.",
+          "suggested_translation_strategy": "Bind to Integer.MIN_VALUE or Long.MIN_VALUE by project convention."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt16 <: MaxMinValue<UInt16>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UInt16 <: MaxMinValue<UInt16>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No native UInt16 in Java.",
+          "semantic_gaps": "Unsigned type missing.",
+          "suggested_translation_strategy": "Represent with int and constants 0..65535."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt16 <: MaxMinValue<UInt16>.getMax()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UInt16 <: MaxMinValue<UInt16>.getMax()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java has no UInt16.MAX_VALUE symbol.",
+          "semantic_gaps": "Unsigned primitive absent.",
+          "suggested_translation_strategy": "Return literal 65535 in surrogate int type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt16 <: MaxMinValue<UInt16>.getMin()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UInt16 <: MaxMinValue<UInt16>.getMin()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No UInt16 min constant symbol in Java.",
+          "semantic_gaps": "Type absent.",
+          "suggested_translation_strategy": "Return literal 0 in surrogate int type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt32 <: MaxMinValue<UInt32>",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend UInt32 <: MaxMinValue<UInt32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "int can represent same 32-bit pattern.",
+          "semantic_gaps": "Unsigned max/min constants are not native as typed API.",
+          "suggested_translation_strategy": "Represent max as 0xFFFFFFFF and min as 0 in long/int abstraction."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt32 <: MaxMinValue<UInt32>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend UInt32 <: MaxMinValue<UInt32>.getMax()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can express unsigned max via bit pattern.",
+          "semantic_gaps": "No UInt32 constant type.",
+          "suggested_translation_strategy": "Use literal `0xFFFFFFFFL` or unsigned-int wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt32 <: MaxMinValue<UInt32>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend UInt32 <: MaxMinValue<UInt32>.getMin()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Unsigned minimum is representable as zero.",
+          "semantic_gaps": "No UInt32 typed constant.",
+          "suggested_translation_strategy": "Return 0 in chosen unsigned representation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt64 <: MaxMinValue<UInt64>",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend UInt64 <: MaxMinValue<UInt64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "long carries 64-bit pattern with unsigned helpers.",
+          "semantic_gaps": "No UInt64 primitive constants.",
+          "suggested_translation_strategy": "Use long/BigInteger abstraction for min/max."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt64 <: MaxMinValue<UInt64>.getMax()",
+      "candidates": [
+        {
+          "java_api": "BigInteger",
+          "cangjie_api": "extend UInt64 <: MaxMinValue<UInt64>.getMax()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "BigInteger can represent 2^64-1 exactly.",
+          "semantic_gaps": "No UInt64 MAX constant in primitive Java types.",
+          "suggested_translation_strategy": "Use `BigInteger.ONE.shiftLeft(64).subtract(BigInteger.ONE)` when exact unsigned max is needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt64 <: MaxMinValue<UInt64>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend UInt64 <: MaxMinValue<UInt64>.getMin()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Unsigned min is zero regardless of storage.",
+          "semantic_gaps": "No dedicated UInt64 type.",
+          "suggested_translation_strategy": "Return zero in long/BigInteger abstraction."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt8 <: MaxMinValue<UInt8>",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend UInt8 <: MaxMinValue<UInt8>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Byte can hold raw 8-bit pattern.",
+          "semantic_gaps": "Unsigned min/max not native.",
+          "suggested_translation_strategy": "Use int surrogate with constants 0..255."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt8 <: MaxMinValue<UInt8>.getMax()",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend UInt8 <: MaxMinValue<UInt8>.getMax()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Unsigned max can be represented numerically.",
+          "semantic_gaps": "No UInt8.MAX constant.",
+          "suggested_translation_strategy": "Return literal 255 in int surrogate."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt8 <: MaxMinValue<UInt8>.getMin()",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend UInt8 <: MaxMinValue<UInt8>.getMin()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Unsigned min is zero.",
+          "semantic_gaps": "No UInt8 typed constant in Java.",
+          "suggested_translation_strategy": "Return literal 0 in int surrogate."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UIntNative <: MaxMinValue<UIntNative>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UIntNative <: MaxMinValue<UIntNative>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java has no native-width unsigned primitive abstraction.",
+          "semantic_gaps": "Type and constant set unavailable.",
+          "suggested_translation_strategy": "Choose fixed surrogate width and define constants explicitly."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UIntNative <: MaxMinValue<UIntNative>.getMax()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UIntNative <: MaxMinValue<UIntNative>.getMax()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Depends on native width not represented in Java types.",
+          "semantic_gaps": "No direct type or max constant.",
+          "suggested_translation_strategy": "Define project-level UIntNative width and set max accordingly."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UIntNative <: MaxMinValue<UIntNative>.getMin()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UIntNative <: MaxMinValue<UIntNative>.getMin()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Native unsigned min constant has no direct Java counterpart type.",
+          "semantic_gaps": "Type absent.",
+          "suggested_translation_strategy": "Define as zero in chosen surrogate representation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Number<T>",
+      "candidates": [
+        {
+          "java_api": "Number",
+          "cangjie_api": "Number<T>",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Java Number is the closest generic numeric supertype concept.",
+          "semantic_gaps": "Java Number lacks operator contracts required by Cangjie interface.",
+          "suggested_translation_strategy": "Use Number for data model and provide operation utilities separately."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Number<T>.+(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Number<T>.+(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java cannot declare generic arithmetic operators on Number.",
+          "semantic_gaps": "Operator-overloaded generic interface missing.",
+          "suggested_translation_strategy": "Implement typed arithmetic adapters or use BigDecimal/BigInteger for dynamic arithmetic."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Number<T>.-(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Number<T>.-(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Generic subtraction operator contract is not representable in Java interfaces.",
+          "semantic_gaps": "No operator-overloading on generics.",
+          "suggested_translation_strategy": "Use concrete numeric specializations."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Number<T>.*(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Number<T>.*(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java generic interfaces cannot express multiplication operator methods.",
+          "semantic_gaps": "Operator traits absent.",
+          "suggested_translation_strategy": "Provide type-specific multiplication helpers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Number<T>./(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Number<T>./(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Generic division operator contract not supported by Java type system.",
+          "semantic_gaps": "No operator-overloaded interfaces.",
+          "suggested_translation_strategy": "Use concrete type APIs (double, BigDecimal, etc.)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Number<T>.-()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "Number<T>.-()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Unary negation over generic Number cannot be defined as interface operator in Java.",
+          "semantic_gaps": "No generic operator methods.",
+          "suggested_translation_strategy": "Implement unary negation in type-specific helper functions."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float16 <: Number<Float16>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend Float16 <: Number<Float16>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Float16 type and extension trait model are unavailable in Java.",
+          "semantic_gaps": "No direct type/mechanism.",
+          "suggested_translation_strategy": "Use custom Float16 wrapper implementing custom numeric interface."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float32 <: Number<Float32>",
+      "candidates": [
+        {
+          "java_api": "Float",
+          "cangjie_api": "extend Float32 <: Number<Float32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Float is corresponding wrapper for 32-bit floating numbers.",
+          "semantic_gaps": "No extension-trait operator interface mapping.",
+          "suggested_translation_strategy": "Use float operations directly and wrap where needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Float64 <: Number<Float64>",
+      "candidates": [
+        {
+          "java_api": "Double",
+          "cangjie_api": "extend Float64 <: Number<Float64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Double is corresponding wrapper for 64-bit floating numbers.",
+          "semantic_gaps": "No extension-trait operator model.",
+          "suggested_translation_strategy": "Use double operations or helper classes."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int16 <: Number<Int16>",
+      "candidates": [
+        {
+          "java_api": "Short",
+          "cangjie_api": "extend Int16 <: Number<Int16>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Short corresponds to 16-bit integer wrapper.",
+          "semantic_gaps": "Operator-trait extension absent.",
+          "suggested_translation_strategy": "Use primitive short/int operations with helper wrappers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int32 <: Number<Int32>",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend Int32 <: Number<Int32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Integer corresponds to 32-bit signed numbers.",
+          "semantic_gaps": "No extension-trait operator API.",
+          "suggested_translation_strategy": "Use int operations directly."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int64 <: Number<Int64>",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend Int64 <: Number<Int64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Long corresponds to 64-bit signed numbers.",
+          "semantic_gaps": "Trait extension not available.",
+          "suggested_translation_strategy": "Use long operations or helper wrappers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend Int8 <: Number<Int8>",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend Int8 <: Number<Int8>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Byte corresponds to 8-bit signed numbers.",
+          "semantic_gaps": "No extension trait and operators widen to int in Java.",
+          "suggested_translation_strategy": "Use int intermediates and cast with range checks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend IntNative <: Number<IntNative>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend IntNative <: Number<IntNative>",
+          "mapping_type": "uncertain",
+          "confidence": "low",
+          "reason": "No IntNative type in Java; needs surrogate selection.",
+          "semantic_gaps": "Native-width abstraction absent.",
+          "suggested_translation_strategy": "Choose int/long based on range and wrap in project abstraction."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt16 <: Number<UInt16>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UInt16 <: Number<UInt16>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java lacks unsigned 16-bit primitive type abstraction.",
+          "semantic_gaps": "Direct type and trait mapping unavailable.",
+          "suggested_translation_strategy": "Represent as int with unsigned range constraints."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt32 <: Number<UInt32>",
+      "candidates": [
+        {
+          "java_api": "Integer",
+          "cangjie_api": "extend UInt32 <: Number<UInt32>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "int carries same 32-bit pattern; unsigned ops can be emulated.",
+          "semantic_gaps": "No true UInt32 type.",
+          "suggested_translation_strategy": "Use int + unsigned helper methods."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt64 <: Number<UInt64>",
+      "candidates": [
+        {
+          "java_api": "Long",
+          "cangjie_api": "extend UInt64 <: Number<UInt64>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "long carries 64-bit pattern; unsigned helpers exist.",
+          "semantic_gaps": "No direct UInt64 type.",
+          "suggested_translation_strategy": "Use long + unsigned API or BigInteger for full-range arithmetic."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UInt8 <: Number<UInt8>",
+      "candidates": [
+        {
+          "java_api": "Byte",
+          "cangjie_api": "extend UInt8 <: Number<UInt8>",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Byte can store 8-bit pattern with unsigned interpretation via masking.",
+          "semantic_gaps": "No native UInt8 type.",
+          "suggested_translation_strategy": "Use int surrogate (0..255) for arithmetic."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend UIntNative <: Number<UIntNative>",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend UIntNative <: Number<UIntNative>",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java lacks native-width unsigned type abstraction.",
+          "semantic_gaps": "No direct equivalent type/mechanism.",
+          "suggested_translation_strategy": "Use configurable surrogate with explicit unsigned operations."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Mathematical Basic Operations Examples",
+      "candidates": [
+        {
+          "java_api": "Math",
+          "cangjie_api": "Mathematical Basic Operations Examples",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Examples are composed of general math/bitwise operations supported by Java classes and operators.",
+          "semantic_gaps": "Several sample functions (lcm, rotate on small unsigned widths, clamp) need helper methods.",
+          "suggested_translation_strategy": "Translate idiom to Java using Math + Integer/Long bit helpers + custom gcd/lcm/clamp wrappers."
+        }
+      ]
+    }
+  ]
+}

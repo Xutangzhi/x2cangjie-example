@@ -1,0 +1,21 @@
+[package]
+  cjc-version = "1.0.5"
+  compile-option = ""
+  description = "Bootstrap Cangjie implementation slice for Apache Commons Validator"
+  link-option = ""
+  name = "validator"
+  output-type = "static"
+  src-dir = "."
+  target-dir = ""
+  version = "1.0.0"
+  package-configuration = {}
+  scripts = {}
+
+[profile]
+  [profile.build]
+    incremental = true
+    lto = ""
+  [profile.customized-option]
+    debug = "-g"
+    release = "-O2"
+  [profile.test]

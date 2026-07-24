@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "translator": {
+    "phase": "CLOSED",
+    "active_slice": "",
+    "active_todo_id": "",
+    "todo_attempt_count": 3,
+    "closure_attempt_count": 1,
+    "last_tester_decision": "PASS",
+    "completion_kind": "complete",
+    "next_action": "delivery gate passed; migration complete"
+  },
+  "tester": {
+    "last_report_path": ".translation/tester/reports/tester-todo-005-core-config-20260706T145402Z.yaml",
+    "last_decision": "PASS",
+    "plan_audit_accepted": true
+  },
+  "final_reviewer": {
+    "last_report_path": ".translation/final-reviewer/reports/final-closure-20260706T151406Z.yaml",
+    "last_decision": "PASS",
+    "closure_ready": true
+  },
+  "history": {
+    "iterations": [
+      {
+        "phase": "SCAN",
+        "note": "bootstrap analyze_java_repo.py generated repo-scan; source baseline mvn -q test passed."
+      },
+      {
+        "phase": "MODEL",
+        "note": "model/todo generated from repo-scan, public APIs, source tests, resources, and target skeleton comments."
+      },
+      {
+        "phase": "PLAN_AUDIT",
+        "decision": "PASS",
+        "report": ".translation/tester/reports/tester-plan-audit-20260706T063610Z.yaml"
+      },
+      {
+        "phase": "TODO_VERIFICATION",
+        "todo_id": "TODO-000-BUILD",
+        "decision": "PASS",
+        "report": ".translation/tester/reports/tester-todo-000-build-20260706T064747Z.yaml"
+      },
+      {
+        "phase": "TODO_VERIFICATION",
+        "todo_id": "TODO-001-CHECKDIGIT",
+        "decision": "PASS",
+        "report": ".translation/tester/reports/tester-todo-001-checkdigit-20260706T082817Z.yaml"
+      },
+      {
+        "phase": "READY_FOR_TEST",
+        "todo_id": "TODO-002-ADDRESS",
+        "note": "TODO-002 address validators implemented with translated legacy/routines tests; ready for contract gate and tester handoff."
+      },
+      {
+        "phase": "TODO_VERIFICATION",
+        "todo_id": "TODO-002-ADDRESS",
+        "decision": "PASS",
+        "report": ".translation/tester/reports/tester-todo-002-address-20260706T093211Z.yaml"
+      },
+      {
+        "phase": "IMPLEMENT",
+        "todo_id": "TODO-003-NUMERIC-TIME",
+        "note": "TODO-002 closed after tester PASS; activated next dependency-ready numeric/time validator slice."
+      },
+      {
+        "phase": "READY_FOR_TEST",
+        "todo_id": "TODO-003-NUMERIC-TIME",
+        "note": "TODO-003 numeric/date/calendar/generic validator slice implemented with translated legacy/routines tests; ready for contract gate and tester handoff."
+      },
+      {
+        "phase": "TODO_VERIFICATION",
+        "todo_id": "TODO-003-NUMERIC-TIME",
+        "decision": "PASS",
+        "report": ".translation/tester/reports/tester-todo-003-numeric-time-20260706T112102Z.yaml"
+      },
+      {
+        "phase": "IMPLEMENT",
+        "todo_id": "TODO-004-IDENTIFIERS",
+        "note": "TODO-003 closed after tester PASS; activated next dependency-ready identifier slice."
+      },
+      {
+        "phase": "READY_FOR_TEST",
+        "todo_id": "TODO-004-IDENTIFIERS",
+        "note": "TODO-004 identifier and financial validator slice implemented with translated legacy/routines tests and IBAN registry fixture replay; ready for contract gate and tester handoff."
+      },
+      {
+        "phase": "TODO_VERIFICATION",
+        "todo_id": "TODO-004-IDENTIFIERS",
+        "decision": "PASS",
+        "report": ".translation/tester/reports/tester-todo-004-identifiers-20260706T121155Z.yaml"
+      },
+      {
+        "phase": "IMPLEMENT",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "note": "TODO-004 closed after tester PASS and tester gate; activated next dependency-ready core config/resource slice."
+      },
+      {
+        "phase": "READY_FOR_TEST",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "note": "TODO-005 core validator config/resource slice implemented with translated core-config tests; ready for contract gate and tester handoff."
+      },
+      {
+        "phase": "FIX",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "note": "TODO-005 failed tester verification on TESTER-TODO-005-001; fix JavaBean/getter property-access parity and re-handoff."
+      },
+      {
+        "phase": "READY_FOR_TEST",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "note": "TODO-005 object-backed bean parity fixed with CoreNameBean/CoreTestBean/CoreValueBean adapters; source baseline, cjpm build, and cjpm test rerun succeeded; ready for contract gate and tester re-handoff."
+      },
+      {
+        "phase": "TODO_VERIFICATION",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "decision": "NEEDS_FIX",
+        "report": ".translation/tester/reports/tester-todo-005-core-config-20260706T141927Z.yaml"
+      },
+      {
+        "phase": "FIX",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "note": "TODO-005 still fails tester verification on TESTER-TODO-005-001; bridge and verify util.ValidatorUtils object-backed property access parity before re-handoff."
+      },
+      {
+        "phase": "READY_FOR_TEST",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "note": "TODO-005 now bridges util.ValidatorUtils to validator.ValidatorPropertyAccess and directly asserts util-package object-bean parity for CoreNameBean/CoreTestBean/CoreValueBean; source baseline, cjpm build, and cjpm test rerun succeeded; ready for contract gate and tester re-handoff."
+      },
+      {
+        "phase": "TODO_VERIFICATION",
+        "todo_id": "TODO-005-CORE-CONFIG",
+        "decision": "PASS",
+        "report": ".translation/tester/reports/tester-todo-005-core-config-20260706T145402Z.yaml"
+      },
+      {
+        "phase": "CLOSURE_REQUESTED",
+        "note": "All todos are terminal and TODO-005 closed after TODO_VERIFICATION PASS; prepare closure-ready gate and independent final reviewer handoff."
+      },
+      {
+        "phase": "FINAL_CLOSURE",
+        "decision": "PASS",
+        "report": ".translation/final-reviewer/reports/final-closure-20260706T151406Z.yaml",
+        "completion_kind": "complete"
+      },
+      {
+        "phase": "CLOSED",
+        "note": "Final reviewer returned PASS with completion_kind=complete; sync state for reviewed and delivery gates."
+      },
+      {
+        "phase": "DELIVERY",
+        "note": "reviewed gate and delivery gate both passed after FINAL_CLOSURE PASS; migration is fully closed."
+      }
+    ]
+  }
+}

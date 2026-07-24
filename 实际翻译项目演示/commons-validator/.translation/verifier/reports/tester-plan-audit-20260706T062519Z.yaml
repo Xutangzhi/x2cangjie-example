@@ -1,0 +1,93 @@
+schema_version: 1
+report_id: "tester-plan-audit-20260706T062519Z"
+report_snapshot_path: ".translation/tester/reports/tester-plan-audit-20260706T062519Z.yaml"
+report_type: PLAN_AUDIT
+decision: NEEDS_FIX
+active_todo_id: ""
+active_slice: ""
+todo_verdict:
+  todo_id: ""
+  verdict: not-applicable
+  can_mark_finished: false
+  verified_obligation_ids: []
+  failed_obligation_ids: []
+  blocking_issue_ids: []
+  required_rework: []
+plan_audit:
+  status: needs-rework
+  source_scan_status: fail
+  module_graph_status: pass
+  public_api_graph_status: pass
+  source_test_inventory_status: fail
+  ledger_status: fail
+  todo_queue_status: pass
+  validation_plan_status: fail
+  missing_modules: []
+  missing_public_apis: []
+  missing_source_tests: []
+  missing_obligations:
+    - "Per-test fixture/resource obligations for XML resource-backed ValidatorResources tests are not modeled; module-backlog source_inventory.resources is empty and every source test fixture list is empty."
+    - "Parameterized test data/provider obligations for IBANValidatorTest MethodSource/FieldSource cases are not modeled separately from the method-level source-test obligation."
+  oversized_todos: []
+  unverifiable_todos:
+    - "TODO-005-CORE-CONFIG: validation plan depends on XML/config fixtures, but the source-test inventory does not identify which tests require which XML resources."
+    - "TODO-004-IDENTIFIERS: validation plan depends on IBAN registry/example data, but parameterized providers and resource fixtures are not traced to obligations."
+  dependency_order_issues: []
+  blocked_without_evidence: []
+claimed_feature_results: []
+global_gap_scan:
+  missing_modules: []
+  incomplete_modules:
+    - "module-resources: main resource root is represented as a module, but source_inventory.resources is empty and test fixtures are not tied to tests."
+  missing_source_tests: []
+  missing_public_api: []
+  dependency_gaps: []
+  ledger_gaps:
+    - "All 396 source test method IDs are present, but resource-backed and parameterized assertion inputs are collapsed into generic method obligations."
+    - "The ledger has aggregate OB_XML_CONFIG_RESOURCES and OB_IBAN_RESOURCE_IO obligations, but does not trace each required fixture/provider to the source tests that consume it."
+  stale_decisions: []
+ledger_consistency:
+  status: fail
+  checked_obligations: 411
+  missing_obligations:
+    - "Fixture/resource traceability for java/commons-validator/src/test/resources/**/*.xml, IBANtests.txt, and iban_registry_v99.txt."
+    - "Parameterized input-provider traceability for java/commons-validator/src/test/java/org/apache/commons/validator/routines/IBANValidatorTest.java."
+  stale_claims: []
+metrics:
+  source_build_status: not-run
+  source_test_status: not-run
+  target_build_status: not-run
+  target_test_status: not-run
+  runtime_smoke_status: not-applicable
+issues:
+  - issue_id: "TESTER-PLAN-001"
+    severity: P1
+    status: open
+    category: source-test-inventory
+    title: "Resource fixtures are not traced to source tests or obligations"
+    evidence:
+      - ".translation/translator/module-backlog.yaml: source_inventory.resources is []"
+      - ".translation/translator/module-backlog.yaml: all 396 test_inventory.source_tests entries have fixtures: []"
+      - "java/commons-validator/src/test/resources contains 18 XML fixtures plus IBANtests.txt and iban_registry_v99.txt"
+      - "java/commons-validator/src/test/java/org/apache/commons/validator/AbstractCommonTest.java:40 loads per-test XML resources by name"
+      - "java/commons-validator/src/test/java/org/apache/commons/validator/routines/checkdigit/IBANCheckDigitTest.java:200 loads IBANtests.txt"
+      - "java/commons-validator/src/test/java/org/apache/commons/validator/routines/IBANValidatorTest.java:276 and :334 load iban_registry_v99.txt"
+    required_rework:
+      - "Populate module-backlog source_inventory.resources with main and test resources that affect runtime behavior."
+      - "Attach fixture paths to affected source_test inventory entries and corresponding ledger obligations."
+      - "Ensure todos that depend on XML/IBAN fixture behavior list the relevant fixture-backed obligations explicitly."
+  - issue_id: "TESTER-PLAN-002"
+    severity: P1
+    status: open
+    category: source-test-inventory
+    title: "Parameterized source-test intent is collapsed to method-level placeholders"
+    evidence:
+      - "java/commons-validator/src/test/java/org/apache/commons/validator/routines/IBANValidatorTest.java:398 uses @ParameterizedTest with MethodSource(\"ibanRegistrySourceExamples\")"
+      - "java/commons-validator/src/test/java/org/apache/commons/validator/routines/IBANValidatorTest.java:422, :429, :494 use @ParameterizedTest with FieldSource fixtures"
+      - "java/commons-validator/src/test/java/org/apache/commons/validator/routines/IBANValidatorTest.java:502 and :508 use MethodSource datasets"
+      - ".translation/translator/module-backlog.yaml source-test assertions are generic 'Preserve assertions and expected exceptions...' strings and do not record providers or data sources."
+    required_rework:
+      - "Record parameterized providers and fixture/data-source dependencies for IBANValidatorTest source-test entries."
+      - "Refine affected obligations so translated tests must cover the provider datasets, not only one representative method invocation."
+reference_paths: []
+summary: "PLAN_AUDIT needs rework. The todo graph, source-test method coverage, public API todo coverage, and yaml_guard todo gate are internally consistent, but the plan is not yet complete enough to start implementation because fixture/resource-backed tests and parameterized test providers are not traceable in the source-test inventory, ledger, or validation plans."

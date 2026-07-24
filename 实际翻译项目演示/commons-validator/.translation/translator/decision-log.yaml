@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "decisions": [
+    {
+      "decision_id": "DEC-0001",
+      "type": "test-strategy",
+      "status": "accepted",
+      "summary": "Use source JUnit tests as the semantic oracle and translate representative assertions per behavior slice into std.unittest tests.",
+      "rationale": "The Java project has 396 source test methods covering public routines and core config behavior; preserving their assertion intent is the highest-value parity signal.",
+      "scope": [
+        "all P0 slices",
+        "source tests",
+        "target tests"
+      ],
+      "evidence": [
+        "mvn -q test passed in java/commons-validator",
+        "references/migration_guide/quick-ref/test_map.md"
+      ],
+      "impact": "Target tests must exercise production Cangjie code paths and not placeholders.",
+      "follow_up": "Each todo feature contract lists translated tests and command evidence."
+    },
+    {
+      "decision_id": "DEC-0002",
+      "type": "dependency",
+      "status": "accepted",
+      "summary": "Do not introduce direct Cangjie third-party replacements for Java commons-beanutils, commons-digester, commons-logging, or commons-collections.",
+      "rationale": "The provided cangjie/src skeleton exposes a standalone library API; the Java dependencies are used for reflection/property access, XML digester configuration, logging, and map wrappers that can be represented by narrow explicit Cangjie code. No runtime external service or protocol dependency is required.",
+      "scope": [
+        "module-core",
+        "module-resources",
+        "ValidatorUtils",
+        "Field",
+        "ValidatorResources"
+      ],
+      "evidence": [
+        "java/commons-validator/pom.xml dependencies",
+        "repo-scan dependency signals",
+        "references/migration_guide/quick-ref/api_map.md reflection/XML guidance"
+      ],
+      "impact": "Target implements explicit adapters/registries and XML/resource handling instead of fake stubs or unverified TPC packages.",
+      "follow_up": "If later hidden tests require full XML digester compatibility beyond fixture-backed behavior, add a focused dependency query or parser enhancement."
+    },
+    {
+      "decision_id": "DEC-0003",
+      "type": "scope",
+      "status": "accepted",
+      "summary": "Example source tree is outside this target skeleton migration.",
+      "rationale": "The user-provided target API skeleton only covers cangjie/src library APIs, and Java src/example is not Maven main source.",
+      "scope": [
+        "java/commons-validator/src/example/org/apache/commons/validator/example"
+      ],
+      "evidence": [
+        "cangjie/src contains no example API skeleton",
+        "repo-scan marks src/example as other source set",
+        "java/commons-validator/pom.xml main source roots are src/main/java/resources"
+      ],
+      "impact": "Library behavior, public main APIs, resources, and tests remain in scope; demo CLI/sample beans are not delivered in cangjie/src.",
+      "follow_up": "Create a separate Cangjie example app only if future evaluation explicitly includes Java src/example."
+    }
+  ]
+}

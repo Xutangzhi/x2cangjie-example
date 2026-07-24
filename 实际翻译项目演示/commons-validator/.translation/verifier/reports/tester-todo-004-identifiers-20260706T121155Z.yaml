@@ -1,0 +1,256 @@
+schema_version: 1
+report_id: tester-todo-004-identifiers-20260706T121155Z
+report_snapshot_path: .translation/tester/reports/tester-todo-004-identifiers-20260706T121155Z.yaml
+report_type: TODO_VERIFICATION
+decision: PASS
+active_todo_id: TODO-004-IDENTIFIERS
+active_slice: SLICE-004-IDENTIFIERS
+todo_verdict:
+  todo_id: TODO-004-IDENTIFIERS
+  verdict: pass
+  can_mark_finished: true
+  verified_obligation_ids:
+  - OB_ST_CreditCardValidatorTest_testAddAllowedCardType
+  - OB_ST_CreditCardValidatorTest_testIsValid
+  - OB_ST_ISBNValidatorTest_testIsValid
+  - OB_ST_routines_CreditCardValidatorTest_testAddAllowedCardType
+  - OB_ST_routines_CreditCardValidatorTest_testAmexOption
+  - OB_ST_routines_CreditCardValidatorTest_testAmexValidator
+  - OB_ST_routines_CreditCardValidatorTest_testArrayConstructor
+  - OB_ST_routines_CreditCardValidatorTest_testDinersOption
+  - OB_ST_routines_CreditCardValidatorTest_testDinersValidator
+  - OB_ST_routines_CreditCardValidatorTest_testDiscoverOption
+  - OB_ST_routines_CreditCardValidatorTest_testDiscoverValidator
+  - OB_ST_routines_CreditCardValidatorTest_testDisjointRange
+  - OB_ST_routines_CreditCardValidatorTest_testGeneric
+  - OB_ST_routines_CreditCardValidatorTest_testGenericValidatorCircularDependency
+  - OB_ST_routines_CreditCardValidatorTest_testIsValid
+  - OB_ST_routines_CreditCardValidatorTest_testMastercardOption
+  - OB_ST_routines_CreditCardValidatorTest_testMastercardUsingSeparators
+  - OB_ST_routines_CreditCardValidatorTest_testMastercardValidator
+  - OB_ST_routines_CreditCardValidatorTest_testRangeGenerator
+  - OB_ST_routines_CreditCardValidatorTest_testRangeGeneratorNoLuhn
+  - OB_ST_routines_CreditCardValidatorTest_testValidLength
+  - OB_ST_routines_CreditCardValidatorTest_testVisaOption
+  - OB_ST_routines_CreditCardValidatorTest_testVisaValidator
+  - OB_ST_routines_CreditCardValidatorTest_testVPayOption
+  - OB_ST_routines_IBANValidatorTest_testExampleAccountsShouldBeValid
+  - OB_ST_routines_IBANValidatorTest_testGetRegexValidatorPatterns
+  - OB_ST_routines_IBANValidatorTest_testGetValidator
+  - OB_ST_routines_IBANValidatorTest_testHasValidator
+  - OB_ST_routines_IBANValidatorTest_testInValid
+  - OB_ST_routines_IBANValidatorTest_testMoreValid
+  - OB_ST_routines_IBANValidatorTest_testNull
+  - OB_ST_routines_IBANValidatorTest_testSetDefaultValidator1
+  - OB_ST_routines_IBANValidatorTest_testSetDefaultValidator2
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLC
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLen1
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLen35
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLen7
+  - OB_ST_routines_IBANValidatorTest_testSorted
+  - OB_ST_routines_IBANValidatorTest_testValid
+  - OB_ST_routines_IBANValidatorTest_testValidateIbanStatuses
+  - OB_ST_routines_ISBNValidatorTest_testConversionErrors
+  - OB_ST_routines_ISBNValidatorTest_testInvalid
+  - OB_ST_routines_ISBNValidatorTest_testInvalidISBN10Format
+  - OB_ST_routines_ISBNValidatorTest_testInvalidISBN13Format
+  - OB_ST_routines_ISBNValidatorTest_testIsValidISBN10
+  - OB_ST_routines_ISBNValidatorTest_testIsValidISBN13
+  - OB_ST_routines_ISBNValidatorTest_testNull
+  - OB_ST_routines_ISBNValidatorTest_testValidateISBN10
+  - OB_ST_routines_ISBNValidatorTest_testValidateISBN10Convert
+  - OB_ST_routines_ISBNValidatorTest_testValidateISBN13
+  - OB_ST_routines_ISBNValidatorTest_testValidISBN10Format
+  - OB_ST_routines_ISBNValidatorTest_testValidISBN13Format
+  - OB_ST_routines_ISINValidatorTest_testInvalidFalse
+  - OB_ST_routines_ISINValidatorTest_testInvalidTrue
+  - OB_ST_routines_ISINValidatorTest_testIsValidFalse
+  - OB_ST_routines_ISINValidatorTest_testIsValidTrue
+  - OB_ST_routines_ISSNValidatorTest_testConversionErrors
+  - OB_ST_routines_ISSNValidatorTest_testInvalid
+  - OB_ST_routines_ISSNValidatorTest_testIsValidExtract
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSN
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSNConvert
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSNConvertNull
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSNConvertSuffix
+  - OB_ST_routines_ISSNValidatorTest_testNull
+  - OB_ST_routines_ISSNValidatorTest_testValidCheckDigitEan13
+  - OB_PUBLIC_API_SLICE_004_IDENTIFIERS
+  - OB_IBAN_RESOURCE_IO
+  - OB_PROVIDER_IBAN_REGISTRY_SOURCE
+  - OB_PROVIDER_IBAN_FIELD_AND_STATUS_FIXTURES
+  - OB_ST_routines_IBANValidatorTest_testValidatorShouldExistWithProperConfiguration
+  failed_obligation_ids: []
+  blocking_issue_ids: []
+  required_rework: []
+  evidence: 'State selects TODO_VERIFICATION for TODO-004-IDENTIFIERS: run-state, migration-todo active todo, and feature-contract all point to TODO-004-IDENTIFIERS / SLICE-004-IDENTIFIERS, with TODO-004 status ready-for-test. Feature-contract source_tests exactly match all 66 active source_test_ids and translated test mappings cover all 66. Claimed ledger obligations exactly match all 70 active todo obligations; all 70 exist in translation-ledger and reverse-bind B_IDENTIFIER_FINANCIAL_VALIDATORS. Required slice-level obligations OB_PUBLIC_API_SLICE_004_IDENTIFIERS, OB_IBAN_RESOURCE_IO, OB_PROVIDER_IBAN_REGISTRY_SOURCE, OB_PROVIDER_IBAN_FIELD_AND_STATUS_FIXTURES, and OB_ST_routines_IBANValidatorTest_testValidatorShouldExistWithProperConfiguration are present and covered. yaml_guard contract and two_agent_gate_check contract passed. Re-run source baseline mvn -q test passed. Re-run cjpm build passed. Re-run cjpm test passed with TOTAL: 65, PASSED: 65, SKIPPED: 0, ERROR: 0, FAILED: 0. Identifier
+    target tests contain 11 executable @TestCase entries across 10 feature-contract groups, no placeholder text, no TODO/FIXME markers, and no ensure(true)/routineEnsure(true) placeholder assertions. The Java cp1252 IBAN registry fixture transcodes byte-for-byte to the checked-in UTF-8 replay fixture used by the target suite.'
+plan_audit:
+  status: not-applicable
+claimed_feature_results:
+- behavior_id: B_IDENTIFIER_FINANCIAL_VALIDATORS
+  verdict: pass
+  ledger_obligation_ids:
+  - OB_ST_CreditCardValidatorTest_testAddAllowedCardType
+  - OB_ST_CreditCardValidatorTest_testIsValid
+  - OB_ST_ISBNValidatorTest_testIsValid
+  - OB_ST_routines_CreditCardValidatorTest_testAddAllowedCardType
+  - OB_ST_routines_CreditCardValidatorTest_testAmexOption
+  - OB_ST_routines_CreditCardValidatorTest_testAmexValidator
+  - OB_ST_routines_CreditCardValidatorTest_testArrayConstructor
+  - OB_ST_routines_CreditCardValidatorTest_testDinersOption
+  - OB_ST_routines_CreditCardValidatorTest_testDinersValidator
+  - OB_ST_routines_CreditCardValidatorTest_testDiscoverOption
+  - OB_ST_routines_CreditCardValidatorTest_testDiscoverValidator
+  - OB_ST_routines_CreditCardValidatorTest_testDisjointRange
+  - OB_ST_routines_CreditCardValidatorTest_testGeneric
+  - OB_ST_routines_CreditCardValidatorTest_testGenericValidatorCircularDependency
+  - OB_ST_routines_CreditCardValidatorTest_testIsValid
+  - OB_ST_routines_CreditCardValidatorTest_testMastercardOption
+  - OB_ST_routines_CreditCardValidatorTest_testMastercardUsingSeparators
+  - OB_ST_routines_CreditCardValidatorTest_testMastercardValidator
+  - OB_ST_routines_CreditCardValidatorTest_testRangeGenerator
+  - OB_ST_routines_CreditCardValidatorTest_testRangeGeneratorNoLuhn
+  - OB_ST_routines_CreditCardValidatorTest_testValidLength
+  - OB_ST_routines_CreditCardValidatorTest_testVisaOption
+  - OB_ST_routines_CreditCardValidatorTest_testVisaValidator
+  - OB_ST_routines_CreditCardValidatorTest_testVPayOption
+  - OB_ST_routines_IBANValidatorTest_testExampleAccountsShouldBeValid
+  - OB_ST_routines_IBANValidatorTest_testGetRegexValidatorPatterns
+  - OB_ST_routines_IBANValidatorTest_testGetValidator
+  - OB_ST_routines_IBANValidatorTest_testHasValidator
+  - OB_ST_routines_IBANValidatorTest_testInValid
+  - OB_ST_routines_IBANValidatorTest_testMoreValid
+  - OB_ST_routines_IBANValidatorTest_testNull
+  - OB_ST_routines_IBANValidatorTest_testSetDefaultValidator1
+  - OB_ST_routines_IBANValidatorTest_testSetDefaultValidator2
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLC
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLen1
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLen35
+  - OB_ST_routines_IBANValidatorTest_testSetValidatorLen7
+  - OB_ST_routines_IBANValidatorTest_testSorted
+  - OB_ST_routines_IBANValidatorTest_testValid
+  - OB_ST_routines_IBANValidatorTest_testValidateIbanStatuses
+  - OB_ST_routines_ISBNValidatorTest_testConversionErrors
+  - OB_ST_routines_ISBNValidatorTest_testInvalid
+  - OB_ST_routines_ISBNValidatorTest_testInvalidISBN10Format
+  - OB_ST_routines_ISBNValidatorTest_testInvalidISBN13Format
+  - OB_ST_routines_ISBNValidatorTest_testIsValidISBN10
+  - OB_ST_routines_ISBNValidatorTest_testIsValidISBN13
+  - OB_ST_routines_ISBNValidatorTest_testNull
+  - OB_ST_routines_ISBNValidatorTest_testValidateISBN10
+  - OB_ST_routines_ISBNValidatorTest_testValidateISBN10Convert
+  - OB_ST_routines_ISBNValidatorTest_testValidateISBN13
+  - OB_ST_routines_ISBNValidatorTest_testValidISBN10Format
+  - OB_ST_routines_ISBNValidatorTest_testValidISBN13Format
+  - OB_ST_routines_ISINValidatorTest_testInvalidFalse
+  - OB_ST_routines_ISINValidatorTest_testInvalidTrue
+  - OB_ST_routines_ISINValidatorTest_testIsValidFalse
+  - OB_ST_routines_ISINValidatorTest_testIsValidTrue
+  - OB_ST_routines_ISSNValidatorTest_testConversionErrors
+  - OB_ST_routines_ISSNValidatorTest_testInvalid
+  - OB_ST_routines_ISSNValidatorTest_testIsValidExtract
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSN
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSNConvert
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSNConvertNull
+  - OB_ST_routines_ISSNValidatorTest_testIsValidISSNConvertSuffix
+  - OB_ST_routines_ISSNValidatorTest_testNull
+  - OB_ST_routines_ISSNValidatorTest_testValidCheckDigitEan13
+  - OB_PUBLIC_API_SLICE_004_IDENTIFIERS
+  - OB_IBAN_RESOURCE_IO
+  - OB_PROVIDER_IBAN_REGISTRY_SOURCE
+  - OB_PROVIDER_IBAN_FIELD_AND_STATUS_FIXTURES
+  - OB_ST_routines_IBANValidatorTest_testValidatorShouldExistWithProperConfiguration
+  production_path_verified: true
+  source_baseline: 'mvn -q test (cwd: java/commons-validator) -> pass; source emitted expected ValidatorResources/logging warnings and the IBAN registry recency warning (Dec-24), but exit code was 0'
+  target_build: 'cjpm build (cwd: cangjie) -> pass'
+  target_test: 'cjpm test (cwd: cangjie) -> pass; TOTAL: 65 PASSED: 65 SKIPPED: 0 ERROR: 0 FAILED: 0'
+  contract_completeness:
+    active_source_tests: 66
+    feature_contract_source_tests: 66
+    active_ledger_obligations: 70
+    feature_contract_ledger_obligations: 70
+    ledger_reverse_bindings_verified: 70
+    special_obligations_verified:
+    - OB_PUBLIC_API_SLICE_004_IDENTIFIERS
+    - OB_IBAN_RESOURCE_IO
+    - OB_PROVIDER_IBAN_REGISTRY_SOURCE
+    - OB_PROVIDER_IBAN_FIELD_AND_STATUS_FIXTURES
+    - OB_ST_routines_IBANValidatorTest_testValidatorShouldExistWithProperConfiguration
+  translated_test_coverage:
+    active_source_tests: 66
+    translated_test_groups: 10
+    covered_source_test_ids: 66
+    uncovered_source_test_ids: []
+    note: TODO-004 intentionally groups 66 Java source test methods into 10 feature-contract translated tests executed through 11 concrete @TestCase entries. This is accepted because each source_test_id is explicitly mapped and the grouped tests replay concrete assertion matrices for legacy wrappers, routines credit-card option/range behavior, ISBN/ISSN/ISIN validation, IBAN mutable-validator semantics, and provider-backed registry fixture replay.
+  behavior_evidence:
+  - cangjie/tests/legacy_identifier_validator_test.cj covers legacy CreditCardValidator card-type registration, brand filtering, Luhn/character rejection, GenericValidator invalid credit-card path, and legacy ISBN wrapper validity semantics.
+  - cangjie/tests/identifier_financial_routines_test.cj covers routines CreditCardValidator brand validators, option masks, array/range constructors, no-Luhn range behavior, separator handling, ISBN10/ISBN13 validation/conversion, ISSN extraction/EAN13 conversion, and ISIN strict/non-strict validation.
+  - cangjie/tests/iban_validator_suite_test.cj plus helper fixture/parsing functions in cangjie/tests/iban_validator_tests.cj cover getValidator/hasValidator/null handling, valid/invalid IBAN matrices, mutable validator error paths, singleton immutability, sorted default validators, status enumeration, and provider-backed registry pattern/length/example replay.
+  - iconv -f WINDOWS-1252 -t UTF-8 on java/commons-validator/src/test/resources/org/apache/commons/validator/routines/iban_registry_v99.txt produced the same SHA-1 as cangjie/tests/iban_registry_v99_utf8.txt, confirming exact dataset replay after encoding conversion.
+  - Target identifier test files contain no placeholder text, TODO/FIXME markers, or ensure(true)/routineEnsure(true) placeholder assertions.
+  public_api_and_boundary_checks:
+  - Target public APIs for legacy validator.CreditCardValidator and validator.ISBNValidator, plus validator.routines.CreditCardValidator, IBANValidator, IBANValidatorStatus, ISBNValidator, ISSNValidator, and ISINValidator, are present in target modules and exercised by target tests.
+  - IBAN resource/provider obligations are covered by explicit replay of the checked-in registry fixture, validator length/pattern assertions, additional-country-code regex checks, example-account validation, and mutable/provider configuration checks matching Java IBANValidatorTest semantics.
+  - No runtime service smoke is applicable for this pure library slice; build and full target unit test suite are the runtime-equivalent verification entrypoints.
+  regression_scope: cjpm test re-ran prior checkdigit, address, numeric-time, and targetPackageSmoke suites in the full target library test set; no regression observed.
+global_gap_scan:
+  missing_modules: []
+  incomplete_modules: []
+  missing_source_tests: []
+  missing_public_api: []
+  dependency_gaps: []
+  ledger_gaps: []
+  stale_decisions: []
+ledger_consistency:
+  status: pass
+  checked_obligations: 416
+  missing_obligations: []
+  stale_claims: []
+metrics:
+  source_build_status: pass
+  source_test_status: pass
+  target_build_status: pass
+  target_test_status: pass
+  source_test_count: 397
+  blocked_source_test_count: 0
+  active_source_test_count: 66
+  active_blocked_source_test_count: 0
+  active_executable_target_test_count: 11
+  executable_target_test_count: 65
+  passing_translated_test_count: 65
+  test_pass_rate: 65/65
+  module_coverage_status: complete
+  public_api_status: complete
+  dependency_boundary_status: complete
+  runtime_smoke_status: not-applicable
+  regression_status: pass
+issues: []
+reference_paths:
+- .translation/tester/reports/tester-plan-audit-20260706T063610Z.yaml
+- .translation/translator/run-state.yaml
+- .translation/translator/migration-todo.yaml
+- .translation/translator/feature-contract.yaml
+- .translation/translator/translation-ledger.yaml
+- java/commons-validator/src/test/java/org/apache/commons/validator/CreditCardValidatorTest.java
+- java/commons-validator/src/test/java/org/apache/commons/validator/ISBNValidatorTest.java
+- java/commons-validator/src/test/java/org/apache/commons/validator/routines/CreditCardValidatorTest.java
+- java/commons-validator/src/test/java/org/apache/commons/validator/routines/IBANValidatorTest.java
+- java/commons-validator/src/test/java/org/apache/commons/validator/routines/ISBNValidatorTest.java
+- java/commons-validator/src/test/java/org/apache/commons/validator/routines/ISSNValidatorTest.java
+- java/commons-validator/src/test/java/org/apache/commons/validator/routines/ISINValidatorTest.java
+- java/commons-validator/src/test/resources/org/apache/commons/validator/routines/iban_registry_v99.txt
+- cangjie/tests/legacy_identifier_validator_test.cj
+- cangjie/tests/identifier_financial_routines_test.cj
+- cangjie/tests/iban_validator_tests.cj
+- cangjie/tests/iban_validator_suite_test.cj
+- cangjie/tests/iban_registry_v99_utf8.txt
+- cangjie/src/CreditCardValidator.cj
+- cangjie/src/ISBNValidator.cj
+- cangjie/src/routines/CreditCardValidator.cj
+- cangjie/src/routines/IBANValidator.cj
+- cangjie/src/routines/IBANValidatorStatus.cj
+- cangjie/src/routines/ISBNValidator.cj
+- cangjie/src/routines/ISSNValidator.cj
+- cangjie/src/routines/ISINValidator.cj
+summary: TODO_VERIFICATION passed for TODO-004-IDENTIFIERS. State files align on TODO-004-IDENTIFIERS / SLICE-004-IDENTIFIERS; feature-contract covers all 66 active source_test_ids and all 70 active obligations, including OB_PUBLIC_API_SLICE_004_IDENTIFIERS, OB_IBAN_RESOURCE_IO, OB_PROVIDER_IBAN_REGISTRY_SOURCE, OB_PROVIDER_IBAN_FIELD_AND_STATUS_FIXTURES, and OB_ST_routines_IBANValidatorTest_testValidatorShouldExistWithProperConfiguration; target tests preserve legacy and routines identifier behavior plus IBAN registry fixture replay through 10 grouped translated tests executed by 11 concrete cases with no placeholders; contract gates, mvn -q test, cjpm build, and cjpm test passed. todo_verdict.can_mark_finished=true.

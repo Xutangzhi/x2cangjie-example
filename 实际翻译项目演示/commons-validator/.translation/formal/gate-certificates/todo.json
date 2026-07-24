@@ -1,0 +1,89 @@
+{
+  "artifacts": {
+    "gate_certificate": ".translation/formal/gate-certificates/todo.json",
+    "gate_history": ".translation/formal/gate-history.jsonl",
+    "gate_history_head": ".translation/formal/gate-history.head.json",
+    "traceability_certificate": ".translation/formal/certificates/todo.json"
+  },
+  "checker": {
+    "wrapper_path": "scripts/two_agent_gate_check.sh",
+    "wrapper_sha256": "f252878e33517961b2af3bb4f04de2159954a8a499fc98a192aebae5f6cd0f8c",
+    "yaml_guard_path": "scripts/yaml_guard.py",
+    "yaml_guard_sha256": "4201de1ec1add28dcf967eb8a2551e4607123ab21482688312322bbd9eaee24e"
+  },
+  "checks": {
+    "history_recorded": true,
+    "wrapper_gate_checks": true,
+    "yaml_guard_strict": true
+  },
+  "generated_at": "2026-07-06T06:29:20.817363+00:00",
+  "inputs": {
+    ".translation/final-reviewer/reviewer-report.yaml": {
+      "exists": false,
+      "sha256": ""
+    },
+    ".translation/formal/certificates/todo.json": {
+      "exists": true,
+      "sha256": "cd018faf83228ac1fbecc28796fafaa9c2962175ecdda138364a93eae8da8936"
+    },
+    ".translation/formal/gate-history.head.json": {
+      "exists": true,
+      "sha256": "4bf8d3d61f2e789e24ebf6faa6ab99f1fdf419f05e039f6172444f3ed8a84566"
+    },
+    ".translation/formal/gate-history.jsonl": {
+      "exists": true,
+      "sha256": "7f604fc0e5dc3f441f5687aad133a669b95fc03b2b61d7aa36476a39d7eb6864"
+    },
+    ".translation/tester/tester-report.yaml": {
+      "exists": true,
+      "sha256": "20437164b57d1b6e6088ce89d090419fdf9ce2fc76ac9e0b2282ced8f6858857"
+    },
+    ".translation/translator/blocked-todos.yaml": {
+      "exists": true,
+      "sha256": "6825707e5b9b586a86ebba9fda221262ff30846806b93ae685eb89f926355117"
+    },
+    ".translation/translator/decision-log.yaml": {
+      "exists": true,
+      "sha256": "3700624191a867a7695095c8f9b01b22ce62c42c9d7c6d77167b87d6896b62a3"
+    },
+    ".translation/translator/feature-contract.yaml": {
+      "exists": false,
+      "sha256": ""
+    },
+    ".translation/translator/migration-todo.yaml": {
+      "exists": true,
+      "sha256": "0703557ef4377c0f54b3081c2909e3bae7ba330115805fb8907c6e203349f628"
+    },
+    ".translation/translator/module-backlog.yaml": {
+      "exists": true,
+      "sha256": "bff0dfe4c79a6beb8555101d2b5afa842b61138fb433cc87e6b0e0cfb1fd7194"
+    },
+    ".translation/translator/run-state.yaml": {
+      "exists": true,
+      "sha256": "1ab967d4daa555b801f8ebba9b0dfa59f73b7adbc0061ff4ea4b671349211ba1"
+    },
+    ".translation/translator/task.yaml": {
+      "exists": true,
+      "sha256": "d05659f4fdc63b1b28be90983adcb943f126708e7dd36531d107e748c07df006"
+    },
+    ".translation/translator/translation-ledger.yaml": {
+      "exists": true,
+      "sha256": "f6e8404cc8caedcf89ef570a0eb810f87672602a0d3a719be0ac822c0aa2530f"
+    }
+  },
+  "kind": "java-to-cangjie-full-gate-certificate",
+  "ok": true,
+  "phase": "todo",
+  "schema_version": 1,
+  "scope": "yaml-guard-and-two-agent-wrapper-gate",
+  "traceability_subgate_certificate": {
+    "exists": true,
+    "path": ".translation/formal/certificates/todo.json",
+    "sha256": "cd018faf83228ac1fbecc28796fafaa9c2962175ecdda138364a93eae8da8936"
+  },
+  "yaml_guard_result": {
+    "issues": [],
+    "ok": true,
+    "phase": "todo"
+  }
+}

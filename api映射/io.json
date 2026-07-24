@@ -1,0 +1,1966 @@
+{
+  "source_cangjie_file": "cangjie_api_card/io.json",
+  "mapping_method": "manual_semantic_alignment",
+  "mappings": [
+    {
+      "cangjie_api": "BufferedInputStream<T> where T <: InputStream",
+      "candidates": [
+        {
+          "java_api": "BufferedInputStream",
+          "cangjie_api": "BufferedInputStream<T> where T <: InputStream",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Both are buffered wrappers around an input stream abstraction.",
+          "semantic_gaps": "Cangjie is generic over stream type; Java version is class hierarchy based.",
+          "suggested_translation_strategy": "Use java.io.BufferedInputStream over InputStream and keep wrapper lifecycle explicit."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedInputStream<T> where T <: InputStream.init(T)",
+      "candidates": [
+        {
+          "java_api": "BufferedInputStream",
+          "cangjie_api": "BufferedInputStream<T> where T <: InputStream.init(T)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Java has BufferedInputStream(InputStream) constructor with default buffer size.",
+          "semantic_gaps": "Default capacity value may differ from Cangjie's documented 4096.",
+          "suggested_translation_strategy": "Construct new BufferedInputStream(input) and avoid relying on exact default size."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedInputStream<T> where T <: InputStream.init(T, Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "BufferedInputStream<T> where T <: InputStream.init(T, Array<Byte>)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java BufferedInputStream does not accept caller-provided backing byte array.",
+          "semantic_gaps": "Cannot inject external buffer object directly.",
+          "suggested_translation_strategy": "Use BufferedInputStream(input, size) or custom FilterInputStream with caller-managed buffer."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedInputStream<T> where T <: InputStream.init(T, Int64)",
+      "candidates": [
+        {
+          "java_api": "BufferedInputStream",
+          "cangjie_api": "BufferedInputStream<T> where T <: InputStream.init(T, Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Java supports BufferedInputStream(InputStream,int) capacity constructor.",
+          "semantic_gaps": "Cangjie Int64 vs Java int size parameter type.",
+          "suggested_translation_strategy": "Range-check and cast size to int before constructing BufferedInputStream."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedInputStream<T> where T <: InputStream.read(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "BufferedInputStream<T> where T <: InputStream.read(Array<Byte>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java InputStream.read(byte[]) returns count and is inherited by BufferedInputStream.",
+          "semantic_gaps": "EOF signaling differs (Java uses -1, Cangjie examples emphasize 0/Option patterns elsewhere).",
+          "suggested_translation_strategy": "Translate return handling with explicit EOF conversion logic."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedInputStream<T> where T <: InputStream.readByte()",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "BufferedInputStream<T> where T <: InputStream.readByte()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java InputStream.read() reads a single byte.",
+          "semantic_gaps": "Java returns int/-1, Cangjie returns Option<Byte>.",
+          "suggested_translation_strategy": "Wrap read() result into Optional<Byte> style adapter in translated code."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedInputStream<T> where T <: InputStream.reset(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "BufferedInputStream<T> where T <: InputStream.reset(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java BufferedInputStream.reset() resets position, not rebinding underlying stream instance.",
+          "semantic_gaps": "No standard API to swap bound input stream on existing buffered wrapper.",
+          "suggested_translation_strategy": "Close and create a new BufferedInputStream around the new source stream."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Resource where T <: Resource",
+      "candidates": [
+        {
+          "java_api": "Closeable",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Resource where T <: Resource",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Resource ownership maps naturally to Java Closeable/try-with-resources.",
+          "semantic_gaps": "Cangjie Resource trait naming differs from Java interfaces.",
+          "suggested_translation_strategy": "Treat translated stream wrappers as Closeable and use try-with-resources."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Resource where T <: Resource.close()",
+      "candidates": [
+        {
+          "java_api": "Closeable",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Resource where T <: Resource.close()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "close() lifecycle operation directly corresponds to Closeable.close().",
+          "semantic_gaps": "Cangjie undefined behavior note after close may differ from Java exception behavior.",
+          "suggested_translation_strategy": "Call close(), then guard against reuse by nulling or state checks when needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Resource where T <: Resource.isClosed()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Resource where T <: Resource.isClosed()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java IO base interfaces do not provide an isClosed() query.",
+          "semantic_gaps": "Closed-state introspection is implementation-specific in Java.",
+          "suggested_translation_strategy": "Add explicit boolean closed flag in adapter wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Seekable behavior corresponds to java.nio.channels.SeekableByteChannel.",
+          "semantic_gaps": "BufferedInputStream itself is not seekable in Java.",
+          "suggested_translation_strategy": "Use SeekableByteChannel + Channels wrappers, or RandomAccessFile for seek support."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.length",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.length",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Total length maps to SeekableByteChannel.size().",
+          "semantic_gaps": "Not exposed on BufferedInputStream class directly.",
+          "suggested_translation_strategy": "Read size() from underlying seekable channel and keep buffer/channel coordinated."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.position",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.position",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Cursor position maps to SeekableByteChannel.position().",
+          "semantic_gaps": "BufferedInputStream internal buffer can desync unless handled carefully.",
+          "suggested_translation_strategy": "When mixing buffering with seek, clear/recreate buffer around channel position changes."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.remainLength",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.remainLength",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Remaining length can be computed from size - position on a seekable channel.",
+          "semantic_gaps": "No direct remainLength property in Java API.",
+          "suggested_translation_strategy": "Implement helper `remaining = channel.size() - channel.position()`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedInputStream<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "SeekPosition-based movement maps to setting channel position relative to begin/current/end.",
+          "semantic_gaps": "Java API accepts absolute position; relative origin logic must be implemented.",
+          "suggested_translation_strategy": "Translate enum case to absolute offset then call position(newPos)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream",
+      "candidates": [
+        {
+          "java_api": "BufferedOutputStream",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Both provide buffered writes over an output stream.",
+          "semantic_gaps": "Cangjie generic typing vs Java class hierarchy typing.",
+          "suggested_translation_strategy": "Use java.io.BufferedOutputStream over OutputStream."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.init(T)",
+      "candidates": [
+        {
+          "java_api": "BufferedOutputStream",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.init(T)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Java BufferedOutputStream(OutputStream) exists directly.",
+          "semantic_gaps": "Default buffer size may differ by implementation.",
+          "suggested_translation_strategy": "Instantiate directly and avoid assumptions on exact default capacity."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.init(T, Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.init(T, Array<Byte>)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java BufferedOutputStream cannot take caller-supplied byte[] as internal buffer.",
+          "semantic_gaps": "No direct external-buffer ownership control.",
+          "suggested_translation_strategy": "Use BufferedOutputStream(output,size) or implement custom buffering wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.init(T, Int64)",
+      "candidates": [
+        {
+          "java_api": "BufferedOutputStream",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.init(T, Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Java supports size-configured buffered output constructor.",
+          "semantic_gaps": "Cangjie Int64 to Java int conversion required.",
+          "suggested_translation_strategy": "Validate range and cast before calling BufferedOutputStream(output,int)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.flush()",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.flush()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "flush() semantics align with OutputStream.flush().",
+          "semantic_gaps": "Exception behavior differs by backend stream.",
+          "suggested_translation_strategy": "Call flush() and surface/translate IOException handling."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.reset(T)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.reset(T)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java BufferedOutputStream has no API to rebind a different target stream.",
+          "semantic_gaps": "Target replacement must recreate wrapper.",
+          "suggested_translation_strategy": "Flush+close old wrapper and construct a new BufferedOutputStream for new target."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.write(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.write(Array<Byte>)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "write(byte[]) exists and is inherited by BufferedOutputStream.",
+          "semantic_gaps": "Cangjie array type and Java byte[] interop details differ.",
+          "suggested_translation_strategy": "Map byte-array writes directly; preserve ordering and flush points."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.writeByte(Byte)",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "BufferedOutputStream<T> where T <: OutputStream.writeByte(Byte)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Single-byte write corresponds to OutputStream.write(int).",
+          "semantic_gaps": "Java signature is int not byte.",
+          "suggested_translation_strategy": "Mask/cast byte to int and call write(int)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Resource where T <: Resource",
+      "candidates": [
+        {
+          "java_api": "Closeable",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Resource where T <: Resource",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Resource ownership maps to Closeable and try-with-resources pattern.",
+          "semantic_gaps": "Trait/interface names differ.",
+          "suggested_translation_strategy": "Implement/consume wrappers as Closeable resources."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Resource where T <: Resource.close()",
+      "candidates": [
+        {
+          "java_api": "Closeable",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Resource where T <: Resource.close()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Close operation aligns to Closeable.close().",
+          "semantic_gaps": "Cangjie undefined behavior wording differs from Java checked exception model.",
+          "suggested_translation_strategy": "Call close() once and avoid post-close usage."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Resource where T <: Resource.isClosed()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Resource where T <: Resource.isClosed()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java OutputStream hierarchy has no standard isClosed().",
+          "semantic_gaps": "Closed-state needs manual tracking in wrapper.",
+          "suggested_translation_strategy": "Maintain explicit closed flag in translated adapter."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Seekable output behavior maps better to SeekableByteChannel than OutputStream.",
+          "semantic_gaps": "BufferedOutputStream class itself is not seek-capable in Java.",
+          "suggested_translation_strategy": "Use channel-based IO with buffering layer when seek is required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.length",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.length",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Length maps to size() on seekable channels.",
+          "semantic_gaps": "No direct property on BufferedOutputStream.",
+          "suggested_translation_strategy": "Expose helper reading underlying channel size()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.position",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.position",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Position is represented by channel.position().",
+          "semantic_gaps": "Must reconcile position with any buffered bytes not flushed.",
+          "suggested_translation_strategy": "Flush before querying position to reduce ambiguity."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.remainLength",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.remainLength",
+          "mapping_type": "rewrite_needed",
+          "confidence": "low",
+          "reason": "Can be modeled as size-position, but remaining writable length is not a universal concept in Java streams.",
+          "semantic_gaps": "Semantics depend on fixed-size backing store vs growable file.",
+          "suggested_translation_strategy": "Define project-specific remainLength semantics for chosen backend."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> BufferedOutputStream<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Seek can be translated by setting channel position.",
+          "semantic_gaps": "Relative-from-end/current positioning must be computed in adapter code.",
+          "suggested_translation_strategy": "Resolve SeekPosition to absolute long and call position(abs)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer",
+      "candidates": [
+        {
+          "java_api": "ByteBuffer",
+          "cangjie_api": "ByteBuffer",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Both model in-memory byte storage with cursor-like operations.",
+          "semantic_gaps": "Cangjie ByteBuffer also acts as InputStream/OutputStream/Seekable in one type; Java nio.ByteBuffer differs.",
+          "suggested_translation_strategy": "For stream-like behavior prefer ByteArrayInputStream/ByteArrayOutputStream or custom adapter around java.nio.ByteBuffer."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.capacity",
+      "candidates": [
+        {
+          "java_api": "ByteBuffer",
+          "cangjie_api": "ByteBuffer.capacity",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "capacity concept exists directly on java.nio.ByteBuffer.",
+          "semantic_gaps": "Growth behavior may differ from Cangjie implementation.",
+          "suggested_translation_strategy": "Use capacity() and design separate growth policy if dynamic resizing is required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.init()",
+      "candidates": [
+        {
+          "java_api": "ByteArrayOutputStream",
+          "cangjie_api": "ByteBuffer.init()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Zero-arg in-memory byte sink/source pattern aligns with ByteArrayOutputStream usage.",
+          "semantic_gaps": "Java ByteArrayOutputStream is output-only unless wrapped for reading.",
+          "suggested_translation_strategy": "Use ByteArrayOutputStream + ByteArrayInputStream (or custom composite) to emulate dual behavior."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.init(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "ByteArrayInputStream",
+          "cangjie_api": "ByteBuffer.init(Array<Byte>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Construct-from-bytes semantics align with ByteArrayInputStream(byte[]).",
+          "semantic_gaps": "Mutability and writable semantics differ from Cangjie ByteBuffer.",
+          "suggested_translation_strategy": "If writable too, copy bytes into custom mutable buffer abstraction."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.init(Int64)",
+      "candidates": [
+        {
+          "java_api": "ByteBuffer",
+          "cangjie_api": "ByteBuffer.init(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Size-initialized buffer corresponds to ByteBuffer.allocate(int).",
+          "semantic_gaps": "Cangjie likely supports stream-style read/write semantics beyond raw buffer operations.",
+          "suggested_translation_strategy": "Allocate(int) with bounds checks, then wrap for stream APIs as needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.bytes()",
+      "candidates": [
+        {
+          "java_api": "ByteArrayOutputStream",
+          "cangjie_api": "ByteBuffer.bytes()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Exporting underlying bytes aligns with toByteArray().",
+          "semantic_gaps": "Copy-vs-view semantics may differ.",
+          "suggested_translation_strategy": "Return a defensive copy via toByteArray() for safety parity."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.clear()",
+      "candidates": [
+        {
+          "java_api": "ByteBuffer",
+          "cangjie_api": "ByteBuffer.clear()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "clear() exists on java.nio.ByteBuffer and resets position/limit metadata.",
+          "semantic_gaps": "Cangjie clear may truncate content; Java clear does not zero/truncate stored bytes.",
+          "suggested_translation_strategy": "If semantic requires logical truncation, recreate buffer or track logical length."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.clone()",
+      "candidates": [
+        {
+          "java_api": "ByteBuffer.duplicate",
+          "cangjie_api": "ByteBuffer.clone()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "java.nio.ByteBuffer.duplicate() provides clone-like view duplication semantics.",
+          "semantic_gaps": "duplicate() shares underlying storage; deep-copy clone requires explicit byte copy.",
+          "suggested_translation_strategy": "Use duplicate() for shared-buffer semantics, or allocate+put for deep copy behavior."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.read(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "ByteBuffer.read(Array<Byte>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Bulk byte read into buffer mirrors InputStream.read(byte[]).",
+          "semantic_gaps": "EOF return conventions can differ.",
+          "suggested_translation_strategy": "Standardize EOF handling and return conversion in translation layer."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.readByte()",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "ByteBuffer.readByte()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Single-byte read aligns with InputStream.read().",
+          "semantic_gaps": "Option<Byte> vs int/-1 signaling mismatch.",
+          "suggested_translation_strategy": "Bridge with Optional and explicit EOF conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.reserve(Int64)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "ByteBuffer.reserve(Int64)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java standard ByteBuffer has fixed capacity and no reserve/grow API.",
+          "semantic_gaps": "Dynamic capacity reservation must be custom.",
+          "suggested_translation_strategy": "Use ByteArrayOutputStream or custom resizable byte store."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.seek(SeekPosition)",
+      "candidates": [
+        {
+          "java_api": "ByteBuffer",
+          "cangjie_api": "ByteBuffer.seek(SeekPosition)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Positioning behavior maps to ByteBuffer.position(int).",
+          "semantic_gaps": "Cangjie supports Begin/Current/End forms; Java uses absolute position only.",
+          "suggested_translation_strategy": "Compute absolute index from origin + offset then set position()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.setLength(Int64)",
+      "candidates": [
+        {
+          "java_api": "RandomAccessFile",
+          "cangjie_api": "ByteBuffer.setLength(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "RandomAccessFile supports setLength(long) with similar intent.",
+          "semantic_gaps": "Target type is file-backed, not in-memory buffer.",
+          "suggested_translation_strategy": "For in-memory translation, implement custom logical length truncation/extension policy."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.write(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "ByteBuffer.write(Array<Byte>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Bulk byte write aligns with OutputStream.write(byte[]).",
+          "semantic_gaps": "Cangjie ByteBuffer may auto-grow; Java backend may not.",
+          "suggested_translation_strategy": "Use growable backend (ByteArrayOutputStream/custom) to preserve append semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer.writeByte(Byte)",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "ByteBuffer.writeByte(Byte)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Single-byte append aligns with OutputStream.write(int).",
+          "semantic_gaps": "Type widening from Byte to int.",
+          "suggested_translation_strategy": "Cast byte to unsigned int range and write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ChainedInputStream<T> where T <: InputStream",
+      "candidates": [
+        {
+          "java_api": "SequenceInputStream",
+          "cangjie_api": "ChainedInputStream<T> where T <: InputStream",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Both combine multiple input streams into one read source.",
+          "semantic_gaps": "Cangjie card describes cyclic read behavior; Java SequenceInputStream is sequential then EOF.",
+          "suggested_translation_strategy": "Use SequenceInputStream for one-pass chaining or custom looping wrapper for cyclic semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ChainedInputStream<T> where T <: InputStream.init(Array<T>)",
+      "candidates": [
+        {
+          "java_api": "SequenceInputStream",
+          "cangjie_api": "ChainedInputStream<T> where T <: InputStream.init(Array<T>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Initialization from list of streams maps to SequenceInputStream over enumeration.",
+          "semantic_gaps": "No direct array constructor; cyclic semantics not built-in.",
+          "suggested_translation_strategy": "Convert array/list to Enumeration<InputStream>, wrap with custom cycle logic if required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ChainedInputStream<T> where T <: InputStream.read(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "SequenceInputStream",
+          "cangjie_api": "ChainedInputStream<T> where T <: InputStream.read(Array<Byte>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Bulk reads from concatenated stream source align conceptually.",
+          "semantic_gaps": "Cyclic continuation behavior differs from Java EOF once last stream consumed.",
+          "suggested_translation_strategy": "Implement custom InputStream that rotates source streams after exhaustion when cyclic mode is needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MultiOutputStream<T> where T <: OutputStream",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "MultiOutputStream<T> where T <: OutputStream",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java IO has no built-in tee output stream in standard java.io cards.",
+          "semantic_gaps": "One write to many sinks requires custom fan-out logic.",
+          "suggested_translation_strategy": "Implement composite OutputStream that writes/flushes to all delegates."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MultiOutputStream<T> where T <: OutputStream.init(Array<T>)",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "MultiOutputStream<T> where T <: OutputStream.init(Array<T>)",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No standard constructor for multi-target output composition.",
+          "semantic_gaps": "Need custom delegate list and failure propagation policy.",
+          "suggested_translation_strategy": "Create custom MultiOutputStream(List<OutputStream>) wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MultiOutputStream<T> where T <: OutputStream.flush()",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "MultiOutputStream<T> where T <: OutputStream.flush()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "flush semantics are per-output-stream and can be propagated to delegates.",
+          "semantic_gaps": "Java has no built-in aggregator flush across many streams.",
+          "suggested_translation_strategy": "Loop through delegate streams and flush each; define exception aggregation behavior."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MultiOutputStream<T> where T <: OutputStream.write(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "MultiOutputStream<T> where T <: OutputStream.write(Array<Byte>)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Write-to-all can be implemented with repeated OutputStream.write calls.",
+          "semantic_gaps": "No single Java standard type for fan-out writes.",
+          "suggested_translation_strategy": "Implement composite output that iterates delegates in deterministic order."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "StringReader<T> where T <: InputStream",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Both provide character-oriented reading helpers over byte input.",
+          "semantic_gaps": "Cangjie reader is generic over InputStream with rune APIs; Java BufferedReader uses Reader abstraction.",
+          "suggested_translation_strategy": "Wrap InputStream with InputStreamReader then BufferedReader."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.init(T)",
+      "candidates": [
+        {
+          "java_api": "InputStreamReader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.init(T)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Constructing string reader from byte stream aligns with InputStreamReader(InputStream).",
+          "semantic_gaps": "Default charset behavior may differ.",
+          "suggested_translation_strategy": "Use InputStreamReader with explicit UTF-8 charset for deterministic behavior."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.lines()",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.lines()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "BufferedReader.lines() provides lazy line iteration.",
+          "semantic_gaps": "Iterator/lazy stream surface differs from Cangjie Iterable<String> details.",
+          "suggested_translation_strategy": "Use BufferedReader.lines() and adapt to target collection/iterator shape."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.read()",
+      "candidates": [
+        {
+          "java_api": "Reader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.read()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Reader.read() yields a single character code point unit.",
+          "semantic_gaps": "Cangjie Rune option semantics differ from Java int/-1 result.",
+          "suggested_translation_strategy": "Translate to Optional<Rune>-like wrapper around Reader.read()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.readToEnd()",
+      "candidates": [
+        {
+          "java_api": "Reader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.readToEnd()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Can read full remaining content by repeatedly calling Reader.read(...) into buffer.",
+          "semantic_gaps": "No single java.io method named readToEnd.",
+          "suggested_translation_strategy": "Implement helper that drains Reader into StringBuilder."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.readUntil((Rune)->Bool)",
+      "candidates": [
+        {
+          "java_api": "Reader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.readUntil((Rune)->Bool)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Predicate-based character scanning can be built atop Reader.read loop.",
+          "semantic_gaps": "No built-in readUntil(predicate) in Java Reader.",
+          "suggested_translation_strategy": "Implement manual loop reading chars until predicate matches."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.readUntil(Rune)",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.readUntil(Rune)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Delimiter-based scan can be implemented with standard reader primitives.",
+          "semantic_gaps": "No direct delimiter read-until API in java.io Reader classes.",
+          "suggested_translation_strategy": "Read char-by-char and stop at delimiter rune."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.readln()",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.readln()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "readln semantics map directly to BufferedReader.readLine().",
+          "semantic_gaps": "EOF signaling Option<String> vs null may differ.",
+          "suggested_translation_strategy": "Wrap null as None/Optional.empty in translation layer."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader<T> where T <: InputStream.runes()",
+      "candidates": [
+        {
+          "java_api": "Reader",
+          "cangjie_api": "StringReader<T> where T <: InputStream.runes()",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can expose rune iteration by repeatedly reading chars/code points.",
+          "semantic_gaps": "No native rune iterator API on Reader.",
+          "suggested_translation_strategy": "Implement iterable wrapper over reader that yields Unicode code points."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringReader<T> <: Resource where T <: Resource",
+      "candidates": [
+        {
+          "java_api": "Closeable",
+          "cangjie_api": "extend<T> StringReader<T> <: Resource where T <: Resource",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Reader resources are Closeable in Java.",
+          "semantic_gaps": "Trait names differ only.",
+          "suggested_translation_strategy": "Use Reader/BufferedReader in try-with-resources blocks."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringReader<T> <: Resource where T <: Resource.close()",
+      "candidates": [
+        {
+          "java_api": "Reader",
+          "cangjie_api": "extend<T> StringReader<T> <: Resource where T <: Resource.close()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Reader.close() corresponds directly.",
+          "semantic_gaps": "Checked exception handling differs from Cangjie effect model.",
+          "suggested_translation_strategy": "Propagate or wrap IOException consistently."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringReader<T> <: Resource where T <: Resource.isClosed()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend<T> StringReader<T> <: Resource where T <: Resource.isClosed()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java Reader API does not expose isClosed().",
+          "semantic_gaps": "Requires custom state tracking.",
+          "suggested_translation_strategy": "Wrap reader and maintain closed flag."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringReader<T> <: Seekable where T <: Seekable",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> StringReader<T> <: Seekable where T <: Seekable",
+          "mapping_type": "near_equivalent",
+          "confidence": "low",
+          "reason": "Seekable source concept maps to seekable byte channel.",
+          "semantic_gaps": "Character decoding + seeking requires charset-aware handling; Reader itself is not seekable.",
+          "suggested_translation_strategy": "Seek at byte-channel layer and recreate decoder/reader around updated position."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringReader<T> <: Seekable where T <: Seekable.position",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> StringReader<T> <: Seekable where T <: Seekable.position",
+          "mapping_type": "near_equivalent",
+          "confidence": "low",
+          "reason": "Position available on underlying seekable byte channel.",
+          "semantic_gaps": "Character index and byte position can diverge under UTF-8.",
+          "suggested_translation_strategy": "Define position in bytes and document this explicitly in translated layer."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringReader<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> StringReader<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+          "mapping_type": "near_equivalent",
+          "confidence": "low",
+          "reason": "Seek operations can map to channel.position(abs).",
+          "semantic_gaps": "Need to reset decoder/reader state after seek.",
+          "suggested_translation_strategy": "Perform seek on channel, then rebuild reader from new position."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "String/primitive oriented writing to stream aligns with PrintWriter behavior.",
+          "semantic_gaps": "Java PrintWriter swallows IOExceptions by default unless checked explicitly.",
+          "suggested_translation_strategy": "Prefer PrintWriter for print/writeln API shape, or Writer with explicit exception flow."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.init(T)",
+      "candidates": [
+        {
+          "java_api": "OutputStreamWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.init(T)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Wraps OutputStream to write textual data with charset encoding.",
+          "semantic_gaps": "Need separate PrintWriter if println convenience is required.",
+          "suggested_translation_strategy": "Create OutputStreamWriter(out, UTF_8) and optionally wrap in PrintWriter."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.flush()",
+      "candidates": [
+        {
+          "java_api": "Writer",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.flush()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Writer.flush() matches flush semantics for text output.",
+          "semantic_gaps": "Exception model differences only.",
+          "suggested_translation_strategy": "Call flush() at the same semantic boundaries as Cangjie code."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Bool)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Bool)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "PrintWriter.print(boolean) provides typed boolean text output.",
+          "semantic_gaps": "Exact lowercase/locale formatting policy may differ.",
+          "suggested_translation_strategy": "Use print(boolean) and enforce formatting if strict parity needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Float16)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "PrintWriter.print can output floating-point text values.",
+          "semantic_gaps": "Java has no Float16 primitive type.",
+          "suggested_translation_strategy": "Convert Float16 to float/double string representation before print."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Float32)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "PrintWriter.print(float) maps directly to Float32 output.",
+          "semantic_gaps": "Precision/format defaults may vary.",
+          "suggested_translation_strategy": "Use print(float) or explicit format string for deterministic output."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Float64)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Float64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "PrintWriter.print(double) corresponds to Float64 textual output.",
+          "semantic_gaps": "Locale-sensitive formatting may differ if String.format used elsewhere.",
+          "suggested_translation_strategy": "Use print(double) directly for language-default textual conversion."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int16)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "PrintWriter.print(int) covers Int16 after widening.",
+          "semantic_gaps": "No Int16 overload specifically.",
+          "suggested_translation_strategy": "Cast short to int and print."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int32)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.print(int) directly matches Int32 output.",
+          "semantic_gaps": "None significant.",
+          "suggested_translation_strategy": "Map directly to print(int)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int64)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.print(long) maps directly.",
+          "semantic_gaps": "None significant.",
+          "suggested_translation_strategy": "Map to print(long)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int8)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "PrintWriter.print(int) can print byte values after widening.",
+          "semantic_gaps": "Signed byte formatting details should match numeric conversion intent.",
+          "suggested_translation_strategy": "Promote byte to int and print."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Rune)",
+      "candidates": [
+        {
+          "java_api": "Writer",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(Rune)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Character/rune output maps to Writer.write(int/char[]/String).",
+          "semantic_gaps": "Rune may represent full Unicode scalar beyond BMP; Java char is UTF-16 code unit.",
+          "suggested_translation_strategy": "Encode rune as code point string via Character.toChars and write resulting String."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(String)",
+      "candidates": [
+        {
+          "java_api": "Writer",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(String)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Writer.write(String) maps directly to string output.",
+          "semantic_gaps": "None significant.",
+          "suggested_translation_strategy": "Map directly to writer.write(str)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt16)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Numeric text output aligns with PrintWriter.print(int).",
+          "semantic_gaps": "Java lacks unsigned 16-bit primitive type.",
+          "suggested_translation_strategy": "Promote to int with unsigned conversion (value & 0xFFFF) before print."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt32)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can print unsigned 32-bit via long/string conversion.",
+          "semantic_gaps": "Java int is signed; no UInt32 type.",
+          "suggested_translation_strategy": "Use Integer.toUnsignedString(intValue) then write string."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt64)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "low",
+          "reason": "Still textual numeric output, but Java long is signed.",
+          "semantic_gaps": "No built-in UInt64 primitive.",
+          "suggested_translation_strategy": "Represent as BigInteger or unsigned string conversion helper before writing."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt8)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write(UInt8)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Numeric text output maps to print(int).",
+          "semantic_gaps": "Java byte is signed; no UInt8 type.",
+          "suggested_translation_strategy": "Convert with (value & 0xFF) then print as int."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.write<T>(T) where T <: ToString",
+      "candidates": [
+        {
+          "java_api": "Object",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.write<T>(T) where T <: ToString",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Generic ToString-based write maps to Object.toString() contract in Java.",
+          "semantic_gaps": "Null handling differs; Java toString may throw if object null.",
+          "suggested_translation_strategy": "Use String.valueOf(obj) then writer.write(...)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln()",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "println() with no args maps directly.",
+          "semantic_gaps": "Line separator may depend on platform.",
+          "suggested_translation_strategy": "Use println() or write('\\n') if fixed newline is required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Bool)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Bool)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.println(boolean) exists directly.",
+          "semantic_gaps": "Platform line separator behavior.",
+          "suggested_translation_strategy": "Map to println(boolean)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Float16)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Float16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "println for floating values is available after conversion.",
+          "semantic_gaps": "No Float16 primitive in Java.",
+          "suggested_translation_strategy": "Convert Float16 to float/double/string then println."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Float32)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Float32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.println(float) exists.",
+          "semantic_gaps": "Formatting precision defaults may differ.",
+          "suggested_translation_strategy": "Map directly or use formatted output when exact text is required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Float64)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Float64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.println(double) maps directly.",
+          "semantic_gaps": "None major.",
+          "suggested_translation_strategy": "Use println(double)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int16)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "println(int) covers widened short values.",
+          "semantic_gaps": "No dedicated short overload needed.",
+          "suggested_translation_strategy": "Cast short to int and println."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int32)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int32)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.println(int) exists.",
+          "semantic_gaps": "None significant.",
+          "suggested_translation_strategy": "Map to println(int)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int64)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int64)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.println(long) exists.",
+          "semantic_gaps": "None significant.",
+          "suggested_translation_strategy": "Map to println(long)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int8)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Byte values can be printed through int overload.",
+          "semantic_gaps": "Signedness display must match expected semantics.",
+          "suggested_translation_strategy": "Promote byte to int and println."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Rune)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(Rune)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Character/code-point text output with newline is supported after conversion to String.",
+          "semantic_gaps": "Rune vs UTF-16 char/code-point handling differences.",
+          "suggested_translation_strategy": "Convert rune to String via code-point utilities, then println(str)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(String)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(String)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "PrintWriter.println(String) is a direct match.",
+          "semantic_gaps": "Platform newline semantics may differ from fixed '\\n'.",
+          "suggested_translation_strategy": "Use println(String) or explicit '\\n' if exact line ending required."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt16)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt16)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Unsigned numeric value can still be printed as text.",
+          "semantic_gaps": "No UInt16 type in Java.",
+          "suggested_translation_strategy": "Convert to int with unsigned mask and println."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt32)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt32)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Unsigned value textual output is possible with conversion helpers.",
+          "semantic_gaps": "Java int signedness mismatch.",
+          "suggested_translation_strategy": "Use Integer.toUnsignedString then println(string)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt64)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt64)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "low",
+          "reason": "Can print unsigned 64-bit as string representation.",
+          "semantic_gaps": "No UInt64 primitive in Java.",
+          "suggested_translation_strategy": "Use BigInteger/unsigned helper and println resulting string."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt8)",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln(UInt8)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Unsigned byte text output is easy after conversion.",
+          "semantic_gaps": "Java byte is signed.",
+          "suggested_translation_strategy": "Convert with value & 0xFF then println."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln<T>(T) where T <: ToString",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter<T> where T <: OutputStream.writeln<T>(T) where T <: ToString",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Generic toString + newline aligns with PrintWriter.println(Object).",
+          "semantic_gaps": "Null rendering conventions may differ.",
+          "suggested_translation_strategy": "Use println(String.valueOf(obj))."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringWriter<T> <: Resource where T <: Resource",
+      "candidates": [
+        {
+          "java_api": "Closeable",
+          "cangjie_api": "extend<T> StringWriter<T> <: Resource where T <: Resource",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Writer hierarchy is Closeable and resource-managed.",
+          "semantic_gaps": "Naming differences only.",
+          "suggested_translation_strategy": "Use try-with-resources over writer wrappers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringWriter<T> <: Resource where T <: Resource.close()",
+      "candidates": [
+        {
+          "java_api": "Writer",
+          "cangjie_api": "extend<T> StringWriter<T> <: Resource where T <: Resource.close()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Writer.close() directly corresponds.",
+          "semantic_gaps": "Exception type handling differences.",
+          "suggested_translation_strategy": "Call close() and propagate/wrap IOException."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringWriter<T> <: Resource where T <: Resource.isClosed()",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "extend<T> StringWriter<T> <: Resource where T <: Resource.isClosed()",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "No isClosed() in standard Writer API.",
+          "semantic_gaps": "Closed state requires manual tracking.",
+          "suggested_translation_strategy": "Wrap writer and expose explicit closed flag."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringWriter<T> <: Seekable where T <: Seekable",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> StringWriter<T> <: Seekable where T <: Seekable",
+          "mapping_type": "near_equivalent",
+          "confidence": "low",
+          "reason": "Seek behavior can be provided by a seekable byte backend.",
+          "semantic_gaps": "Writer abstraction itself is not seekable.",
+          "suggested_translation_strategy": "Perform seek on underlying channel and recreate writer/encoder state if needed."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "extend<T> StringWriter<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "extend<T> StringWriter<T> <: Seekable where T <: Seekable.seek(SeekPosition)",
+          "mapping_type": "near_equivalent",
+          "confidence": "low",
+          "reason": "Seek operation can map to channel position changes.",
+          "semantic_gaps": "Need flush + encoding boundary handling around seek.",
+          "suggested_translation_strategy": "Flush writer, seek channel, then continue writing from new position."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "SeekPosition",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "SeekPosition",
+          "mapping_type": "rewrite_needed",
+          "confidence": "high",
+          "reason": "Java has no standard enum with begin/current/end seek origin in java.io cards.",
+          "semantic_gaps": "Origin-tagged seek intent type missing.",
+          "suggested_translation_strategy": "Define custom Java enum SeekPositionKind {BEGIN, CURRENT, END} with offset payload."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "SeekPosition.Begin(Int64)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "SeekPosition.Begin(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Begin-origin seek maps to absolute position(offset).",
+          "semantic_gaps": "Requires custom enum/value carrier around offset.",
+          "suggested_translation_strategy": "Compute absolute = offset and call channel.position(absolute)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "SeekPosition.Current(Int64)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "SeekPosition.Current(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Current-origin seek equals channel.position() + offset.",
+          "semantic_gaps": "No built-in origin enum in Java API.",
+          "suggested_translation_strategy": "Read current position, add offset, set new absolute position."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "SeekPosition.End(Int64)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "SeekPosition.End(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "End-origin seek equals size() + offset.",
+          "semantic_gaps": "End-relative arithmetic must be implemented manually.",
+          "suggested_translation_strategy": "Compute target = channel.size() + offset then set position(target)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ContentFormatException",
+      "candidates": [
+        {
+          "java_api": "UTFDataFormatException",
+          "cangjie_api": "ContentFormatException",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Both indicate invalid encoded content/format while reading textual data.",
+          "semantic_gaps": "Cangjie type is broader/general; Java UTFDataFormatException is specific context.",
+          "suggested_translation_strategy": "Map to UTFDataFormatException or define custom subclass of IOException for broader use."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ContentFormatException.init()",
+      "candidates": [
+        {
+          "java_api": "Exception",
+          "cangjie_api": "ContentFormatException.init()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "No-arg exception constructor pattern matches Java Exception base behavior.",
+          "semantic_gaps": "Specific exception class must be custom-defined for direct parity.",
+          "suggested_translation_strategy": "Create ContentFormatException extends Exception (or IOException) with no-arg ctor."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ContentFormatException.init(String)",
+      "candidates": [
+        {
+          "java_api": "Exception",
+          "cangjie_api": "ContentFormatException.init(String)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Message constructor semantics align with Exception(String).",
+          "semantic_gaps": "Direct class name requires custom type.",
+          "suggested_translation_strategy": "Implement message constructor in custom ContentFormatException."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "IOException",
+      "candidates": [
+        {
+          "java_api": "IOException",
+          "cangjie_api": "IOException",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Same conceptual and nominal IO exception type in Java.",
+          "semantic_gaps": "Hierarchy details may differ slightly in Cangjie runtime.",
+          "suggested_translation_strategy": "Map directly to java.io.IOException."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "IOException.init()",
+      "candidates": [
+        {
+          "java_api": "IOException",
+          "cangjie_api": "IOException.init()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "No-arg constructor exists on java.io.IOException.",
+          "semantic_gaps": "None significant.",
+          "suggested_translation_strategy": "Use new IOException()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "IOException.init(String)",
+      "candidates": [
+        {
+          "java_api": "IOException",
+          "cangjie_api": "IOException.init(String)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Message constructor exists on java.io.IOException.",
+          "semantic_gaps": "None significant.",
+          "suggested_translation_strategy": "Use new IOException(message)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "IOException.getClassName()",
+      "candidates": [
+        {
+          "java_api": "Object",
+          "cangjie_api": "IOException.getClassName()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Java supports e.getClass().getName() for class-name lookup.",
+          "semantic_gaps": "No dedicated IOException.getClassName() convenience API.",
+          "suggested_translation_strategy": "Translate to exception.getClass().getName()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "copy(InputStream, OutputStream)",
+      "candidates": [
+        {
+          "java_api": "InputStream.transferTo",
+          "cangjie_api": "copy(InputStream, OutputStream)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Java InputStream has transferTo(OutputStream) for stream-to-stream byte copy.",
+          "semantic_gaps": "Return type and exception details may differ slightly by runtime and wrapper layers.",
+          "suggested_translation_strategy": "Map to input.transferTo(output), and adapt return/exception handling if API contract differs."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "readString<T>(T) where T <: InputStream & Seekable",
+      "candidates": [
+        {
+          "java_api": "InputStreamReader",
+          "cangjie_api": "readString<T>(T) where T <: InputStream & Seekable",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Reading remaining bytes and decoding to string aligns with reader-based drain.",
+          "semantic_gaps": "Cangjie throws ContentFormatException on invalid UTF-8; Java behavior depends on decoder settings.",
+          "suggested_translation_strategy": "Decode with CharsetDecoder configured REPORT to surface malformed input."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "readStringUnchecked<T>(T) where T <: InputStream & Seekable",
+      "candidates": [
+        {
+          "java_api": "InputStreamReader",
+          "cangjie_api": "readStringUnchecked<T>(T) where T <: InputStream & Seekable",
+          "mapping_type": "rewrite_needed",
+          "confidence": "low",
+          "reason": "Unchecked decoding can be approximated with replacement-on-error decoding.",
+          "semantic_gaps": "Java does not expose a standard 'unchecked UTF-8 decode' API by this name.",
+          "suggested_translation_strategy": "Use decoder with CodingErrorAction.REPLACE or byte->String constructor semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "readToEnd<T>(T) where T <: InputStream & Seekable",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "readToEnd<T>(T) where T <: InputStream & Seekable",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Drain-until-EOF into byte array is standard InputStream pattern.",
+          "semantic_gaps": "No single method in listed cards guarantees this exact helper surface.",
+          "suggested_translation_strategy": "Read loop into ByteArrayOutputStream then toByteArray()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "IOStream",
+      "candidates": [
+        {
+          "java_api": "RandomAccessFile",
+          "cangjie_api": "IOStream",
+          "mapping_type": "near_equivalent",
+          "confidence": "low",
+          "reason": "RandomAccessFile supports both read and write operations in one object.",
+          "semantic_gaps": "Not an InputStream+OutputStream subtype union; different API shape.",
+          "suggested_translation_strategy": "Introduce project-local interface combining InputStream/OutputStream capabilities."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "InputStream",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "InputStream",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Core input stream abstraction is directly shared conceptually.",
+          "semantic_gaps": "Method set details differ (e.g., Option-return helpers).",
+          "suggested_translation_strategy": "Map interface to java.io.InputStream and add adapters for differing helpers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "InputStream.read(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "InputStream.read(Array<Byte>)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "InputStream.read(byte[]) is direct equivalent.",
+          "semantic_gaps": "EOF return handling conventions may differ.",
+          "suggested_translation_strategy": "Map directly and normalize EOF semantics where necessary."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "OutputStream",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "OutputStream",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "Core output stream abstraction maps directly.",
+          "semantic_gaps": "Default flush semantics may differ by implementation.",
+          "suggested_translation_strategy": "Use java.io.OutputStream as base type."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "OutputStream.flush()",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "OutputStream.flush()",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "flush method is directly shared.",
+          "semantic_gaps": "Cangjie default empty flush behavior may not match all Java implementations.",
+          "suggested_translation_strategy": "Call flush() and rely on concrete stream semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "OutputStream.write(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "OutputStream",
+          "cangjie_api": "OutputStream.write(Array<Byte>)",
+          "mapping_type": "direct",
+          "confidence": "high",
+          "reason": "write(byte[]) exists directly.",
+          "semantic_gaps": "None major.",
+          "suggested_translation_strategy": "Map directly to write(byte[])."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Seekable",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "Seekable",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Seekable contract (size/position/seek) maps naturally to SeekableByteChannel.",
+          "semantic_gaps": "Interface names and method signatures differ.",
+          "suggested_translation_strategy": "Define adapter between Cangjie-style seek interface and SeekableByteChannel."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Seekable.length",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "Seekable.length",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "length corresponds to size().",
+          "semantic_gaps": "Property vs method API shape.",
+          "suggested_translation_strategy": "Expose getter that delegates to channel.size()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Seekable.position",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "Seekable.position",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Current position maps to channel.position().",
+          "semantic_gaps": "Property vs method form.",
+          "suggested_translation_strategy": "Expose accessor around channel.position()."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Seekable.remainLength",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "Seekable.remainLength",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Can be derived from size-position.",
+          "semantic_gaps": "No direct remainLength API.",
+          "suggested_translation_strategy": "Implement computed property `size() - position()`."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Seekable.seek(SeekPosition)",
+      "candidates": [
+        {
+          "java_api": "SeekableByteChannel",
+          "cangjie_api": "Seekable.seek(SeekPosition)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Seeking is represented by setting channel position.",
+          "semantic_gaps": "Relative origin enum handling must be custom.",
+          "suggested_translation_strategy": "Translate Begin/Current/End offset into absolute position(long)."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedInputStream Example",
+      "candidates": [
+        {
+          "java_api": "BufferedInputStream",
+          "cangjie_api": "BufferedInputStream Example",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Example pattern maps to reading through BufferedInputStream into byte[].",
+          "semantic_gaps": "Cangjie uses ByteBuffer test stream; Java demo may use ByteArrayInputStream.",
+          "suggested_translation_strategy": "Use ByteArrayInputStream + BufferedInputStream and print decoded bytes."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "BufferedOutputStream Example",
+      "candidates": [
+        {
+          "java_api": "BufferedOutputStream",
+          "cangjie_api": "BufferedOutputStream Example",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Example intent is buffered write then flush.",
+          "semantic_gaps": "Underlying in-memory stream setup differs.",
+          "suggested_translation_strategy": "Use ByteArrayOutputStream + BufferedOutputStream, then flush and inspect bytes."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ByteBuffer Example",
+      "candidates": [
+        {
+          "java_api": "ByteBuffer",
+          "cangjie_api": "ByteBuffer Example",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Example combines write/read/seek over in-memory bytes, partially similar to java.nio.ByteBuffer.",
+          "semantic_gaps": "Cangjie object also behaves like stream with dynamic length and helper functions.",
+          "suggested_translation_strategy": "Use custom wrapper over byte[]/ByteArrayOutputStream with explicit cursor and seek helpers."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ChainedInputStream Example",
+      "candidates": [
+        {
+          "java_api": "SequenceInputStream",
+          "cangjie_api": "ChainedInputStream Example",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Demonstrates chaining multiple input sources into one read flow.",
+          "semantic_gaps": "Card mentions cyclic behavior, not standard in SequenceInputStream.",
+          "suggested_translation_strategy": "Use SequenceInputStream for one pass or custom rotating stream implementation."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "MultiOutputStream Example",
+      "candidates": [
+        {
+          "java_api": "uncertain",
+          "cangjie_api": "MultiOutputStream Example",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "Java standard cards do not include a multi-delegate tee OutputStream type.",
+          "semantic_gaps": "Broadcast write to N streams requires custom class.",
+          "suggested_translation_strategy": "Implement composite OutputStream and verify each target receives identical bytes."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringReader Example",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "StringReader Example",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Example covers read char/read line/read-until/read-to-end patterns available with Reader loops.",
+          "semantic_gaps": "readUntil helper must be custom.",
+          "suggested_translation_strategy": "Use InputStreamReader+BufferedReader and implement custom delimiter/predicate reads."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "StringWriter Example",
+      "candidates": [
+        {
+          "java_api": "PrintWriter",
+          "cangjie_api": "StringWriter Example",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Example writes string, line, and number then flushes.",
+          "semantic_gaps": "Cangjie typed overload set differs in unsigned/float16 details.",
+          "suggested_translation_strategy": "Use PrintWriter over OutputStreamWriter and explicit numeric conversions where needed."
+        }
+      ]
+    }
+  ]
+}

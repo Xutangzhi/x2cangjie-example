@@ -1,0 +1,38 @@
+{
+  "packageInformation": {
+    "validator.routines.checkdigit": {
+      "rootPackageName": "validator",
+      "fileNameHash": "-7299933871954685528",
+      "timeStamp": 1783325091,
+      "isBuilt": true,
+      "exeName": "",
+      "hasSubPkgs": false
+    },
+    "validator": {
+      "rootPackageName": "validator",
+      "fileNameHash": "-556786883187675339",
+      "timeStamp": 1783344551,
+      "isBuilt": true,
+      "exeName": "",
+      "hasSubPkgs": true
+    },
+    "validator.util": {
+      "rootPackageName": "validator",
+      "fileNameHash": "7391842476125423888",
+      "timeStamp": 1783348583,
+      "isBuilt": true,
+      "exeName": "",
+      "hasSubPkgs": false
+    },
+    "validator.routines": {
+      "rootPackageName": "validator",
+      "fileNameHash": "457668421507231797",
+      "timeStamp": 1783338769,
+      "isBuilt": true,
+      "exeName": "",
+      "hasSubPkgs": true
+    }
+  },
+  "jsonHash": "2768076619860682858",
+  "rootPackageName": "validator"
+}

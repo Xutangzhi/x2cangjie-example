@@ -1,0 +1,109 @@
+{
+  "artifacts": {
+    "certificate": ".translation/formal/certificates/todo.json",
+    "facts": ".translation/formal/facts/todo.facts",
+    "violations": ".translation/formal/violations/todo.json"
+  },
+  "checker": {
+    "path": "scripts/traceability_guard.py",
+    "sha256": "679baf1017e895cb11964214b436e5bbce54ed5b530c69ed887ef44c927eed01"
+  },
+  "evaluated_rule_ids": [
+    "TR-CERT-001",
+    "TR-CERT-002",
+    "TR-CERT-003",
+    "TR-CLI-001",
+    "TR-CLOSURE-001",
+    "TR-CLOSURE-002",
+    "TR-CLOSURE-003",
+    "TR-CLOSURE-004",
+    "TR-CLOSURE-005",
+    "TR-CLOSURE-006",
+    "TR-CLOSURE-007",
+    "TR-CLOSURE-008",
+    "TR-CLOSURE-009",
+    "TR-CLOSURE-010",
+    "TR-CONTRACT-001",
+    "TR-CONTRACT-002",
+    "TR-CONTRACT-003",
+    "TR-CONTRACT-004",
+    "TR-CONTRACT-005",
+    "TR-CONTRACT-006",
+    "TR-COVERAGE-001",
+    "TR-COVERAGE-002",
+    "TR-COVERAGE-003",
+    "TR-COVERAGE-004",
+    "TR-COVERAGE-005",
+    "TR-DECISION-001",
+    "TR-DECISION-002",
+    "TR-GRAPH-001",
+    "TR-GRAPH-002",
+    "TR-GRAPH-003",
+    "TR-GRAPH-004",
+    "TR-GRAPH-005",
+    "TR-LOAD-001",
+    "TR-PLAN-001",
+    "TR-PLAN-002",
+    "TR-PLAN-003",
+    "TR-PLAN-004",
+    "TR-PLAN-005",
+    "TR-PLAN-006",
+    "TR-PLAN-007",
+    "TR-PLAN-008",
+    "TR-SOURCE-001"
+  ],
+  "failed_rule_ids": [],
+  "generated_at": "2026-07-06T06:35:27.494086+00:00",
+  "inputs": {
+    ".translation/final-reviewer/reviewer-report.yaml": {
+      "exists": false,
+      "sha256": ""
+    },
+    ".translation/formal/gate-history.head.json": {
+      "exists": true,
+      "sha256": "4bf8d3d61f2e789e24ebf6faa6ab99f1fdf419f05e039f6172444f3ed8a84566"
+    },
+    ".translation/formal/gate-history.jsonl": {
+      "exists": true,
+      "sha256": "7f604fc0e5dc3f441f5687aad133a669b95fc03b2b61d7aa36476a39d7eb6864"
+    },
+    ".translation/tester/reports/tester-plan-audit-20260706T062519Z.yaml": {
+      "exists": true,
+      "sha256": "20437164b57d1b6e6088ce89d090419fdf9ce2fc76ac9e0b2282ced8f6858857"
+    },
+    ".translation/tester/tester-report.yaml": {
+      "exists": true,
+      "sha256": "20437164b57d1b6e6088ce89d090419fdf9ce2fc76ac9e0b2282ced8f6858857"
+    },
+    ".translation/translator/blocked-todos.yaml": {
+      "exists": true,
+      "sha256": "6825707e5b9b586a86ebba9fda221262ff30846806b93ae685eb89f926355117"
+    },
+    ".translation/translator/decision-log.yaml": {
+      "exists": true,
+      "sha256": "3700624191a867a7695095c8f9b01b22ce62c42c9d7c6d77167b87d6896b62a3"
+    },
+    ".translation/translator/migration-todo.yaml": {
+      "exists": true,
+      "sha256": "0703557ef4377c0f54b3081c2909e3bae7ba330115805fb8907c6e203349f628"
+    },
+    ".translation/translator/module-backlog.yaml": {
+      "exists": true,
+      "sha256": "bff0dfe4c79a6beb8555101d2b5afa842b61138fb433cc87e6b0e0cfb1fd7194"
+    },
+    ".translation/translator/translation-ledger.yaml": {
+      "exists": true,
+      "sha256": "f6e8404cc8caedcf89ef570a0eb810f87672602a0d3a719be0ac822c0aa2530f"
+    }
+  },
+  "kind": "datalog-style-traceability-certificate",
+  "ok": true,
+  "phase": "todo",
+  "rules": {
+    "path": "rules/traceability.dl",
+    "sha256": "0ad659f6285bec12acbee9342b76ce72a72bca99967a36541da25a53d1e15416"
+  },
+  "schema_version": 1,
+  "scope": "traceability-subgate",
+  "violation_count": 0
+}

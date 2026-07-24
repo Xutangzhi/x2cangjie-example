@@ -1,0 +1,12 @@
+/target/
+/.settings/
+/.classpath
+/.project
+/site-content/
+/.vscode/
+/commons-validator.iml
+/.idea/
+
+# NetBeans files
+nb-configuration.xml
+nbactions.xml

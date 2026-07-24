@@ -1,0 +1,26 @@
+[package]
+  cjc-version = "1.0.5"
+  compile-option = ""
+  description = "Bootstrap Cangjie test package for Apache Commons Validator"
+  link-option = ""
+  name = "commons_validator_test"
+  output-type = "static"
+  src-dir = "./tests"
+  target-dir = ""
+  version = "1.0.0"
+  package-configuration = {}
+  scripts = {}
+
+[dependencies]
+  [dependencies.validator]
+    path = "./src"
+    version = "1.0.0"
+
+[profile]
+  [profile.build]
+    incremental = true
+    lto = ""
+  [profile.customized-option]
+    debug = "-g"
+    release = "-O2"
+  [profile.test]

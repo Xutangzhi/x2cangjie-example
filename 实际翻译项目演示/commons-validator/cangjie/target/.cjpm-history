@@ -1,0 +1,180 @@
+{
+  "resolves": [
+    {
+      "rootPackageName": "validator",
+      "modulePath": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src",
+      "packagePath": {
+        "commonPaths": [],
+        "platformPaths": [
+          {
+            "_0": "package.src-dir",
+            "_1": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit"
+          }
+        ]
+      },
+      "fullName": "validator.routines.checkdigit",
+      "isMacroPackage": false,
+      "output-type": "static",
+      "compile-option": "",
+      "native-compile-option": "",
+      "customized-option": {
+        "debug": "-g",
+        "release": "-O2"
+      },
+      "link-option": "",
+      "native-link-option": "",
+      "requires": [],
+      "std-requires": [],
+      "c_libs": {},
+      "hasTestFiles": false,
+      "hasProdFiles": true,
+      "hasTestsInProdFiles": false,
+      "accessLevel": "public"
+    },
+    {
+      "rootPackageName": "validator",
+      "modulePath": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src",
+      "packagePath": {
+        "commonPaths": [],
+        "platformPaths": [
+          {
+            "_0": "package.src-dir",
+            "_1": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/util"
+          }
+        ]
+      },
+      "fullName": "validator.util",
+      "isMacroPackage": false,
+      "output-type": "static",
+      "compile-option": "",
+      "native-compile-option": "",
+      "customized-option": {
+        "debug": "-g",
+        "release": "-O2"
+      },
+      "link-option": "",
+      "native-link-option": "",
+      "requires": [],
+      "std-requires": [],
+      "c_libs": {},
+      "hasTestFiles": false,
+      "hasProdFiles": true,
+      "hasTestsInProdFiles": false,
+      "accessLevel": "public"
+    },
+    {
+      "rootPackageName": "validator",
+      "modulePath": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src",
+      "packagePath": {
+        "commonPaths": [],
+        "platformPaths": [
+          {
+            "_0": "package.src-dir",
+            "_1": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines"
+          }
+        ]
+      },
+      "fullName": "validator.routines",
+      "isMacroPackage": false,
+      "output-type": "static",
+      "compile-option": "",
+      "native-compile-option": "",
+      "customized-option": {
+        "debug": "-g",
+        "release": "-O2"
+      },
+      "link-option": "",
+      "native-link-option": "",
+      "requires": [
+        "validator.routines.checkdigit"
+      ],
+      "std-requires": [
+        "std.collection",
+        "std.regex",
+        "std.sort",
+        "std.unicode"
+      ],
+      "c_libs": {},
+      "hasTestFiles": false,
+      "hasProdFiles": true,
+      "hasTestsInProdFiles": false,
+      "accessLevel": "public"
+    },
+    {
+      "rootPackageName": "commons_validator_test",
+      "modulePath": ".",
+      "packagePath": {
+        "commonPaths": [],
+        "platformPaths": [
+          {
+            "_0": "package.src-dir",
+            "_1": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests"
+          }
+        ]
+      },
+      "fullName": "commons_validator_test",
+      "isMacroPackage": false,
+      "output-type": "static",
+      "compile-option": "",
+      "native-compile-option": "",
+      "customized-option": {
+        "debug": "-g",
+        "release": "-O2"
+      },
+      "link-option": "",
+      "native-link-option": "",
+      "requires": [
+        "validator.routines"
+      ],
+      "std-requires": [
+        "std.collection",
+        "std.fs"
+      ],
+      "c_libs": {},
+      "hasTestFiles": true,
+      "hasProdFiles": true,
+      "hasTestsInProdFiles": false,
+      "accessLevel": "public"
+    },
+    {
+      "rootPackageName": "validator",
+      "modulePath": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src",
+      "packagePath": {
+        "commonPaths": [],
+        "platformPaths": [
+          {
+            "_0": "package.src-dir",
+            "_1": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src"
+          }
+        ]
+      },
+      "fullName": "validator",
+      "isMacroPackage": false,
+      "output-type": "static",
+      "compile-option": "",
+      "native-compile-option": "",
+      "customized-option": {
+        "debug": "-g",
+        "release": "-O2"
+      },
+      "link-option": "",
+      "native-link-option": "",
+      "requires": [
+        "validator.routines",
+        "validator.routines.checkdigit"
+      ],
+      "std-requires": [
+        "std.collection",
+        "std.fs",
+        "std.regex"
+      ],
+      "c_libs": {},
+      "hasTestFiles": false,
+      "hasProdFiles": true,
+      "hasTestsInProdFiles": false,
+      "accessLevel": "public"
+    }
+  ],
+  "binDeps": {},
+  "crossBinDeps": {}
+}

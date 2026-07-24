@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "source_language": "java",
+  "target_language": "cangjie",
+  "repo": {
+    "source_path": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator",
+    "target_path": "/Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator",
+    "source_commit": "non-git",
+    "target_commit": "non-git"
+  },
+  "migration": {
+    "mode": "backend-slice",
+    "output_root": "cangjie",
+    "scope": {
+      "include": [
+        "java/commons-validator/src/main/java",
+        "java/commons-validator/src/main/resources",
+        "java/commons-validator/src/test/java",
+        "cangjie/src"
+      ],
+      "exclude": [],
+      "out_of_scope": [
+        "java/commons-validator/src/example (DEC-0003 example-only source outside provided cangjie/src skeleton)"
+      ]
+    }
+  },
+  "constraints": {
+    "pure_backend_only": true,
+    "frontend_ui_out_of_scope": true,
+    "preserve_source_tests": true
+  },
+  "commands": {
+    "source_baseline": [
+      "mvn -q test (cwd: java/commons-validator)"
+    ],
+    "source_tests": [
+      "mvn -q test (cwd: java/commons-validator)"
+    ],
+    "target_build": [
+      "cjpm build (cwd: cangjie)"
+    ],
+    "target_tests": [
+      "cjpm test (cwd: cangjie)"
+    ],
+    "runtime_smoke": []
+  },
+  "entrypoints": {
+    "cli": [],
+    "services": [],
+    "scheduled_jobs": [],
+    "message_consumers": []
+  },
+  "external_requirements": {
+    "databases": [],
+    "brokers": [],
+    "network_services": [],
+    "secrets": [],
+    "filesystem": [
+      "ValidatorResources XML/resource fixtures under java/commons-validator/src/test/resources and source main resources"
+    ]
+  }
+}

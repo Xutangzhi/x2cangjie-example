@@ -1,0 +1,67 @@
+[33mwarning[0m: unused function:'getFirstName'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/core_config_test.cj:61:5:
+   [36m| [0m
+[36m61[0m [36m| [0m      public func getFirstName(): ?String {[0m
+   [36m| [0m [33m_[0m[33m____^[0m
+[36m62[0m [36m| [0m[33m|[0m         firstName[0m
+[36m63[0m [36m| [0m[33m|[0m     }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'getMiddleName'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/core_config_test.cj:65:5:
+   [36m| [0m
+[36m65[0m [36m| [0m      public func getMiddleName(): ?String {[0m
+   [36m| [0m [33m_[0m[33m____^[0m
+[36m66[0m [36m| [0m[33m|[0m         middleName[0m
+[36m67[0m [36m| [0m[33m|[0m     }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'getLastName'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/core_config_test.cj:69:5:
+   [36m| [0m
+[36m69[0m [36m| [0m      public func getLastName(): ?String {[0m
+   [36m| [0m [33m_[0m[33m____^[0m
+[36m70[0m [36m| [0m[33m|[0m         lastName[0m
+[36m71[0m [36m| [0m[33m|[0m     }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'getValue'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/core_config_test.cj:104:5:
+    [36m| [0m
+[36m104[0m [36m| [0m      public func getValue(): ?String {[0m
+    [36m| [0m [33m_[0m[33m____^[0m
+[36m105[0m [36m| [0m[33m|[0m         value[0m
+[36m106[0m [36m| [0m[33m|[0m     }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'getLetter'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/core_config_test.cj:126:5:
+    [36m| [0m
+[36m126[0m [36m| [0m      public func getLetter(): ?String {[0m
+    [36m| [0m [33m_[0m[33m____^[0m
+[36m127[0m [36m| [0m[33m|[0m         letter[0m
+[36m128[0m [36m| [0m[33m|[0m     }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'getDate'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/tests/core_config_test.cj:130:5:
+    [36m| [0m
+[36m130[0m [36m| [0m      public func getDate(): ?String {[0m
+    [36m| [0m [33m_[0m[33m____^[0m
+[36m131[0m [36m| [0m[33m|[0m         date[0m
+[36m132[0m [36m| [0m[33m|[0m     }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+6 warnings generated, 6 warnings printed.

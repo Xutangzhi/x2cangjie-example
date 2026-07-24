@@ -1,0 +1,74 @@
+schema_version: 1
+report_id: "tester-todo-000-build-20260706T064747Z"
+report_snapshot_path: ".translation/tester/reports/tester-todo-000-build-20260706T064747Z.yaml"
+report_type: TODO_VERIFICATION
+decision: PASS
+active_todo_id: "TODO-000-BUILD"
+active_slice: "SLICE-000-BUILD"
+todo_verdict:
+  todo_id: "TODO-000-BUILD"
+  verdict: pass
+  can_mark_finished: true
+  verified_obligation_ids:
+    - "OB_BUILD_TARGET_PROJECT"
+  failed_obligation_ids: []
+  blocking_issue_ids: []
+  required_rework: []
+  evidence: "TODO-000-BUILD contract is internally consistent with run-state and migration-todo. OB_BUILD_TARGET_PROJECT is the only active obligation, and it is bound to B_TARGET_BUILD. Source baseline command mvn -q test passed from java/commons-validator. Contract gate passed. Target cjpm build passed from cangjie. Target cjpm test passed from cangjie with TOTAL: 1, PASSED: 1, ERROR: 0, FAILED: 0. The active todo has no source_test_ids and claims only build/test harness behavior, so no source assertions are omitted by this verdict."
+plan_audit:
+  status: not-applicable
+claimed_feature_results:
+  - behavior_id: "B_TARGET_BUILD"
+    verdict: pass
+    ledger_obligation_ids:
+      - "OB_BUILD_TARGET_PROJECT"
+    source_refs:
+      - "java/commons-validator/pom.xml"
+      - "cangjie/cjpm.toml"
+      - "cangjie/src/cjpm.toml"
+    target_refs:
+      - "cangjie/cjpm.toml"
+      - "cangjie/src/cjpm.toml"
+      - "cangjie/tests/smoke_test.cj"
+    production_path_verified: true
+    red_evidence: "feature-contract records pre-fix cjpm build failures for missing ./tests and conflicting generated cangjie/src/main.cj."
+    green_evidence: "cjpm build passed from /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie."
+    smoke_evidence: "cjpm test passed and executed TestCase_targetPackageSmoke."
+    notes:
+      - "The smoke test is not counted as source behavior coverage; active_source_test_count is 0 for TODO-000-BUILD."
+      - "The target package no longer contains cangjie/src/main.cj, matching the contract note about removing the conflicting generated static-library main."
+      - "Formal contract gate passed before this report. The post-report tester gate still requires translator state sync: run-state tester.last_* must point to this report and TODO-000-BUILD must become finished."
+global_gap_scan:
+  missing_modules: []
+  incomplete_modules: []
+  missing_source_tests: []
+  missing_public_api: []
+  dependency_gaps: []
+  ledger_gaps: []
+  stale_decisions: []
+ledger_consistency:
+  status: pass
+  checked_obligations: 416
+  missing_obligations: []
+  stale_claims: []
+metrics:
+  source_build_status: pass
+  source_test_status: pass
+  target_build_status: pass
+  target_test_status: pass
+  source_test_count: 397
+  blocked_source_test_count: 0
+  active_source_test_count: 0
+  active_blocked_source_test_count: 0
+  active_executable_target_test_count: 1
+  executable_target_test_count: 1
+  passing_translated_test_count: 1
+  test_pass_rate: "1/1"
+  module_coverage_status: complete
+  public_api_status: not-applicable
+  dependency_boundary_status: complete
+  runtime_smoke_status: not-applicable
+  regression_status: pass
+issues: []
+reference_paths: []
+summary: "TODO_VERIFICATION passed for TODO-000-BUILD only. The active todo verifies the target build/test harness, not validator API behavior. run-state, migration-todo, feature-contract, and ledger agree on TODO-000-BUILD / SLICE-000-BUILD / B_TARGET_BUILD / OB_BUILD_TARGET_PROJECT. The contract gate passed, mvn -q test passed, cjpm build passed, and cjpm test passed with 1 executable smoke test. can_mark_finished=true for TODO-000-BUILD with verified_obligation_ids=[OB_BUILD_TARGET_PROJECT]. The post-report tester gate is expected to remain pending until translator state is synchronized to this snapshot and TODO-000-BUILD is marked finished."

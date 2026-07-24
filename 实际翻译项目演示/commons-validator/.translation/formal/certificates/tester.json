@@ -1,0 +1,153 @@
+{
+  "artifacts": {
+    "certificate": ".translation/formal/certificates/tester.json",
+    "facts": ".translation/formal/facts/tester.facts",
+    "violations": ".translation/formal/violations/tester.json"
+  },
+  "checker": {
+    "path": "scripts/traceability_guard.py",
+    "sha256": "679baf1017e895cb11964214b436e5bbce54ed5b530c69ed887ef44c927eed01"
+  },
+  "evaluated_rule_ids": [
+    "TR-CERT-001",
+    "TR-CERT-002",
+    "TR-CERT-003",
+    "TR-CLI-001",
+    "TR-CLOSURE-001",
+    "TR-CLOSURE-002",
+    "TR-CLOSURE-003",
+    "TR-CLOSURE-004",
+    "TR-CLOSURE-005",
+    "TR-CLOSURE-006",
+    "TR-CLOSURE-007",
+    "TR-CLOSURE-008",
+    "TR-CLOSURE-009",
+    "TR-CLOSURE-010",
+    "TR-CONTRACT-001",
+    "TR-CONTRACT-002",
+    "TR-CONTRACT-003",
+    "TR-CONTRACT-004",
+    "TR-CONTRACT-005",
+    "TR-CONTRACT-006",
+    "TR-COVERAGE-001",
+    "TR-COVERAGE-002",
+    "TR-COVERAGE-003",
+    "TR-COVERAGE-004",
+    "TR-COVERAGE-005",
+    "TR-DECISION-001",
+    "TR-DECISION-002",
+    "TR-GRAPH-001",
+    "TR-GRAPH-002",
+    "TR-GRAPH-003",
+    "TR-GRAPH-004",
+    "TR-GRAPH-005",
+    "TR-LOAD-001",
+    "TR-PLAN-001",
+    "TR-PLAN-002",
+    "TR-PLAN-003",
+    "TR-PLAN-004",
+    "TR-PLAN-005",
+    "TR-PLAN-006",
+    "TR-PLAN-007",
+    "TR-PLAN-008",
+    "TR-SOURCE-001"
+  ],
+  "failed_rule_ids": [],
+  "generated_at": "2026-07-06T15:03:46.932226+00:00",
+  "inputs": {
+    ".translation/final-reviewer/reviewer-report.yaml": {
+      "exists": false,
+      "sha256": ""
+    },
+    ".translation/formal/gate-history.head.json": {
+      "exists": true,
+      "sha256": "5db92f4f2164780c590b94ab1eb2d4d37f389486351b494c36e2f549c509b065"
+    },
+    ".translation/formal/gate-history.jsonl": {
+      "exists": true,
+      "sha256": "56b7b60cb485df8f5b8ebaf3dffab542f5dc65e4b907f16c20f7b50cfd3d0f39"
+    },
+    ".translation/tester/reports/tester-plan-audit-20260706T062519Z.yaml": {
+      "exists": true,
+      "sha256": "20437164b57d1b6e6088ce89d090419fdf9ce2fc76ac9e0b2282ced8f6858857"
+    },
+    ".translation/tester/reports/tester-plan-audit-20260706T063610Z.yaml": {
+      "exists": true,
+      "sha256": "65c40a12735e0e3f70a9e17a508f2b5697a7ca433ec1a53fc2e6bb32fe7112b7"
+    },
+    ".translation/tester/reports/tester-todo-000-build-20260706T064747Z.yaml": {
+      "exists": true,
+      "sha256": "8010960ec3528ed33dc3b5249c11d4e4970feb06ea80d3244e757bc0a23d048f"
+    },
+    ".translation/tester/reports/tester-todo-001-checkdigit-20260706T082201Z.yaml": {
+      "exists": true,
+      "sha256": "13086863575d972c1c99d10757247fdfd44895ece57ac15e92b6d3debf7c8702"
+    },
+    ".translation/tester/reports/tester-todo-001-checkdigit-20260706T082817Z.yaml": {
+      "exists": true,
+      "sha256": "30330c8d5a070d499ac5a64c25ba44b2ab0520b65538ad91bb6fdbe5917bc0b2"
+    },
+    ".translation/tester/reports/tester-todo-002-address-20260706T093211Z.yaml": {
+      "exists": true,
+      "sha256": "7b2d494424e79a7f5160a1210c20d8caa3bb5f3a587f64fdf37a29c07ffe8c3f"
+    },
+    ".translation/tester/reports/tester-todo-003-numeric-time-20260706T112102Z.yaml": {
+      "exists": true,
+      "sha256": "14c1d962cc796a13fb0c366da2194b7ef5d45cd8c49d79d761a8167ab26a193f"
+    },
+    ".translation/tester/reports/tester-todo-004-identifiers-20260706T121155Z.yaml": {
+      "exists": true,
+      "sha256": "6072ad08cf1a96a3d7ca3b511defd3f5135620192eaaf45ae3822296e333a923"
+    },
+    ".translation/tester/reports/tester-todo-005-core-config-20260706T134723Z.yaml": {
+      "exists": true,
+      "sha256": "9f1fff6504f6f4aa13d98c363647b10f42634d2e7464ddb4630252fdc41b20ce"
+    },
+    ".translation/tester/reports/tester-todo-005-core-config-20260706T141927Z.yaml": {
+      "exists": true,
+      "sha256": "cddc2e0b2d7db7d1f2d305a3bb723a759e2878d34cb9222cdcadf3ad8013e858"
+    },
+    ".translation/tester/reports/tester-todo-005-core-config-20260706T145402Z.yaml": {
+      "exists": true,
+      "sha256": "7ea850eec5d58017d2b2119271765ff930fd9bef1dd1e525417fce7c2bd744d4"
+    },
+    ".translation/tester/tester-report.yaml": {
+      "exists": true,
+      "sha256": "7ea850eec5d58017d2b2119271765ff930fd9bef1dd1e525417fce7c2bd744d4"
+    },
+    ".translation/translator/blocked-todos.yaml": {
+      "exists": true,
+      "sha256": "6825707e5b9b586a86ebba9fda221262ff30846806b93ae685eb89f926355117"
+    },
+    ".translation/translator/decision-log.yaml": {
+      "exists": true,
+      "sha256": "3700624191a867a7695095c8f9b01b22ce62c42c9d7c6d77167b87d6896b62a3"
+    },
+    ".translation/translator/feature-contract.yaml": {
+      "exists": true,
+      "sha256": "3ed83b444e068adef77c39ab24894281df810bbbb21520eb83dce164859d8880"
+    },
+    ".translation/translator/migration-todo.yaml": {
+      "exists": true,
+      "sha256": "76e1b92b2d8e59cd57a0e078292227a64fa003d36c3979d7a13eeac58f01736a"
+    },
+    ".translation/translator/module-backlog.yaml": {
+      "exists": true,
+      "sha256": "bff0dfe4c79a6beb8555101d2b5afa842b61138fb433cc87e6b0e0cfb1fd7194"
+    },
+    ".translation/translator/translation-ledger.yaml": {
+      "exists": true,
+      "sha256": "cda3f4d76bc50c5a3f8bd305f338d4b9793da05a4251fa504ac1e4cb8f17ed1a"
+    }
+  },
+  "kind": "datalog-style-traceability-certificate",
+  "ok": true,
+  "phase": "tester",
+  "rules": {
+    "path": "rules/traceability.dl",
+    "sha256": "0ad659f6285bec12acbee9342b76ce72a72bca99967a36541da25a53d1e15416"
+  },
+  "schema_version": 1,
+  "scope": "traceability-subgate",
+  "violation_count": 0
+}

@@ -1,0 +1,8 @@
+{
+  "entry_sha256": "82e4ad6cb7ff27db0785b1645ef7814a14273f906d2793276d19bc06be6a1ae5",
+  "gate_history_path": ".translation/formal/gate-history.jsonl",
+  "gate_phase": "delivery",
+  "line_count": 31,
+  "recorded_at": "2026-07-06T15:21:01.227004+00:00",
+  "schema_version": 1
+}

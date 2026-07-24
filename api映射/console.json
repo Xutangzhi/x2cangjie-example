@@ -1,0 +1,650 @@
+{
+  "source_cangjie_file": "cangjie_api_card/console.json",
+  "mapping_method": "manual_semantic_alignment",
+  "mappings": [
+    {
+      "cangjie_api": "Console",
+      "candidates": [
+        {
+          "java_api": "System",
+          "cangjie_api": "Console",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both provide process-wide standard input/output/error handles.",
+          "semantic_gaps": "Java exposes streams directly, not through a Cangjie-style facade class.",
+          "suggested_translation_strategy": "Use System.in/System.out/System.err via a thin compatibility wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Console.stdErr",
+      "candidates": [
+        {
+          "java_api": "System",
+          "cangjie_api": "Console.stdErr",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both provide process-wide standard input/output/error handles.",
+          "semantic_gaps": "Java exposes streams directly, not through a Cangjie-style facade class.",
+          "suggested_translation_strategy": "Use System.in/System.out/System.err via a thin compatibility wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Console.stdIn",
+      "candidates": [
+        {
+          "java_api": "System",
+          "cangjie_api": "Console.stdIn",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both provide process-wide standard input/output/error handles.",
+          "semantic_gaps": "Java exposes streams directly, not through a Cangjie-style facade class.",
+          "suggested_translation_strategy": "Use System.in/System.out/System.err via a thin compatibility wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Console.stdOut",
+      "candidates": [
+        {
+          "java_api": "System",
+          "cangjie_api": "Console.stdOut",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Both provide process-wide standard input/output/error handles.",
+          "semantic_gaps": "Java exposes streams directly, not through a Cangjie-style facade class.",
+          "suggested_translation_strategy": "Use System.in/System.out/System.err via a thin compatibility wrapper."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleReader",
+      "candidates": [
+        {
+          "java_api": "Console",
+          "cangjie_api": "ConsoleReader",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Java Console offers terminal input abstractions close to reader role.",
+          "semantic_gaps": "Java Console may be unavailable in non-interactive environments.",
+          "suggested_translation_strategy": "Fallback to BufferedReader when System.console() is null."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleReader.read()",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "ConsoleReader.read()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Line/character oriented console input maps to BufferedReader over System.in.",
+          "semantic_gaps": "UTF-8 truncation and Option-return contracts differ.",
+          "suggested_translation_strategy": "Wrap InputStreamReader(StandardCharsets.UTF_8) + BufferedReader and convert null/EOF to Optional semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleReader.read(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "InputStream",
+          "cangjie_api": "ConsoleReader.read(Array<Byte>)",
+          "mapping_type": "rewrite_needed",
+          "confidence": "medium",
+          "reason": "Byte-array reads are closer to InputStream.read(byte[]) than character-oriented BufferedReader APIs.",
+          "semantic_gaps": "Cangjie buffer ownership and EOF signaling may not match Java InputStream contracts exactly.",
+          "suggested_translation_strategy": "Map to System.in/InputStream.read(byte[]) and wrap return/EOF behavior to Cangjie semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleReader.readToEnd()",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "ConsoleReader.readToEnd()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Line/character oriented console input maps to BufferedReader over System.in.",
+          "semantic_gaps": "UTF-8 truncation and Option-return contracts differ.",
+          "suggested_translation_strategy": "Wrap InputStreamReader(StandardCharsets.UTF_8) + BufferedReader and convert null/EOF to Optional semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleReader.readUntil((Rune) -> Bool)",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "ConsoleReader.readUntil((Rune) -> Bool)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Line/character oriented console input maps to BufferedReader over System.in.",
+          "semantic_gaps": "UTF-8 truncation and Option-return contracts differ.",
+          "suggested_translation_strategy": "Wrap InputStreamReader(StandardCharsets.UTF_8) + BufferedReader and convert null/EOF to Optional semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleReader.readUntil(Rune)",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "ConsoleReader.readUntil(Rune)",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Line/character oriented console input maps to BufferedReader over System.in.",
+          "semantic_gaps": "UTF-8 truncation and Option-return contracts differ.",
+          "suggested_translation_strategy": "Wrap InputStreamReader(StandardCharsets.UTF_8) + BufferedReader and convert null/EOF to Optional semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleReader.readln()",
+      "candidates": [
+        {
+          "java_api": "BufferedReader",
+          "cangjie_api": "ConsoleReader.readln()",
+          "mapping_type": "near_equivalent",
+          "confidence": "medium",
+          "reason": "Line/character oriented console input maps to BufferedReader over System.in.",
+          "semantic_gaps": "UTF-8 truncation and Option-return contracts differ.",
+          "suggested_translation_strategy": "Wrap InputStreamReader(StandardCharsets.UTF_8) + BufferedReader and convert null/EOF to Optional semantics."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.flush()",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.flush()",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Array<Byte>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Bool)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Bool)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Float16)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Float32)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Float64)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Float64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Int16)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Int32)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Int32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Int64)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Int8)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(Rune)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(Rune)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(String)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(String)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(UInt16)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(UInt32)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(UInt64)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write(UInt8)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write(UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.write<T>(T) where T <: ToString",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.write<T>(T) where T <: ToString",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Array<Byte>)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Array<Byte>)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Bool)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Bool)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Float16)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Float16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Float32)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Float32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Float64)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Float64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Int16)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Int16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Int32)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Int32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Int64)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Int64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Int8)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Int8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(Rune)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(Rune)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(String)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(String)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(UInt16)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(UInt16)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(UInt32)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(UInt32)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(UInt64)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(UInt64)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln(UInt8)",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln(UInt8)",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "ConsoleWriter.writeln<T>(T) where T <: ToString",
+      "candidates": [
+        {
+          "java_api": "PrintStream",
+          "cangjie_api": "ConsoleWriter.writeln<T>(T) where T <: ToString",
+          "mapping_type": "near_equivalent",
+          "confidence": "high",
+          "reason": "Typed console output and newline variants align with PrintStream print/println/flush.",
+          "semantic_gaps": "Overload set and byte-array handling behavior are not identical.",
+          "suggested_translation_strategy": "Map write/writeln to print/println; special-case byte[] via out.write."
+        }
+      ]
+    },
+    {
+      "cangjie_api": "Console Example",
+      "candidates": [
+        {
+          "java_api": "unsupported",
+          "cangjie_api": "Console Example",
+          "mapping_type": "unsupported",
+          "confidence": "high",
+          "reason": "This is a documentation/example usage pattern rather than a stable runtime API symbol.",
+          "semantic_gaps": "No one-to-one Java API mapping applies because this entry describes usage guidance, not an API contract.",
+          "suggested_translation_strategy": "Omit direct mapping; translate the underlying concrete APIs used in the example."
+        }
+      ]
+    }
+  ]
+}

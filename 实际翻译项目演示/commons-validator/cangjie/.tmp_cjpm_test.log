@@ -1,0 +1,596 @@
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/EAN13CheckDigit.cj:24:58:
+   [36m| [0m
+[36m24[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/LuhnCheckDigit.cj:24:58:
+   [36m| [0m
+[36m24[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ABANumberCheckDigit.cj:24:58:
+   [36m| [0m
+[36m24[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/CUSIPCheckDigit.cj:34:58:
+   [36m| [0m
+[36m34[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ISBN10CheckDigit.cj:41:58:
+   [36m| [0m
+[36m41[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ISSNCheckDigit.cj:41:74:
+   [36m| [0m
+[36m41[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                         [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/SedolCheckDigit.cj:43:74:
+   [36m| [0m
+[36m43[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                         [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ISINCheckDigit.cj:45:58:
+   [36m| [0m
+[36m45[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/CASNumberCheckDigit.cj:63:58:
+   [36m| [0m
+[36m63[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                         [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusTenCheckDigit.cj:65:65:
+   [36m| [0m
+[36m65[0m [36m| [0m    public override func toInt(character: Rune, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ECNumberCheckDigit.cj:65:74:
+   [36m| [0m
+[36m65[0m [36m| [0m    public override func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+   [36m| [0m                                                                         [33m^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'code'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/AbstractCheckDigit.cj:84:32:
+   [36m| [0m
+[36m84[0m [36m| [0m    public open func calculate(code: String): String {[0m
+   [36m| [0m                               [33m^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'code'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/AbstractCheckDigit.cj:88:30:
+   [36m| [0m
+[36m88[0m [36m| [0m    public open func isValid(code: String): Bool {[0m
+   [36m| [0m                             [33m^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:107:61:
+    [36m| [0m
+[36m107[0m [36m| [0m    public open func toInt(character: Rune, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                                            [33m^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'charValue'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:114:36:
+    [36m| [0m
+[36m114[0m [36m| [0m    public open func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                   [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'leftPos'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:114:54:
+    [36m| [0m
+[36m114[0m [36m| [0m    public open func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                                     [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'rightPos'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/checkdigit/ModulusCheckDigit.cj:114:70:
+    [36m| [0m
+[36m114[0m [36m| [0m    public open func weightedValue(charValue: Int64, leftPos: Int64, rightPos: Int64): Int64 {[0m
+    [36m| [0m                                                                     [33m^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+17 warnings generated, 17 warnings printed.
+[33mwarning[0m: unused import 'std.regex.*'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DomainValidator.cj:63:1:
+   [36m| [0m
+[36m63[0m [36m| [0mimport std.regex.*[0m
+   [36m| [0m[33m^^^^^^^^^^^^^^^^^^ unused import[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'value'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/CodeValidator.cj:31:46:
+   [36m| [0m
+[36m31[0m [36m| [0mpublic func serializationSupportCanSerialize(value: Any): Bool {[0m
+   [36m| [0m                                             [33m^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'inetIsBlankOrNull'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/InetAddressValidator.cj:45:1:
+   [36m| [0m
+[36m45[0m [36m| [0m  private func inetIsBlankOrNull(value: ?String): Bool {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m46[0m [36m| [0m[33m|[0m     match (value) {[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m50[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/ShortValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DoubleValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/LongValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/ByteValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/FloatValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/IntegerValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/BigIntegerValidator.cj:54:75:
+   [36m| [0m
+[36m54[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/TimeValidator.cj:62:62:
+   [36m| [0m
+[36m62[0m [36m| [0m    public override func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+   [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DateValidator.cj:78:62:
+   [36m| [0m
+[36m78[0m [36m| [0m    public override func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+   [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/CalendarValidator.cj:91:62:
+   [36m| [0m
+[36m91[0m [36m| [0m    public override func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+   [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'domainNormalizeOverrides'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DomainValidator.cj:104:1:
+    [36m| [0m
+[36m104[0m [36m| [0m  private func domainNormalizeOverrides(values: ArrayList<String>): Array<String> {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m105[0m [36m| [0m[33m|[0m     domainNormalizeOverrides(values.toArray())[0m
+[36m106[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'numberBlankOrNull'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractNumberValidator.cj:106:1:
+    [36m| [0m
+[36m106[0m [36m| [0m  private func numberBlankOrNull(value: ?String): Bool {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m107[0m [36m| [0m[33m|[0m     match (value) {[0m
+    [36m| [0m[33m|[0m ...[0m
+[36m111[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'_internal'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/RegexValidator.cj:120:72:
+    [36m| [0m
+[36m120[0m [36m| [0m    private init(normalizedRegexs: Array<String>, caseSensitive: Bool, _internal: Int64) {[0m
+    [36m| [0m                                                                       [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'pattern'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractFormatValidator.cj:127:35:
+    [36m| [0m
+[36m127[0m [36m| [0m    protected open func getFormat(pattern: ?String, locale: ?Locale): ValidatorNumberFormat {[0m
+    [36m| [0m                                  [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'locale'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractFormatValidator.cj:127:53:
+    [36m| [0m
+[36m127[0m [36m| [0m    protected open func getFormat(pattern: ?String, locale: ?Locale): ValidatorNumberFormat {[0m
+    [36m| [0m                                                    [33m^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractFormatValidator.cj:131:71:
+    [36m| [0m
+[36m131[0m [36m| [0m    protected open func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+    [36m| [0m                                                                      [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'isOn'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/UrlValidator.cj:298:5:
+    [36m| [0m
+[36m298[0m [36m| [0m      private func isOn(flag: Int64): Bool {[0m
+    [36m| [0m [33m_[0m[33m____^[0m
+[36m299[0m [36m| [0m[33m|[0m         (options & flag) > 0[0m
+[36m300[0m [36m| [0m[33m|[0m     }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'hasDate'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:360:9:
+    [36m| [0m
+[36m360[0m [36m| [0m    var hasDate = false[0m
+    [36m| [0m        [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'hasTime'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:361:9:
+    [36m| [0m
+[36m361[0m [36m| [0m    var hasTime = false[0m
+    [36m| [0m        [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'locale'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:676:36:
+    [36m| [0m
+[36m676[0m [36m| [0m    public static func getInstance(locale: Locale): Calendar {[0m
+    [36m| [0m                                   [33m^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'style'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:805:40:
+    [36m| [0m
+[36m805[0m [36m| [0m    public static func getDateInstance(style: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                       [33m^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'style'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:813:40:
+    [36m| [0m
+[36m813[0m [36m| [0m    public static func getTimeInstance(style: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                       [33m^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'dateStyle'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:821:44:
+    [36m| [0m
+[36m821[0m [36m| [0m    public static func getDateTimeInstance(dateStyle: Int64, timeStyle: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                           [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'timeStyle'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:821:62:
+    [36m| [0m
+[36m821[0m [36m| [0m    public static func getDateTimeInstance(dateStyle: Int64, timeStyle: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+    [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractNumberValidator.cj:1104:56:
+     [36m| [0m
+[36m1104[0m [36m| [0m    protected open func processParsedValue(value: Any, formatter: ValidatorNumberFormat): ?Any {[0m
+     [36m| [0m                                                       [33m^^^^^^^^^ unused variable[0m
+     [36m| [0m
+     [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+    [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:1108:61:
+     [36m| [0m
+[36m1108[0m [36m| [0m    protected open func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+     [36m| [0m                                                            [33m^^^^^^^^^ unused variable[0m
+     [36m| [0m
+     [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+29 warnings generated, 29 warnings printed.
+[33mwarning[0m: unused import 'std.collection.*'
+ [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/GenericTypeValidator.cj:7:1:
+  [36m| [0m
+[36m7[0m [36m| [0mimport std.collection.*[0m
+  [36m| [0m[33m^^^^^^^^^^^^^^^^^^^^^^^ unused import[0m
+  [36m| [0m
+  [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused import 'std.collection.*'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:32:1:
+   [36m| [0m
+[36m32[0m [36m| [0mimport std.collection.*[0m
+   [36m| [0m[33m^^^^^^^^^^^^^^^^^^^^^^^ unused import[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_URL_PATTERN'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:44:13:
+   [36m| [0m
+[36m44[0m [36m| [0mprivate let LEGACY_URL_PATTERN = Regex(LEGACY_URL_REGEX)[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'ignored'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/ValidatorResult.cj:45:17:
+   [36m| [0m
+[36m45[0m [36m| [0m    public init(ignored: ValidatorResult, valid: Bool, result: ?Any) {[0m
+   [36m| [0m                [33m^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_SCHEME'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:54:13:
+   [36m| [0m
+[36m54[0m [36m| [0mprivate let LEGACY_PARSE_URL_SCHEME: Int64 = 2[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_AUTHORITY'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:55:13:
+   [36m| [0m
+[36m55[0m [36m| [0mprivate let LEGACY_PARSE_URL_AUTHORITY: Int64 = 4[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_PATH'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:56:13:
+   [36m| [0m
+[36m56[0m [36m| [0mprivate let LEGACY_PARSE_URL_PATH: Int64 = 5[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_QUERY'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:57:13:
+   [36m| [0m
+[36m57[0m [36m| [0mprivate let LEGACY_PARSE_URL_QUERY: Int64 = 7[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'LEGACY_PARSE_URL_FRAGMENT'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/UrlValidator.cj:58:13:
+   [36m| [0m
+[36m58[0m [36m| [0mprivate let LEGACY_PARSE_URL_FRAGMENT: Int64 = 9[0m
+   [36m| [0m            [33m^^^^^^^^^^^^^^^^^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+9 warnings generated, 9 warnings printed.
+[?25l[0J7[;r8
+[1F7[9999E8[0J7[;r8
+
+
+
+[4F7[9999E[3F📦 group commons_validator_test       33% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m--------------[0m[90m][0m [32m    [0m (00:00:00)
+🧪 test CoreRequiredAndDependencyTranslatedTest.requiredNameR...      (00:00:00)
+
+passed: [32m25[0m, failed: 0                33% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m--------------[0m[90m][0m 25/74 (00:00:00) 8[0J7[;r8
+
+
+
+[4F7[9999E[3F📦 group commons_validator_test       87% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m---[0m[90m][0m [32m    [0m (00:00:00)
+🧪 test RoutinesUrlTranslatedTest.urlFragmentsPermutationAndS...      (00:00:00)
+
+passed: [32m65[0m, failed: 0                87% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m---[0m[90m][0m 65/74 (00:00:00) 8[0J7[;r8
+
+
+
+[4F7[9999E[3F📦 group commons_validator_test       87% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m---[0m[90m][0m [32m    [0m (00:00:00)
+🧪 test RoutinesUrlTranslatedTest.urlFragmentsPermutationAndS...      (00:00:00)
+
+passed: [32m65[0m, failed: 0                87% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m---[0m[90m][0m 65/74 (00:00:01) 8[0J7[;r8
+
+
+
+[4F7[9999E[3F📦 group commons_validator_test       87% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m---[0m[90m][0m [32m    [0m (00:00:01)
+🧪 test RoutinesUrlTranslatedTest.urlFragmentsPermutationAndS...      (00:00:00)
+
+passed: [32m65[0m, failed: 0                87% [90m[[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[32m|[0m[32m[0m[32m[0m[90m---[0m[90m][0m 65/74 (00:00:01) 8--------------------------------------------------------------------------------------------------
+TP: [33mcommons_validator_test[0m, time elapsed: 1242032000 ns, RESULT:
+    TCS: [33mCheckDigitTranslatedTest[0m, time elapsed: 5759000 ns, RESULT:
+    [[32m PASSED [0m] CASE: abstractCheckDigitTestCalculateInvalid (313000 ns)
+    [[32m PASSED [0m] CASE: abstractCheckDigitTestCalculateValid (215000 ns)
+    [[32m PASSED [0m] CASE: abstractCheckDigitTestIsValidFalse (2393000 ns)
+    [[32m PASSED [0m] CASE: abstractCheckDigitTestIsValidTrue (147000 ns)
+    [[32m PASSED [0m] CASE: abstractCheckDigitTestMissingCode (22000 ns)
+    [[32m PASSED [0m] CASE: abstractCheckDigitTestSerialization (14000 ns)
+    [[32m PASSED [0m] CASE: abstractCheckDigitTestZeroSum (34000 ns)
+    [[32m PASSED [0m] CASE: cusipCheckDigitTestValidator336InvalidCheckDigits (22000 ns)
+    [[32m PASSED [0m] CASE: cusipCheckDigitTestValidator336ValidCheckDigits (7000 ns)
+    [[32m PASSED [0m] CASE: modulusTenCusipCheckDigitTestValidator336InvalidCheckDigits (8000 ns)
+    [[32m PASSED [0m] CASE: modulusTenCusipCheckDigitTestValidator336ValidCheckDigits (6000 ns)
+    [[32m PASSED [0m] CASE: modulusTenSedolCheckDigitTestValidator346 (10000 ns)
+    [[32m PASSED [0m] CASE: sedolCheckDigitTestValidator346 (30000 ns)
+    [[32m PASSED [0m] CASE: isbnCheckDigitTestInvalidLength (27000 ns)
+    [[32m PASSED [0m] CASE: isinCheckDigitTestValidator345 (29000 ns)
+    [[32m PASSED [0m] CASE: ibanCheckDigitTestOther (497000 ns)
+    [[32m PASSED [0m] CASE: ibanCheckDigitTestZeroSum (8000 ns)
+    [[32m PASSED [0m] CASE: verhoeffCheckDigitTestZeroSum (7000 ns)
+    [[32m PASSED [0m] CASE: checkDigitPublicApis (17000 ns)
+    TCS: [33mCoreFieldTranslatedTest[0m, time elapsed: 286000 ns, RESULT:
+    [[32m PASSED [0m] CASE: fieldArgumentPositioningScenarios (171000 ns)
+    TCS: [33mCoreManualValidatorTranslatedTest[0m, time elapsed: 919000 ns, RESULT:
+    [[32m PASSED [0m] CASE: validatorManualBooleanAndDeprecated (544000 ns)
+    [[32m PASSED [0m] CASE: validatorManualObjectAndFieldFiltering (200000 ns)
+    TCS: [33mCoreValidatorResultAndParameterTranslatedTest[0m, time elapsed: 1928000 ns, RESULT:
+    [[32m PASSED [0m] CASE: parameterAndValidatorResultsBehavior (1812000 ns)
+    TCS: [33mCoreVarAndExceptionTranslatedTest[0m, time elapsed: 1248000 ns, RESULT:
+    [[32m PASSED [0m] CASE: varsAndValidatorException (1137000 ns)
+    TCS: [33mCoreLocaleAndFormLookupTranslatedTest[0m, time elapsed: 4435000 ns, RESULT:
+    [[32m PASSED [0m] CASE: localeFallbackAndRetrieveFormBehaviors (4282000 ns)
+    TCS: [33mCoreRequiredAndDependencyTranslatedTest[0m, time elapsed: 4146000 ns, RESULT:
+    [[32m PASSED [0m] CASE: requiredNameRequiredIfAndMultipleBehaviors (1997000 ns)
+    [[32m PASSED [0m] CASE: multipleConfigAndExtensionBehaviors (1979000 ns)
+    TCS: [33mCoreResourceAndUtilTranslatedTest[0m, time elapsed: 1798000 ns, RESULT:
+    [[32m PASSED [0m] CASE: validatorResourcesEntityImportAndUtilBehaviors (1718000 ns)
+    TCS: [33mIBANValidatorTranslatedTest[0m, time elapsed: 2565000 ns, RESULT:
+    [[32m PASSED [0m] CASE: fixturesAndBasicApis (930000 ns)
+    [[32m PASSED [0m] CASE: mutableValidatorBehaviors (96000 ns)
+    [[32m PASSED [0m] CASE: defaultValidatorsRemainSortedAndConfigured (24000 ns)
+    [[32m PASSED [0m] CASE: providerRegistryExamplesAndPatterns (1278000 ns)
+    TCS: [33mIdentifierFinancialRoutinesTranslatedTest[0m, time elapsed: 1887000 ns, RESULT:
+    [[32m PASSED [0m] CASE: creditCardValidatorsAndOptions (109000 ns)
+    [[32m PASSED [0m] CASE: creditCardConstructorsAndRangeBehaviors (224000 ns)
+    [[32m PASSED [0m] CASE: isbnValidatorBehaviors (182000 ns)
+    [[32m PASSED [0m] CASE: issnValidatorBehaviors (121000 ns)
+    [[32m PASSED [0m] CASE: isinValidatorBehaviors (975000 ns)
+    TCS: [33mLegacyIdentifierTranslatedTest[0m, time elapsed: 223000 ns, RESULT:
+    [[32m PASSED [0m] CASE: legacyCreditCardValidatorBehaviors (34000 ns)
+    [[32m PASSED [0m] CASE: legacyIsbnValidatorBehaviors (25000 ns)
+    TCS: [33mLegacyUrlTranslatedTest[0m, time elapsed: 251149000 ns, RESULT:
+    [[32m PASSED [0m] CASE: legacyUrlIsValidPermutations (250575000 ns)
+    [[32m PASSED [0m] CASE: legacyUrlSchemeAndValidators (294000 ns)
+    [[32m PASSED [0m] CASE: legacyUrlValidateUrlNoopEquivalence (10000 ns)
+    TCS: [33mLegacyEmailTranslatedTest[0m, time elapsed: 227000 ns, RESULT:
+    [[32m PASSED [0m] CASE: legacyEmailCoreCases (86000 ns)
+    [[32m PASSED [0m] CASE: legacyEmailControlsAndEdgeCases (11000 ns)
+    TCS: [33mLegacyNumericDateTranslatedTest[0m, time elapsed: 342000 ns, RESULT:
+    [[32m PASSED [0m] CASE: genericValidatorLengthBehaviors (18000 ns)
+    [[32m PASSED [0m] CASE: genericTypeValidatorLocaleAndPlain (39000 ns)
+    [[32m PASSED [0m] CASE: legacyNumericAndDateValidation (55000 ns)
+    TCS: [33mRoutinesNumericTimeTranslatedTest[0m, time elapsed: 646000 ns, RESULT:
+    [[32m PASSED [0m] CASE: numericValidatorMethodsAndRanges (198000 ns)
+    [[32m PASSED [0m] CASE: currencyAndPercentValidators (72000 ns)
+    [[32m PASSED [0m] CASE: dateAndCalendarValidators (63000 ns)
+    [[32m PASSED [0m] CASE: timeValidatorBehaviors (36000 ns)
+    [[32m PASSED [0m] CASE: codeValidatorBehaviors (25000 ns)
+    TCS: [33mRoutinesRegexTranslatedTest[0m, time elapsed: 442000 ns, RESULT:
+    [[32m PASSED [0m] CASE: regexExceptions (41000 ns)
+    [[32m PASSED [0m] CASE: regexGetPatternsAndStrings (13000 ns)
+    [[32m PASSED [0m] CASE: regexMissingInputs (19000 ns)
+    [[32m PASSED [0m] CASE: regexInsensitiveAndSensitive (29000 ns)
+    [[32m PASSED [0m] CASE: regexSingleAndNull (26000 ns)
+    TCS: [33mRoutinesDomainTranslatedTest[0m, time elapsed: 1793000 ns, RESULT:
+    [[32m PASSED [0m] CASE: domainCoreValidation (135000 ns)
+    [[32m PASSED [0m] CASE: domainArraysUnicodeAndSyntax (353000 ns)
+    [[32m PASSED [0m] CASE: domainInvalidValidAndAscii (713000 ns)
+    [[32m PASSED [0m] CASE: domainLengthAndOverrides (183000 ns)
+    [[32m PASSED [0m] CASE: domainStartupGuards (196000 ns)
+    TCS: [33mRoutinesEmailTranslatedTest[0m, time elapsed: 3167000 ns, RESULT:
+    [[32m PASSED [0m] CASE: emailBasicAndOverrides (377000 ns)
+    [[32m PASSED [0m] CASE: emailUsernamesAndEdgeCases (1766000 ns)
+    [[32m PASSED [0m] CASE: emailAdditionalCases (874000 ns)
+    TCS: [33mRoutinesUrlTranslatedTest[0m, time elapsed: 957760000 ns, RESULT:
+    [[32m PASSED [0m] CASE: urlFragmentsPermutationAndSchemes (954278000 ns)
+    [[32m PASSED [0m] CASE: urlSpecialCases (1100000 ns)
+    [[32m PASSED [0m] CASE: urlAuthorityPathAndFileCases (318000 ns)
+    [[32m PASSED [0m] CASE: urlMoreValidatorCases (1627000 ns)
+    [[32m PASSED [0m] CASE: urlConstructorGuards (26000 ns)
+    [[32m PASSED [0m] CASE: urlValidateUrlNoopEquivalence (22000 ns)
+    TCS: [33mRoutinesInetAddressTranslatedTest[0m, time elapsed: 312000 ns, RESULT:
+    [[32m PASSED [0m] CASE: inetBrokenAndClassCases (59000 ns)
+    [[32m PASSED [0m] CASE: inetIpv6RepresentativeCases (100000 ns)
+    TCS: [33mTestCase_targetPackageSmoke[0m, time elapsed: 80000 ns, RESULT:
+    [[32m PASSED [0m] CASE: targetPackageSmoke (10000 ns)
+Summary: TOTAL: 74
+    [32mPASSED[0m: 74, [32mSKIPPED[0m: 0, ERROR: 0
+    [31mFAILED[0m: 0
+--------------------------------------------------------------------------------------------------
+Project tests finished, time elapsed: 1243045000 ns, RESULT:
+TP: [33mcommons_validator_test[0m.*, time elapsed: 1242992000 ns, RESULT:
+    PASSED:
+    TP: [33mcommons_validator_test[0m, time elapsed: 1242032000 ns
+Summary: TOTAL: 74
+    [32mPASSED[0m: 74, [32mSKIPPED[0m: 0, ERROR: 0
+    [31mFAILED[0m: 0
+--------------------------------------------------------------------------------------------------
+[0J7[;r8[?25hcjpm test success

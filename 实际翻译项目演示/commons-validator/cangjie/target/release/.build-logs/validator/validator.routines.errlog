@@ -1,0 +1,247 @@
+[33mwarning[0m: unused import 'std.regex.*'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DomainValidator.cj:63:1:
+   [36m| [0m
+[36m63[0m [36m| [0mimport std.regex.*[0m
+   [36m| [0m[33m^^^^^^^^^^^^^^^^^^ unused import[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'value'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/CodeValidator.cj:31:46:
+   [36m| [0m
+[36m31[0m [36m| [0mpublic func serializationSupportCanSerialize(value: Any): Bool {[0m
+   [36m| [0m                                             [33m^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'inetIsBlankOrNull'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/InetAddressValidator.cj:45:1:
+   [36m| [0m
+[36m45[0m [36m| [0m  private func inetIsBlankOrNull(value: ?String): Bool {[0m
+   [36m| [0m [33m_[0m[33m^[0m
+[36m46[0m [36m| [0m[33m|[0m     match (value) {[0m
+   [36m| [0m[33m|[0m ...[0m
+[36m50[0m [36m| [0m[33m|[0m }[0m
+   [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/ShortValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DoubleValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/LongValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/ByteValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/FloatValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/IntegerValidator.cj:53:75:
+   [36m| [0m
+[36m53[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/BigIntegerValidator.cj:54:75:
+   [36m| [0m
+[36m54[0m [36m| [0m    protected override func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+   [36m| [0m                                                                          [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/TimeValidator.cj:62:62:
+   [36m| [0m
+[36m62[0m [36m| [0m    public override func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+   [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DateValidator.cj:78:62:
+   [36m| [0m
+[36m78[0m [36m| [0m    public override func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+   [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+  [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/CalendarValidator.cj:91:62:
+   [36m| [0m
+[36m91[0m [36m| [0m    public override func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+   [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+   [36m| [0m
+   [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'domainNormalizeOverrides'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/DomainValidator.cj:104:1:
+    [36m| [0m
+[36m104[0m [36m| [0m  private func domainNormalizeOverrides(values: ArrayList<String>): Array<String> {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m105[0m [36m| [0m[33m|[0m     domainNormalizeOverrides(values.toArray())[0m
+[36m106[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'numberBlankOrNull'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractNumberValidator.cj:106:1:
+    [36m| [0m
+[36m106[0m [36m| [0m  private func numberBlankOrNull(value: ?String): Bool {[0m
+    [36m| [0m [33m_[0m[33m^[0m
+[36m107[0m [36m| [0m[33m|[0m     match (value) {[0m
+    [36m| [0m[33m|[0m ...[0m
+[36m111[0m [36m| [0m[33m|[0m }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'_internal'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/RegexValidator.cj:120:72:
+    [36m| [0m
+[36m120[0m [36m| [0m    private init(normalizedRegexs: Array<String>, caseSensitive: Bool, _internal: Int64) {[0m
+    [36m| [0m                                                                       [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'pattern'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractFormatValidator.cj:127:35:
+    [36m| [0m
+[36m127[0m [36m| [0m    protected open func getFormat(pattern: ?String, locale: ?Locale): ValidatorNumberFormat {[0m
+    [36m| [0m                                  [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'locale'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractFormatValidator.cj:127:53:
+    [36m| [0m
+[36m127[0m [36m| [0m    protected open func getFormat(pattern: ?String, locale: ?Locale): ValidatorNumberFormat {[0m
+    [36m| [0m                                                    [33m^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractFormatValidator.cj:131:71:
+    [36m| [0m
+[36m131[0m [36m| [0m    protected open func processParsedValue(value: ValidatorRawNumber, formatter: ValidatorNumberFormat): ?Any {[0m
+    [36m| [0m                                                                      [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused function:'isOn'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/UrlValidator.cj:298:5:
+    [36m| [0m
+[36m298[0m [36m| [0m      private func isOn(flag: Int64): Bool {[0m
+    [36m| [0m [33m_[0m[33m____^[0m
+[36m299[0m [36m| [0m[33m|[0m         (options & flag) > 0[0m
+[36m300[0m [36m| [0m[33m|[0m     }[0m
+    [36m| [0m[33m|[0m[33m_[0m[33m____^ unused function[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'hasDate'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:360:9:
+    [36m| [0m
+[36m360[0m [36m| [0m    var hasDate = false[0m
+    [36m| [0m        [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'hasTime'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:361:9:
+    [36m| [0m
+[36m361[0m [36m| [0m    var hasTime = false[0m
+    [36m| [0m        [33m^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'locale'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:676:36:
+    [36m| [0m
+[36m676[0m [36m| [0m    public static func getInstance(locale: Locale): Calendar {[0m
+    [36m| [0m                                   [33m^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'style'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:805:40:
+    [36m| [0m
+[36m805[0m [36m| [0m    public static func getDateInstance(style: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                       [33m^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'style'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:813:40:
+    [36m| [0m
+[36m813[0m [36m| [0m    public static func getTimeInstance(style: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                       [33m^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'dateStyle'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:821:44:
+    [36m| [0m
+[36m821[0m [36m| [0m    public static func getDateTimeInstance(dateStyle: Int64, timeStyle: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                           [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'timeStyle'
+   [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:821:62:
+    [36m| [0m
+[36m821[0m [36m| [0m    public static func getDateTimeInstance(dateStyle: Int64, timeStyle: Int64, locale: Locale): DateFormat {[0m
+    [36m| [0m                                                             [33m^^^^^^^^^ unused variable[0m
+    [36m| [0m
+    [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+    [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractNumberValidator.cj:1104:56:
+     [36m| [0m
+[36m1104[0m [36m| [0m    protected open func processParsedValue(value: Any, formatter: ValidatorNumberFormat): ?Any {[0m
+     [36m| [0m                                                       [33m^^^^^^^^^ unused variable[0m
+     [36m| [0m
+     [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+[33mwarning[0m: unused variable:'formatter'
+    [36m==>[0m /Users/xutangzhi/Desktop/exp_projects/x2cangjie/formulate_version/commons-validator/cangjie/src/routines/AbstractCalendarValidator.cj:1108:61:
+     [36m| [0m
+[36m1108[0m [36m| [0m    protected open func processParsedValue(value: Calendar, formatter: DateFormat): ?Any {[0m
+     [36m| [0m                                                            [33m^^^^^^^^^ unused variable[0m
+     [36m| [0m
+     [36m#[0m [0mnote[0m: this warning can be suppressed by setting the compiler option `-Woff unused`
+
+29 warnings generated, 29 warnings printed.

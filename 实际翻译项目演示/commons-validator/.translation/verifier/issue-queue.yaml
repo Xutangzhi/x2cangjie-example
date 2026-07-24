@@ -1,0 +1,39 @@
+schema_version: 1
+iteration: 12
+active_todo_id: TODO-005-CORE-CONFIG
+issues:
+- issue_id: TESTER-TODO-005-001
+  report_id: tester-todo-005-core-config-20260706T141927Z
+  report_snapshot_path: .translation/tester/reports/tester-todo-005-core-config-20260706T141927Z.yaml
+  status: fixed
+  severity: P1
+  category: dependency-boundary
+  title: util.ValidatorUtils object-bean parity is still unverified after the adapter fix
+  resolution_evidence:
+  - cangjie/src/util/ValidatorUtils.cj now imports validator.ValidatorPropertyAccess as CoreValidatorPropertyAccess and bridges both util/core property-access interfaces inside validatorResolveDirectProperty.
+  - cangjie/tests/core_config_test.cj now directly asserts UtilValidatorUtils.getValueAsString(...) on CoreNameBean, CoreTestBean, and CoreValueBean object-backed scenarios in addition to validator.ValidatorUtils.getValueAsString(...).
+  - yaml_guard contract, two_agent_gate_check.sh contract, mvn -q test, cjpm build, and cjpm test all passed after the util-path fix.
+- issue_id: TESTER-TODO-001-001
+  report_id: tester-todo-001-checkdigit-20260706T082817Z
+  report_snapshot_path: .translation/tester/reports/tester-todo-001-checkdigit-20260706T082817Z.yaml
+  status: fixed
+  severity: P1
+  category: translated-test-quality
+  title: Two active checkdigit obligations are represented by placeholder tests
+  resolution_evidence:
+  - cangjie/tests/checkdigit_test.cj no longer contains placeholder or ensure(true).
+  - cangjie/tests/checkdigit_test.cj documents IBAN and Verhoeff source no-op equivalence and verifies ordinary validation paths.
+- issue_id: TESTER-PLAN-001
+  report_id: tester-plan-audit-20260706T063610Z
+  report_snapshot_path: .translation/tester/reports/tester-plan-audit-20260706T063610Z.yaml
+  status: fixed
+  severity: P1
+  category: source-test-inventory
+  title: Resource fixtures are not traced to source tests or obligations
+- issue_id: TESTER-PLAN-002
+  report_id: tester-plan-audit-20260706T063610Z
+  report_snapshot_path: .translation/tester/reports/tester-plan-audit-20260706T063610Z.yaml
+  status: fixed
+  severity: P1
+  category: source-test-inventory
+  title: Parameterized source-test intent is collapsed to method-level placeholders
